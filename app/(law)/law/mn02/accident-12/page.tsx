@@ -34,7 +34,7 @@ const items12 = [
 export default function Page() {
   return (
     <>
-      <SiteSubVisual title="12대 중과실사고" site="law" bgImage="/law/mn02/img/sub_vs02.jpg" />
+      <SiteSubVisual title="12대 중과실사고" site="law" imgSrc="/law/mn02/img/sub_vs02.jpg" />
       <LawNavTabs current="/law/mn02/accident-12" />
       <div id="contents">
 

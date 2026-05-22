@@ -28,7 +28,7 @@ const steps = [
 export default function Page() {
   return (
     <>
-      <SiteSubVisual title="형사사건 절차" site="law" bgImage="/law/mn02/img/sub_vs02.jpg" />
+      <SiteSubVisual title="형사사건 절차" site="law" imgSrc="/law/mn02/img/sub_vs02.jpg" />
       <LawNavTabs current="/law/mn02/procedure" />
 
       <div id="contents">

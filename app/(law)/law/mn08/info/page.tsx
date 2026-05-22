@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <SiteSubVisual title="카톡상담" site="law" />
+      <SiteSubVisual title="카톡상담" site="law" imgSrc="/law/mn02/img/sub_vs02.jpg" />
       <LawNavTabs current="/law/mn08/info" />
       <div id="contents" style={{ maxWidth: 1200, margin: '40px auto', padding: '0 20px' }}>
         <section>

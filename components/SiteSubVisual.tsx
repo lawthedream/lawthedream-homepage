@@ -2,7 +2,8 @@ interface SiteSubVisualProps {
   title: string
   subtitle?: string
   site: 'law' | 'accident' | 'center' | 'work'
-  bgImage?: string  // 페이지별 커스텀 배너 이미지
+  bgImage?: string   // for non-law: CSS background image path
+  imgSrc?: string    // for law: <img> with 2000px positioning
 }
 
 const SITE_CONFIG = {
@@ -12,8 +13,25 @@ const SITE_CONFIG = {
   work:     { accent: '#145a32', label: '더드림 직업병연구원' },
 }
 
-export default function SiteSubVisual({ title, subtitle, site, bgImage }: SiteSubVisualProps) {
+export default function SiteSubVisual({ title, subtitle, site, bgImage, imgSrc }: SiteSubVisualProps) {
   const cfg = SITE_CONFIG[site]
+
+  // Law site: use original wide-image approach (CSS handles positioning via #sub_visual)
+  if (site === 'law') {
+    return (
+      <div id="sub_visual">
+        {imgSrc && (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img src={imgSrc} alt="" />
+        )}
+        <div className="visual_text">
+          <h2>{title}</h2>
+        </div>
+      </div>
+    )
+  }
+
+  // Other sites: CSS background approach
   return (
     <div id="sub_visual" style={{ position: 'relative', overflow: 'hidden', minHeight: 220, backgroundColor: cfg.accent }}>
       {bgImage && (

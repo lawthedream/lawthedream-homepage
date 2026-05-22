@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <SiteSubVisual title="더드림 보호프로그램" site="law" bgImage="/law/mn02/img/sub_vs02.jpg" />
+      <SiteSubVisual title="더드림 보호프로그램" site="law" imgSrc="/law/mn02/img/sub_vs02.jpg" />
       <LawNavTabs current="/law/mn02/solution" />
 
       <div id="contents">

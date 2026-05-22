@@ -18,7 +18,7 @@ const tagBox = (text: string, color = '#253d5f'): object => ({
 export default function Page() {
   return (
     <>
-      <SiteSubVisual title="면허취소 구제" site="law" bgImage="/law/mn02/img/sub_vs02.jpg" />
+      <SiteSubVisual title="면허취소 구제" site="law" imgSrc="/law/mn02/img/sub_vs02.jpg" />
       <LawNavTabs current="/law/mn02/license" />
 
       <div id="contents">

@@ -23,7 +23,7 @@ const sep: object = { borderTop: '1px solid #ddd', margin: '18px 0' }
 export default function Page() {
   return (
     <>
-      <SiteSubVisual title="보험소송 / 합의" site="law" bgImage="/law/mn02/img/sub_vs02.jpg" />
+      <SiteSubVisual title="보험소송 / 합의" site="law" imgSrc="/law/mn02/img/sub_vs02.jpg" />
       <LawNavTabs current="/law/mn02/lawsuit" />
 
       <div id="contents">

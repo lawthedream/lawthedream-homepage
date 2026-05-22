@@ -26,14 +26,24 @@ const SECTION_TABS: SectionMap = {
   ],
 }
 
+// tabs-N class by tab count
+function tabsClass(count: number): string {
+  if (count >= 7) return 'tabs-7'
+  if (count === 4) return 'tabs-4'
+  if (count === 3) return 'tabs-3'
+  if (count === 2) return 'tabs-2'
+  return `tabs-${count}`
+}
+
 export default function LawNavTabs({ current }: { current: string }) {
   const match = current.match(/\/law\/(mn\d+)/)
   const sectionBase = match ? `/law/${match[1]}` : ''
   const tabs: Tab[] = SECTION_TABS[sectionBase] ?? []
   if (tabs.length === 0) return null
+
   return (
     <nav className="tab_area borad_tab" aria-label="교통형사센터 메뉴">
-      <div className="sub_tabs">
+      <div className={`sub_tabs ${tabsClass(tabs.length)}`}>
         <ul>
           {tabs.map((t: Tab) => (
             <li key={t.href}>

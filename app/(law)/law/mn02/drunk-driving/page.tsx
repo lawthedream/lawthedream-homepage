@@ -30,7 +30,7 @@ const sep: object = { borderTop: '1px solid #ddd', margin: '18px 0' }
 export default function Page() {
   return (
     <>
-      <SiteSubVisual title="음주 / 뺑소니" site="law" bgImage="/law/mn02/img/sub_vs02.jpg" />
+      <SiteSubVisual title="음주 / 뺑소니" site="law" imgSrc="/law/mn02/img/sub_vs02.jpg" />
       <LawNavTabs current="/law/mn02/drunk-driving" />
 
       <div id="contents">
