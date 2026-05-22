@@ -98,7 +98,7 @@ export default function LawHeader() {
           </button>
         </div>
       </div>
-      <div style={{ height: 100 }} />
+      <div style={{ height: 182 }} />
 
       {mobileOpen && (
         <div role="dialog" aria-modal="true" style={{ position: 'fixed', inset: 0, zIndex: 9999, backgroundColor: '#fff', overflowY: 'auto', paddingTop: 70 }}>

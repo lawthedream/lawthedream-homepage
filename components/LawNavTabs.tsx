@@ -1,29 +1,23 @@
 import Link from 'next/link'
 
-const tabs = [
-  { label: '교통사고', href: '/law/mn02/accident-12', base: '/law/mn02' },
-  { label: '성범죄', href: '/law/mn03/sexual-harassment', base: '/law/mn03' },
-  { label: '산업안전', href: '/law/mn04/safety-law', base: '/law/mn04' },
-  { label: '일반형사', href: '/law/mn05/general', base: '/law/mn05' },
-  { label: '형사절차', href: '/law/mn06/reason', base: '/law/mn06' },
-  { label: '성공사례', href: '/law/mn07/cases', base: '/law/mn07' },
-  { label: '상담/안내', href: '/law/mn08/consult', base: '/law/mn08' },
-]
-
-export default function LawNavTabs({ current }: { current: string }) {
-  return (
-    <nav className="tab_area borad_tab" aria-label="교통형사센터 메뉴">
-      <div className="sub_tabs">
-        <ul>
-          {tabs.map(t => (
-            <li key={t.href}>
-              <Link href={t.href} className={current.startsWith(t.base) ? 'on' : ''}>
-                {t.label}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </nav>
-  )
-}
+// 섹션별 독립 탭 구조 (원본 PHP tabs.php 기준)
+const SECTION_TABS: Record<string, { label: string; href: string }[]> = {
+  '/law/mn01': [
+    { label: '인사말', href: '/law/mn01/greeting' },
+    { label: '구성원소개', href: '/law/mn01/members' },
+    { label: '왜 더드림인가', href: '/law/mn01/strength' },
+    { label: '오시는 길', href: '/law/mn01/location' },
+  ],
+  '/law/mn02': [
+    { label: '12대 중과실', href: '/law/mn02/accident-12' },
+    { label: '음주/뺑소니', href: '/law/mn02/drunk-driving' },
+    { label: '민식이법', href: '/law/mn02/minshik-law' },
+    { label: '합의', href: '/law/mn02/lawsuit' },
+    { label: '면허취소 구제', href: '/law/mn02/license' },
+    { label: '형사사건절차', href: '/law/mn02/procedure' },
+    { label: '더드림 솔루션', href: '/law/mn02/solution' },
+  ],
+  '/law/mn03': [
+    { label: '성희롱', href: '/law/mn03/sexual-harassment' },
+    { label: '성추행', href: '/law/mn03/molestation' },
+    { label: '성폭행'
