@@ -237,7 +237,7 @@ export default function Home() {
           };
           document.head.appendChild(s);
         })();
-      \`}</Script>
+      `}</Script>
     </>
   )
 }
