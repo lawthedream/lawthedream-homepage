@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import Image from 'next/image'
-import Script from 'next/script'
+import LawMainSlider from '@/components/LawMainSlider'
 import ConsultForm from '@/components/ConsultForm'
 
 export const metadata: Metadata = {
@@ -29,21 +28,7 @@ const menuItems = [
 export default function LawHome() {
   return (
     <>
-      {/* 메인 비주얼 슬라이더 */}
-      <div className="main_vs" id="lawSlider">
-        <div className="item n1">
-          <div className="inner_box">
-            <div className="main_vs_text style1">
-              <strong className="text">
-                <p className="big_tit">교통사고<span>·형사사건</span></p>
-                <h1 className="mid_tit">더드림 교통형사센터<span>가 함께합니다</span></h1>
-                <p style={{ marginBottom: 30 }}>12대 중과실사고·음주운전·성범죄·산업안전 전문</p>
-                <p className="eng_tit">the dream</p>
-              </strong>
-            </div>
-          </div>
-        </div>
-      </div>
+      <LawMainSlider />
 
       <div id="content">
         {/* 업무분야 */}
@@ -69,7 +54,7 @@ export default function LawHome() {
           </div>
         </section>
 
-        {/* 상담 */}
+        {/* 상담 신청 */}
         <section id="main_map" aria-label="무료 상담 신청">
           <div className="bg">
             <div className="cnt_1300 map_box">
@@ -85,8 +70,6 @@ export default function LawHome() {
           </div>
         </section>
       </div>
-
-      <Script src="/law/js/main_visual.js" strategy="afterInteractive" />
     </>
   )
 }
