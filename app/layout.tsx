@@ -1,7 +1,5 @@
 import type { Metadata } from 'next'
 import Script from 'next/script'
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
 import NaverTracker from '@/components/NaverTracker'
 import FloatingButtons from '@/components/FloatingButtons'
 import '@/styles/globals.css'
@@ -60,9 +58,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body>
         <NaverTracker />
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        {children}
         <FloatingButtons />
       </body>
     </html>
