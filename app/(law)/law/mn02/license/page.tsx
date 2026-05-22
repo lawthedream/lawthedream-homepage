@@ -16,10 +16,6 @@ const tagBox = (text: string, color = '#253d5f'): object => ({
 })
 
 export default function Page() {
-  const conTit = (text: string) => (
-    <h3 style={{ textAlign: 'center', fontSize: 28, fontWeight: 700, color: '#222', marginBottom: 20 }}>{text}</h3>
-  )
-  const titLine = <div style={{ width: 1, height: 40, background: '#bbb', margin: '0 auto 40px' }} />
   return (
     <>
       <SiteSubVisual title="면허취소 구제" site="law" bgImage="/law/mn02/img/sub_vs02.jpg" />
@@ -28,8 +24,8 @@ export default function Page() {
       <div id="contents">
         {/* ── Section 1: 면허취소구제 Key Point ── */}
         <div style={{ maxWidth: 1300, margin: '0 auto', padding: '80px 20px 60px' }}>
-          {conTit('면허취소구제 key point')}
-          {titLine}
+          <h3 style={{ textAlign: 'center', fontSize: 28, fontWeight: 700, color: '#222', marginBottom: 20 }}>면허취소구제 key point</h3>
+          <div style={{ width: 1, height: 40, background: '#bbb', margin: '0 auto 40px' }} />
           <p style={{ textAlign: 'center', fontSize: 17, color: '#333', lineHeight: 2, marginBottom: 10 }}>
             운전면허에 대한 취소처분 또는 정지처분이나 연습운전면허의 취소처분에 대해<br />
             이의가 있는 사람은 처분을 받은 날로부터 60일 이내에 지방경찰청장에게 이의를 신청할 수 있습니다.
@@ -64,8 +60,8 @@ export default function Page() {
 
         {/* ── Section 2: 운전면허 결격기간 ── */}
         <div style={{ maxWidth: 1300, margin: '0 auto', padding: '0 20px 80px' }}>
-          {conTit('운전면허 결격기간')}
-          {titLine}
+          <h3 style={{ textAlign: 'center', fontSize: 28, fontWeight: 700, color: '#222', marginBottom: 20 }}>운전면허 결격기간</h3>
+          <div style={{ width: 1, height: 40, background: '#bbb', margin: '0 auto 40px' }} />
           <table style={{ width: '100%', borderCollapse: 'collapse', borderTop: '2px solid #222', borderBottom: '2px solid #222', fontSize: 15, marginBottom: 60 }}>
             <thead>
               <tr>
@@ -100,8 +96,8 @@ export default function Page() {
           </table>
 
           {/* 벌점 초과 취소·정지 */}
-          {conTit('운전면허 결격기간')}
-          {titLine}
+          <h3 style={{ textAlign: 'center', fontSize: 28, fontWeight: 700, color: '#222', marginBottom: 20 }}>운전면허 결격기간</h3>
+          <div style={{ width: 1, height: 40, background: '#bbb', margin: '0 auto 40px' }} />
           <p style={{ textAlign: 'center', fontSize: 17, fontWeight: 600, color: '#333', marginBottom: 30 }}>벌점 등 초과로 인한 운전면허 취소·정지</p>
           <div style={{ display: 'flex', gap: 40, alignItems: 'flex-start', marginBottom: 40 }}>
             <div style={{ flexShrink: 0, width: 300, height: 220, overflow: 'hidden', borderRadius: 4 }}>
@@ -165,8 +161,8 @@ export default function Page() {
         {/* ── Section 3: 생계형 이의신청 ── */}
         <div style={{ background: '#f4f3f2', padding: '80px 20px' }}>
           <div style={{ maxWidth: 1300, margin: '0 auto' }}>
-            {conTit('생계형 이의신청')}
-            {titLine}
+            <h3 style={{ textAlign: 'center', fontSize: 28, fontWeight: 700, color: '#222', marginBottom: 20 }}>생계형 이의신청</h3>
+            <div style={{ width: 1, height: 40, background: '#bbb', margin: '0 auto 40px' }} />
             <p style={{ textAlign: 'center', fontSize: 16, color: '#555', lineHeight: 2, marginBottom: 50 }}>
               생계형 이의신청이란, 음주운전이나 벌점초과 등의 사유로 운전면허 취소처분이 행해질 경우,<br />
               직업이나 생계에 지장이 발생하여, 사익침해가 중대한 경우 이의신청을 청구하는 것을 말함.
@@ -211,8 +207,8 @@ export default function Page() {
 
         {/* ── Section 4: 행정심판 ── */}
         <div style={{ maxWidth: 1300, margin: '0 auto', padding: '80px 20px 60px' }}>
-          {conTit('행정심판')}
-          {titLine}
+          <h3 style={{ textAlign: 'center', fontSize: 28, fontWeight: 700, color: '#222', marginBottom: 20 }}>행정심판</h3>
+          <div style={{ width: 1, height: 40, background: '#bbb', margin: '0 auto 40px' }} />
           <p style={{ textAlign: 'center', fontSize: 16, color: '#555', marginBottom: 50 }}>
             음주운전구제를 위한 행정심판은 별도의 대상을 정하지 않으며 모든 처분자에게 기회를 부여
           </p>
@@ -247,8 +243,8 @@ export default function Page() {
         {/* ── Section 5: 행정소송 ── */}
         <div style={{ background: '#f4f3f2', padding: '80px 20px' }}>
           <div style={{ maxWidth: 1300, margin: '0 auto' }}>
-            {conTit('행정소송')}
-            {titLine}
+            <h3 style={{ textAlign: 'center', fontSize: 28, fontWeight: 700, color: '#222', marginBottom: 20 }}>행정소송</h3>
+            <div style={{ width: 1, height: 40, background: '#bbb', margin: '0 auto 40px' }} />
             <div style={{ display: 'flex', gap: 40, alignItems: 'flex-start' }}>
               <div style={{ flexShrink: 0, width: 360, height: 260, overflow: 'hidden', borderRadius: 4 }}>
                 <img src="/law/mn02/img/mn02_05_img6.jpg" alt="행정소송"

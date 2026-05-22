@@ -11,10 +11,6 @@ export const metadata: Metadata = {
 
 
 export default function Page() {
-  const conTit = (text: string) => (
-    <h3 style={{ textAlign: 'center', fontSize: 28, fontWeight: 700, color: '#222', marginBottom: 20 }}>{text}</h3>
-  )
-  const titLine = <div style={{ width: 1, height: 40, background: '#bbb', margin: '0 auto 40px' }} />
   return (
     <>
       <SiteSubVisual title="더드림 보호프로그램" site="law" bgImage="/law/mn02/img/sub_vs02.jpg" />
@@ -23,8 +19,8 @@ export default function Page() {
       <div id="contents">
         {/* ── Section 1: 더드림 보호프로그램 ── */}
         <div style={{ maxWidth: 1300, margin: '0 auto', padding: '80px 20px 60px' }}>
-          {conTit('더드림 보호프로그램')}
-          {titLine}
+          <h3 style={{ textAlign: 'center', fontSize: 28, fontWeight: 700, color: '#222', marginBottom: 20 }}>더드림 보호프로그램</h3>
+          <div style={{ width: 1, height: 40, background: '#bbb', margin: '0 auto 40px' }} />
 
           {/* 변호사 팀 사진 */}
           <div style={{ width: '100%', height: 300, overflow: 'hidden', borderRadius: 4, marginBottom: 40 }}>
@@ -146,8 +142,8 @@ export default function Page() {
         {/* ── Section 2: 보호 프로그램 과정 ── */}
         <div style={{ background: '#f4f3f2', padding: '80px 20px' }}>
           <div style={{ maxWidth: 1300, margin: '0 auto' }}>
-            {conTit('보호 프로그램 과정')}
-            {titLine}
+            <h3 style={{ textAlign: 'center', fontSize: 28, fontWeight: 700, color: '#222', marginBottom: 20 }}>보호 프로그램 과정</h3>
+            <div style={{ width: 1, height: 40, background: '#bbb', margin: '0 auto 40px' }} />
 
             <div style={{ display: 'flex', justifyContent: 'center', gap: 0, alignItems: 'center' }}>
               {[

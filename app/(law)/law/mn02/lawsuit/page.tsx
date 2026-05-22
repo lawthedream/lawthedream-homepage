@@ -21,10 +21,6 @@ const sTxt: object = { fontSize: 16, fontWeight: 300, color: '#444', lineHeight:
 const sep: object = { borderTop: '1px solid #ddd', margin: '18px 0' }
 
 export default function Page() {
-  const conTit = (text: string) => (
-    <h3 style={{ textAlign: 'center', fontSize: 28, fontWeight: 700, color: '#222', marginBottom: 20 }}>{text}</h3>
-  )
-  const titLine = <div style={{ width: 1, height: 40, background: '#bbb', margin: '0 auto 40px' }} />
   return (
     <>
       <SiteSubVisual title="보험소송 / 합의" site="law" bgImage="/law/mn02/img/sub_vs02.jpg" />
@@ -33,8 +29,8 @@ export default function Page() {
       <div id="contents">
         {/* ── Section 1: 합의 Key Point ── */}
         <div style={{ maxWidth: 1300, margin: '0 auto', padding: '80px 20px 60px' }}>
-          {conTit('합의 key point')}
-          {titLine}
+          <h3 style={{ textAlign: 'center', fontSize: 28, fontWeight: 700, color: '#222', marginBottom: 20 }}>합의 key point</h3>
+          <div style={{ width: 1, height: 40, background: '#bbb', margin: '0 auto 40px' }} />
 
           <div style={cardStyle}>
             <div style={{ display: 'flex', gap: 32, alignItems: 'flex-start' }}>
@@ -65,8 +61,8 @@ export default function Page() {
 
         {/* ── Section 2: 소외합의 ── */}
         <div style={{ maxWidth: 1300, margin: '0 auto', padding: '0 20px 80px' }}>
-          {conTit('소외합의')}
-          {titLine}
+          <h3 style={{ textAlign: 'center', fontSize: 28, fontWeight: 700, color: '#222', marginBottom: 20 }}>소외합의</h3>
+          <div style={{ width: 1, height: 40, background: '#bbb', margin: '0 auto 40px' }} />
 
           <table style={{ width: '100%', borderCollapse: 'collapse', borderTop: '2px solid #222', borderBottom: '2px solid #222', fontSize: 16 }}>
             <tbody>
@@ -110,8 +106,8 @@ export default function Page() {
         {/* ── Section 3: 합의절차 ── */}
         <div style={{ background: '#f4f3f2', padding: '80px 20px' }}>
           <div style={{ maxWidth: 1300, margin: '0 auto' }}>
-            {conTit('합의절차')}
-            {titLine}
+            <h3 style={{ textAlign: 'center', fontSize: 28, fontWeight: 700, color: '#222', marginBottom: 20 }}>합의절차</h3>
+            <div style={{ width: 1, height: 40, background: '#bbb', margin: '0 auto 40px' }} />
 
             {/* 플로우차트 */}
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexWrap: 'wrap', gap: 0 }}>

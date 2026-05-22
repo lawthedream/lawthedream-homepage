@@ -22,10 +22,6 @@ const sTxt: object = { fontSize: 16, fontWeight: 300, color: '#444', lineHeight:
 const sep: object = { borderTop: '1px solid #ddd', margin: '18px 0' }
 
 export default function Page() {
-  const conTit = (text: string) => (
-    <h3 style={{ textAlign: 'center', fontSize: 28, fontWeight: 700, color: '#222', marginBottom: 20 }}>{text}</h3>
-  )
-  const titLine = <div style={{ width: 1, height: 40, background: '#bbb', margin: '0 auto 40px' }} />
   return (
     <>
       <SiteSubVisual title="민식이법" site="law" bgImage="/law/mn02/img/sub_vs02.jpg" />
@@ -34,8 +30,8 @@ export default function Page() {
       <div id="contents">
         {/* ── Section 1: Key Point ── */}
         <div style={{ maxWidth: 1300, margin: '0 auto', padding: '80px 20px 60px' }}>
-          {conTit('민식이법 key point')}
-          {titLine}
+          <h3 style={{ textAlign: 'center', fontSize: 28, fontWeight: 700, color: '#222', marginBottom: 20 }}>민식이법 key point</h3>
+          <div style={{ width: 1, height: 40, background: '#bbb', margin: '0 auto 40px' }} />
 
           {/* Key point card with hammer bg image */}
           <div style={{ ...cardStyle, position: 'relative', overflow: 'hidden', minHeight: 300 }}>
@@ -61,8 +57,8 @@ export default function Page() {
 
         {/* ── Section 2: 스쿨존사고 민식이법 ── */}
         <div style={{ maxWidth: 1300, margin: '0 auto', padding: '0 20px 80px' }}>
-          {conTit('스쿨존사고 - 민식이법')}
-          {titLine}
+          <h3 style={{ textAlign: 'center', fontSize: 28, fontWeight: 700, color: '#222', marginBottom: 20 }}>스쿨존사고 - 민식이법</h3>
+          <div style={{ width: 1, height: 40, background: '#bbb', margin: '0 auto 40px' }} />
 
           <div style={cardStyle}>
             <div style={{ display: 'flex', gap: 32, alignItems: 'flex-start' }}>
@@ -93,8 +89,8 @@ export default function Page() {
 
         {/* ── Section 3: 민식이법 법안 ── */}
         <div style={{ maxWidth: 1300, margin: '0 auto', padding: '0 20px 80px' }}>
-          {conTit('민식이법 법안')}
-          {titLine}
+          <h3 style={{ textAlign: 'center', fontSize: 28, fontWeight: 700, color: '#222', marginBottom: 20 }}>민식이법 법안</h3>
+          <div style={{ width: 1, height: 40, background: '#bbb', margin: '0 auto 40px' }} />
 
           <table style={{ width: '100%', borderCollapse: 'collapse', borderTop: '2px solid #222', borderBottom: '2px solid #222', fontSize: 16, marginBottom: 32 }}>
             <tbody>
@@ -152,8 +148,8 @@ export default function Page() {
         {/* ── Section 4: 민식이법 형량 ── */}
         <div style={{ background: '#f4f3f2', padding: '80px 20px' }}>
           <div style={{ maxWidth: 1300, margin: '0 auto' }}>
-            {conTit('민식이법 형량')}
-            {titLine}
+            <h3 style={{ textAlign: 'center', fontSize: 28, fontWeight: 700, color: '#222', marginBottom: 20 }}>민식이법 형량</h3>
+            <div style={{ width: 1, height: 40, background: '#bbb', margin: '0 auto 40px' }} />
 
             <div style={{ display: 'flex', gap: 40, justifyContent: 'center', alignItems: 'flex-start', flexWrap: 'wrap' }}>
               {/* 형량 원 */}
