@@ -1,75 +1,68 @@
-import type { Metadata } from 'next'
-import SiteSubVisual from '@/components/SiteSubVisual'
 import LawNavTabs from '@/components/LawNavTabs'
 
-export const metadata: Metadata = {
-  title: '피의자/피고인 | 더드림교통형사센터',
-  description: '피의자·피고인을 위한 형사 변호 안내. 즉시 상담 02-6959-5053.',
-  keywords: '피의자,피고인,형사변호',
-  alternates: { canonical: 'https://www.lawthedream.com/law/mn06/defendant' },
-}
+export const metadata = { title: '피의자/피고인 | 더드림 교통형사센터' }
 
-const badge = (text: string, color = '#bf8553'): object => ({
-  display: 'inline-block', background: color, color: '#fff',
-  padding: '7px 22px', borderRadius: 30, fontSize: 16, fontWeight: 500, marginBottom: 18,
-})
-const conTit = (text: string) => (
-  <h3 style={{ textAlign: 'center', fontSize: 28, fontWeight: 700, color: '#222', marginBottom: 20 }}>{text}</h3>
-)
-const titLine = (
-  <div style={{ width: 1, height: 40, background: '#bbb', margin: '0 auto 40px' }} />
-)
-const sTxt: object = { fontSize: 16, fontWeight: 300, color: '#444', lineHeight: 1.9, marginBottom: 14 }
-const sep: object = { borderTop: '1px solid #ddd', margin: '18px 0' }
-
-export default function Page() {
+export default function DefendantPage() {
+  const current = '/law/mn06/defendant'
   return (
-    <>
-      <SiteSubVisual title="피의자 / 피고인" site="law" bgImage="/law/mn06/img/sub_vs06.jpg" />
-      <LawNavTabs current="/law/mn06/defendant" />
+    <div id="content_wrap">
+      <div id="sub_visual">
+        <img src="/law/mn06/img/sub_vs06.jpg" alt="" style={{ width: '100%' }} />
+        <div className="visual_text" style={{ top: '47%' }}>
+          <h2>피의자/피고인</h2>
+        </div>
+      </div>
+
+      <LawNavTabs current={current} />
 
       <div id="contents">
-        <div style={{ maxWidth: 1300, margin: '0 auto', padding: '80px 20px 60px' }}>
-          {conTit('피의자 / 피고인 지원')}
-          {titLine}
-
-          <div style={{ border: '1px solid #e2e2e2', borderRadius: 4, padding: '36px 40px', marginBottom: 24, background: '#fff' }}>
-            <div style={{ display: 'flex', gap: 32, alignItems: 'flex-start' }}>
-              <div style={{ flexShrink: 0, width: 480, height: 240, overflow: 'hidden', borderRadius: 4 }}>
-                <img src="/law/mn06/img/mn06_02_img1.jpg" alt="피의자 변호"
-                  style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center' }} />
-              </div>
-              <div style={{ flex: 1, minWidth: 0 }}>
-                <span style={badge('피의자')}>피의자</span>
-                <p style={{ fontSize: 17, fontWeight: 500, color: '#222', lineHeight: 1.8, marginBottom: 12 }}>
-                  피의자란 범죄의 혐의를 받아 수사기관(경찰·검찰)에서 조사를 받는 사람을 말합니다. 수사 단계에서의 진술은 이후 재판에서 중요한 증거로 사용되므로 초기 대응이 매우 중요합니다.
-                </p>
-                <div style={sep} />
-                <p style={sTxt}>피의자 신문 시 진술 거부권(묵비권)이 있으며, 변호인의 조력을 받을 권리가 있습니다. 특히 불리한 진술은 나중에 번복하기 매우 어려우므로 경찰 출석 전 반드시 변호사와 상담하시기 바랍니다.</p>
-              </div>
+        <h3 className="con_tit">더드림의 조력</h3>
+        <div className="tit_line"><img src="/law/images/tit_line.gif" alt="" /></div>
+        <div className="cntbox wd2000">
+          <div className="bg_grey">
+            <div className="wd1300" style={{ padding: '60px 0' }}>
+              <p className="big_txt">수사 단계에서 처음으로 작성되는 피의자 신문조서는 '수사의 첫 단추'와 같습니다.</p>
+              <p className="s_txt">변호인 대동 없이 불리한 진술을 한 경우 후속 절차에서 이를 번복하기가 매우 어렵습니다. 처음부터 변호사의 조력이 필요합니다. 더드림은 수사단계에서 공판단계까지 함께하며 죄가 없음을 입증하여 드릴 것입니다.</p>
             </div>
           </div>
+        </div>
 
-          <div style={{ border: '1px solid #e2e2e2', borderRadius: 4, padding: '36px 40px', background: '#fff' }}>
-            <span style={badge('피고인', '#253d5f')}>피고인</span>
-            <p style={sTxt}>피고인이란 검사로부터 공소가 제기된 사람으로, 기소 이후 재판을 받는 당사자를 말합니다. 공판 절차에서는 공소사실에 대한 방어, 유리한 증거 제출, 증인 신문 등을 통해 적극적으로 방어해야 합니다.</p>
-            <div style={sep} />
-            <div style={{ display: 'flex', gap: 20, flexWrap: 'wrap' }}>
+        <h3 className="con_tit">수사기관 조사 시</h3>
+        <div className="tit_line"><img src="/law/images/tit_line.gif" alt="" /></div>
+        <div className="cntbox wd2000">
+          <div className="wd1300">
+            <div style={{ display: 'flex', gap: 20, flexWrap: 'wrap', margin: '40px 0' }}>
               {[
-                { title: '불구속 재판', desc: '구속 상태에서 재판을 받는 것보다 불구속으로 재판을 받는 것이 유리합니다. 보석 신청 등을 통해 석방을 추진합니다.' },
-                { title: '증거 조사', desc: '검사가 제출한 증거에 대한 반박과 피고인에게 유리한 증거를 적극 수집·제출합니다.' },
-                { title: '최후 진술', desc: '재판의 최후 단계에서 피고인의 반성과 선처를 구하는 진술을 효과적으로 준비합니다.' },
-                { title: '항소·상고', desc: '1심 판결에 불복하는 경우 항소·상고를 통해 더 나은 결과를 도모합니다.' },
-              ].map(({ title, desc }, i) => (
-                <div key={i} style={{ flex: 1, minWidth: 200, padding: '20px', background: '#f7f7f7', borderRadius: 4, borderTop: `3px solid ${i % 2 === 0 ? '#bf8553' : '#253d5f'}` }}>
-                  <p style={{ fontSize: 15, fontWeight: 700, color: '#222', marginBottom: 8 }}>{title}</p>
-                  <p style={{ fontSize: 14, color: '#555', lineHeight: 1.7 }}>{desc}</p>
+                {
+                  icon: '/law/mn06/img/icon01.png',
+                  text: '수사기관의 조사가 익숙하지 않은 의뢰인은 수사관의 추궁이나 고압적인 태도를 보일 때 불안, 초조감을 느껴 불리한 진술을 할 수 있습니다. 더드림은 수사기관과의 원만한 커뮤니케이션을 통하여 적극적으로 의뢰인의 입장을 피력할 수 있으며, 불필요한 진술로 수사과정을 그르치지 않도록 만들어 드립니다.'
+                },
+                {
+                  icon: '/law/mn06/img/icon02.png',
+                  text: '의뢰인은 자신에게 유리한 증거 수집이 현실적으로 어려운면이 많습니다. 실제 증거를 발견해도 의뢰인에게 유리한지 법적으로 판단하기도 쉽지 않습니다. 증거수집을 위해 팀을 운영하여 수사기관을 설득시킬 증거를 수집함으로 의뢰인을 지켜드릴 것입니다.'
+                },
+                {
+                  icon: '/law/mn06/img/icon03.png',
+                  text: '수사기관과의 원활한 커뮤니케이션은 매우 중요합니다. 더드림은 객관적인 자료와 합리적인 법리검토를 바탕으로 소통하며 사건초기부터 상황 및 변론 방향을 긴밀히 협의하여 의뢰인의 요구에 부합하는 법률서비스를 제공해드릴 것입니다.'
+                },
+              ].map((item, idx) => (
+                <div key={idx} style={{ flex: 1, minWidth: 280, background: '#f7f7f7', padding: 30, textAlign: 'center' }}>
+                  <img src={item.icon} alt="" style={{ marginBottom: 20 }} />
+                  <p className="s_txt" style={{ textAlign: 'left' }}>{item.text}</p>
                 </div>
               ))}
             </div>
           </div>
         </div>
+
+        <h3 className="con_tit">공판단계 진행 시</h3>
+        <div className="tit_line"><img src="/law/images/tit_line.gif" alt="" /></div>
+        <div className="cntbox wd2000">
+          <div className="wd1300">
+            <img src="/law/mn06/img/mn06_02_img1.jpg" alt="공판단계" style={{ width: '100%' }} />
+          </div>
+        </div>
       </div>
-    </>
+    </div>
   )
 }

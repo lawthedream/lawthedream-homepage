@@ -1,79 +1,58 @@
-import type { Metadata } from 'next'
-import SiteSubVisual from '@/components/SiteSubVisual'
 import LawNavTabs from '@/components/LawNavTabs'
 
-export const metadata: Metadata = {
-  title: '일반형사 | 더드림교통형사센터',
-  description: '일반 형사사건 전문 변호사. 무죄·집행유예·감형 전략. 02-6959-5053.',
-  keywords: '일반형사,형사변호사,형사사건',
-  alternates: { canonical: 'https://www.lawthedream.com/law/mn05/general' },
-}
+export const metadata = { title: '일반형사 | 더드림 교통형사센터' }
 
-const badge = (text: string, color = '#bf8553'): object => ({
-  display: 'inline-block', background: color, color: '#fff',
-  padding: '7px 22px', borderRadius: 30, fontSize: 16, fontWeight: 500, marginBottom: 18,
-})
-const conTit = (text: string) => (
-  <h3 style={{ textAlign: 'center', fontSize: 28, fontWeight: 700, color: '#222', marginBottom: 20 }}>{text}</h3>
-)
-const titLine = (
-  <div style={{ width: 1, height: 40, background: '#bbb', margin: '0 auto 40px' }} />
-)
-const sTxt: object = { fontSize: 16, fontWeight: 300, color: '#444', lineHeight: 1.9, marginBottom: 14 }
-const sep: object = { borderTop: '1px solid #ddd', margin: '18px 0' }
-
-export default function Page() {
+export default function GeneralPage() {
+  const current = '/law/mn05/general'
   return (
-    <>
-      <SiteSubVisual title="일반형사" site="law" bgImage="/law/mn05/img/sub_vs05.jpg" />
-      <LawNavTabs current="/law/mn05/general" />
+    <div id="content_wrap">
+      <div id="sub_visual">
+        <img src="/law/mn05/img/sub_vs05.jpg" alt="" style={{ width: '100%' }} />
+        <div className="visual_text" style={{ top: '47%' }}>
+          <h2>일반형사</h2>
+        </div>
+      </div>
+
+      <LawNavTabs current={current} />
 
       <div id="contents">
-        <div style={{ maxWidth: 1300, margin: '0 auto', padding: '80px 20px 60px' }}>
-          {conTit('일반형사 key point')}
-          {titLine}
-
-          <div style={{ border: '1px solid #e2e2e2', borderRadius: 4, padding: '36px 40px', marginBottom: 24, background: '#fff' }}>
-            <div style={{ display: 'flex', gap: 32, alignItems: 'flex-start' }}>
-              <div style={{ flexShrink: 0, width: 460, height: 240, overflow: 'hidden', borderRadius: 4 }}>
-                <img src="/law/mn05/img/mn05_01_img1.jpg" alt="형사 법률"
-                  style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center' }} />
-              </div>
-              <div style={{ flex: 1, minWidth: 0 }}>
-                <span style={badge('일반형사')}>일반형사</span>
-                <p style={{ fontSize: 17, fontWeight: 500, color: '#222', lineHeight: 1.8, marginBottom: 12 }}>
-                  형사사건은 국가가 범죄 행위에 대하여 형벌권을 행사하는 절차입니다. 수사 개시부터 기소, 공판, 선고까지 각 단계에서 전문 변호사의 조력이 필수적입니다.
-                </p>
-                <div style={sep} />
-                <p style={sTxt}>형사사건에서 변호인의 조력을 받을 권리는 헌법상 기본권입니다. 초기 수사 단계에서부터 변호인의 도움을 받는 것이 유리한 결과를 이끌어내는 데 매우 중요합니다.</p>
-              </div>
+        <h3 className="con_tit">일반형사 key point</h3>
+        <div className="tit_line"><img src="/law/images/tit_line.gif" alt="" /></div>
+        <div className="cntbox wd2000">
+          <div className="bg_grey">
+            <div className="wd1300">
+              <p className="big_txt">형사사건은 민사사건과 달리 경찰 및 검찰의 수사 및 공소제기, 재판, 형집행의 일련의 과정으로 진행이 되는데, 수사 초기부터 어떻게 방향을 잡고 대응하는지에 따라 향후 결과가 크게 달라질 수 있는바 경험 많은 형사전담변호사의 조력을 받는 것이 중요합니다.</p>
+              <p className="s_txt">더드림은 고소·고발을 당하고 어떻게 대응할지 몰라 고민하고 있는 분들, 불기소처분으로 종결될 것을 예상하고 있던 사건에서 공소제기로 당황하고 있는 분들, 피해를 입고 고소·고발을 하고 싶지만 형사절차를 잘 몰라서 도움이 필요한 분들에게 형사전담변호사가 풍부한 경험을 바탕으로 신속하고 적절한 대응방안을 찾아드리고 있습니다.</p>
             </div>
           </div>
+        </div>
 
-          <div style={{ border: '1px solid #e2e2e2', borderRadius: 4, padding: '36px 40px', marginBottom: 24, background: '#fff' }}>
-            <div style={{ display: 'flex', gap: 32, alignItems: 'flex-start' }}>
-              <div style={{ flex: 1, minWidth: 0 }}>
-                <span style={badge('더드림의 형사변호 전략', '#253d5f')}>더드림의 형사변호 전략</span>
-                {[
-                  { t: '무죄 주장', d: '혐의 사실이 없거나 증거가 불충분한 경우 적극적으로 무죄를 다툽니다.' },
-                  { t: '집행유예 획득', d: '실형을 피하고 집행유예를 받을 수 있도록 양형 전략을 수립합니다.' },
-                  { t: '감형 전략', d: '피해자와의 합의, 진지한 반성, 사회적 유대관계 등을 적극 활용합니다.' },
-                  { t: '구속 방지', d: '영장심사 단계에서 구속을 막아 불구속 수사·재판을 진행합니다.' },
-                ].map(({ t, d }, i) => (
-                  <div key={i} style={{ marginBottom: 16, padding: '16px 20px', background: '#f7f7f7', borderRadius: 4, borderLeft: '4px solid #bf8553' }}>
-                    <p style={{ fontSize: 15, fontWeight: 600, color: '#222', marginBottom: 6 }}>{t}</p>
-                    <p style={{ fontSize: 14, color: '#555' }}>{d}</p>
-                  </div>
-                ))}
-              </div>
-              <div style={{ flexShrink: 0, width: 300, height: 360, overflow: 'hidden', borderRadius: 4 }}>
-                <img src="/law/mn05/img/mn05_01_img2.jpg" alt="정의의 여신"
-                  style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center' }} />
-              </div>
+        <h3 className="con_tit">일반 형사사건 유형</h3>
+        <div className="tit_line"><img src="/law/images/tit_line.gif" alt="" /></div>
+        <div className="cntbox wd2000">
+          <div className="wd1300">
+            <img src="/law/mn05/img/mn05_01_img1.jpg" alt="일반 형사사건 유형" style={{ width: '100%' }} />
+          </div>
+        </div>
+
+        <h3 className="con_tit">형사소송</h3>
+        <div className="tit_line"><img src="/law/images/tit_line.gif" alt="" /></div>
+        <div className="cntbox wd2000">
+          <div className="wd1300">
+            <div style={{ overflow: 'hidden' }}>
+              <ul style={{ overflow: 'hidden' }}>
+                <li style={{ float: 'left', width: 596 }}>
+                  <img src="/law/mn05/img/mn05_01_img2.jpg" alt="" />
+                </li>
+                <li style={{ float: 'left', width: 640, padding: '46px 30px', backgroundColor: '#f7f7f7', textAlign: 'left' }}>
+                  <p className="big_txt">형사소송은 형법의 구체적 실현을 위하여 범죄의 수사개시로부터 체포·구금·압수·수색과 공소의 제기, 변호인의 선임, 모두절차·증인신문·증거물 및 증거서류의 조사·감정, 논고·구형·최종변론·최후진술, 판결의 선고에 이르기까지 일련의 절차를 거쳐서 범인의 유죄·무죄를 정하는 국가법체계의 일부를 말합니다.</p>
+                  <p className="s_txt">더드림은 다양한 경험과 창의적인 지식으로 형사소송을 진행하고 있습니다. 이미 상담하는 단계에서 의뢰인은 최상의 법률 서비스를 받는 것은 물론이고 법률비용까지 절약할 수 있습니다.</p>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
-    </>
+    </div>
   )
 }

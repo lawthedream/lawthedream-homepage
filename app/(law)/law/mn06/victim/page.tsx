@@ -1,76 +1,64 @@
-import type { Metadata } from 'next'
-import SiteSubVisual from '@/components/SiteSubVisual'
 import LawNavTabs from '@/components/LawNavTabs'
 
-export const metadata: Metadata = {
-  title: '피해자 | 더드림교통형사센터',
-  description: '형사 피해자 법적 권리 보호. 고소·손해배상 전문 지원. 02-6959-5053.',
-  keywords: '형사피해자,고소,피해자변호,손해배상',
-  alternates: { canonical: 'https://www.lawthedream.com/law/mn06/victim' },
-}
+export const metadata = { title: '피해자 | 더드림 교통형사센터' }
 
-const badge = (text: string, color = '#bf8553'): object => ({
-  display: 'inline-block', background: color, color: '#fff',
-  padding: '7px 22px', borderRadius: 30, fontSize: 16, fontWeight: 500, marginBottom: 18,
-})
-const conTit = (text: string) => (
-  <h3 style={{ textAlign: 'center', fontSize: 28, fontWeight: 700, color: '#222', marginBottom: 20 }}>{text}</h3>
-)
-const titLine = (
-  <div style={{ width: 1, height: 40, background: '#bbb', margin: '0 auto 40px' }} />
-)
-const sTxt: object = { fontSize: 16, fontWeight: 300, color: '#444', lineHeight: 1.9, marginBottom: 14 }
-const sep: object = { borderTop: '1px solid #ddd', margin: '18px 0' }
-
-export default function Page() {
+export default function VictimPage() {
+  const current = '/law/mn06/victim'
   return (
-    <>
-      <SiteSubVisual title="피해자 지원" site="law" bgImage="/law/mn06/img/sub_vs06.jpg" />
-      <LawNavTabs current="/law/mn06/victim" />
+    <div id="content_wrap">
+      <div id="sub_visual">
+        <img src="/law/mn06/img/sub_vs06.jpg" alt="" style={{ width: '100%' }} />
+        <div className="visual_text" style={{ top: '47%' }}>
+          <h2>피해자</h2>
+        </div>
+      </div>
+
+      <LawNavTabs current={current} />
 
       <div id="contents">
-        <div style={{ maxWidth: 1300, margin: '0 auto', padding: '80px 20px 60px' }}>
-          {conTit('피해자 지원')}
-          {titLine}
-
-          <div style={{ border: '1px solid #e2e2e2', borderRadius: 4, padding: '36px 40px', marginBottom: 24, background: '#fff' }}>
-            <div style={{ display: 'flex', gap: 32, alignItems: 'flex-start' }}>
-              <div style={{ flexShrink: 0, width: 500, height: 200, overflow: 'hidden', borderRadius: 4 }}>
-                <img src="/law/mn06/img/mn06_03_img1.jpg" alt="피해자 지원"
-                  style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center' }} />
-              </div>
-              <div style={{ flex: 1, minWidth: 0 }}>
-                <span style={badge('피해자의 권리')}>피해자의 권리</span>
-                <p style={{ fontSize: 17, fontWeight: 500, color: '#222', lineHeight: 1.8, marginBottom: 12 }}>
-                  범죄 피해자는 단순히 피해를 입은 사람이 아니라 형사 절차에서 중요한 역할을 하는 당사자입니다. 피해자의 권리를 적극 행사하여 정당한 보상과 처벌을 이끌어낼 수 있습니다.
-                </p>
-                <div style={sep} />
-                <p style={sTxt}>피해자는 고소권, 수사 진행상황 통보 요청권, 공판 열람·등사권, 의견 진술권, 배상명령 신청권 등 다양한 권리를 가집니다.</p>
-              </div>
+        <h3 className="con_tit">더드림의 조력</h3>
+        <div className="tit_line"><img src="/law/images/tit_line.gif" alt="" /></div>
+        <div className="cntbox wd2000">
+          <div className="bg_grey">
+            <div className="wd1300" style={{ padding: '60px 0' }}>
+              <p className="big_txt">고소장 작성에서부터 증거수집까지, 수사과정과 재판과정에서의 변호까지.</p>
+              <p className="s_txt">더드림은 사건 관련자들이 수사과정에서 공판단계까지 어떻게 대처하고 무엇을 해야 하는지 체계적으로 설명드리고 과정을 진행합니다. 특히 형사 소송의 첫단계는 고소 및 고발로부터 시작하게 되는 만큼 이에 대한 법리적인 해석과 사실관계를 정확하게 분석해 드립니다. 또한 의뢰인 혼자 증거를 수집한다는 것은 현실적으로 어렵기에 이에 대해서 과학적이고 체계적인 방법으로 의뢰인에게 유리한 증거를 수집해드릴 것입니다.</p>
             </div>
           </div>
+        </div>
 
-          <div style={{ background: '#f4f3f2', padding: '40px', borderRadius: 4 }}>
-            <p style={{ textAlign: 'center', fontSize: 20, fontWeight: 600, color: '#253d5f', marginBottom: 30 }}>더드림의 피해자 지원 서비스</p>
-            <div style={{ display: 'flex', gap: 20, flexWrap: 'wrap', justifyContent: 'center' }}>
+        <h3 className="con_tit">수사기관 조사 시</h3>
+        <div className="tit_line"><img src="/law/images/tit_line.gif" alt="" /></div>
+        <div className="cntbox wd2000">
+          <div className="wd1300">
+            <div style={{ display: 'flex', gap: 20, flexWrap: 'wrap', margin: '40px 0' }}>
               {[
-                { num: '01', title: '고소장 작성', desc: '철저한 사실 조사와 법적 분석을 바탕으로 강력한 고소장을 작성합니다.' },
-                { num: '02', title: '수사 지원', desc: '수사기관 조사 동행, 증거 수집, 유리한 진술 준비를 지원합니다.' },
-                { num: '03', title: '손해배상 청구', desc: '형사 절차와 병행하여 민사상 손해배상 청구를 진행합니다.' },
-                { num: '04', title: '2차 피해 방지', desc: '피해자의 개인정보 보호와 2차 피해 방지를 위한 법적 조치를 취합니다.' },
-              ].map(({ num, title, desc }) => (
-                <div key={num} style={{ flex: 1, minWidth: 220, background: '#fff', borderRadius: 8, padding: '28px 24px', textAlign: 'center', boxShadow: '0 4px 14px rgba(0,0,0,0.08)' }}>
-                  <div style={{ width: 50, height: 50, borderRadius: '50%', background: '#bf8553', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 16px' }}>
-                    <span style={{ color: '#fff', fontSize: 16, fontWeight: 700 }}>{num}</span>
-                  </div>
-                  <p style={{ fontSize: 16, fontWeight: 700, color: '#222', marginBottom: 10 }}>{title}</p>
-                  <p style={{ fontSize: 14, color: '#555', lineHeight: 1.7 }}>{desc}</p>
+                {
+                  icon: '/law/mn06/img/icon01.png',
+                  text: '고소사건의 경우라면 피의자와 범죄 피해자 사이에 원만한 형사 분쟁 해결이 필요하게 됩니다. 검사의 직권 또는 피의자나 피해자의 신청을 통하여 수사중인 형사사건을 형사조정에 회부할 수 있습니다. 더드림은 피해자를 대신해 적정한 합의 금액을 판단하고 제시하며 금액 조정을 통해 불이익을 최소화합니다.'
+                },
+                {
+                  icon: '/law/mn06/img/icon02.png',
+                  text: '수사기관에서는 고소장을 통해서 기본적인 사실관계를 파악한 후 진술 확보를 위하여 출석을 요구합니다. 피해자 입장에서는 상대방의 범죄를 밝혀야 하므로 불리한 진술은 최대한 피해야 합니다. 더드림의 변호인은 의뢰인과 함께 동석하여 안정된 상태에서 조언과 상담을 받아가며 진술을 할 수 있도록 도와드릴 것입니다.'
+                },
+              ].map((item, idx) => (
+                <div key={idx} style={{ flex: 1, minWidth: 280, background: '#f7f7f7', padding: 30, textAlign: 'center' }}>
+                  <img src={item.icon} alt="" style={{ marginBottom: 20 }} />
+                  <p className="s_txt" style={{ textAlign: 'left' }}>{item.text}</p>
                 </div>
               ))}
             </div>
           </div>
         </div>
+
+        <h3 className="con_tit">재판단계 진행 시</h3>
+        <div className="tit_line"><img src="/law/images/tit_line.gif" alt="" /></div>
+        <div className="cntbox wd2000">
+          <div className="wd1300">
+            <img src="/law/mn06/img/mn06_03_img1.jpg" alt="재판단계" style={{ width: '100%' }} />
+          </div>
+        </div>
       </div>
-    </>
+    </div>
   )
 }

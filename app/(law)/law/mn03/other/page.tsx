@@ -1,93 +1,132 @@
-import type { Metadata } from 'next'
-import SiteSubVisual from '@/components/SiteSubVisual'
 import LawNavTabs from '@/components/LawNavTabs'
 
-export const metadata: Metadata = {
-  title: '기타 성범죄 | 더드림교통형사센터',
-  description: '통신매체이용음란, 카메라불법촬영 등 기타 성범죄 전문 변호사. 02-6959-5053.',
-  keywords: '기타성범죄,통신매체이용음란,불법촬영,성범죄변호사',
-  alternates: { canonical: 'https://www.lawthedream.com/law/mn03/other' },
-}
+export const metadata = { title: '기타 성범죄 | 더드림 교통형사센터' }
 
-const badge = (text: string, color = '#bf8553'): object => ({
-  display: 'inline-block', background: color, color: '#fff',
-  padding: '7px 22px', borderRadius: 30, fontSize: 16, fontWeight: 500, marginBottom: 18,
-})
-const conTit = (text: string) => (
-  <h3 style={{ textAlign: 'center', fontSize: 28, fontWeight: 700, color: '#222', marginBottom: 20 }}>{text}</h3>
-)
-const titLine = (
-  <div style={{ width: 1, height: 40, background: '#bbb', margin: '0 auto 40px' }} />
-)
-const cardStyle: object = { border: '1px solid #e2e2e2', borderRadius: 4, padding: '36px 40px', marginBottom: 24, background: '#fff' }
-const sTxt: object = { fontSize: 16, fontWeight: 300, color: '#444', lineHeight: 1.9, marginBottom: 14 }
-const sep: object = { borderTop: '1px solid #ddd', margin: '18px 0' }
-
-export default function Page() {
+export default function OtherSexCrimePage() {
+  const current = '/law/mn03/other'
   return (
-    <>
-      <SiteSubVisual title="기타 성범죄" site="law" bgImage="/law/mn03/img/sub_vs03.jpg" />
-      <LawNavTabs current="/law/mn03/other" />
+    <div id="content_wrap">
+      <div id="sub_visual">
+        <img src="/law/mn03/img/sub_vs03.jpg" alt="" style={{ width: '100%' }} />
+        <div className="visual_text" style={{ top: '47%' }}>
+          <h2>기타 성범죄</h2>
+        </div>
+      </div>
+
+      <LawNavTabs current={current} />
 
       <div id="contents">
-        <div style={{ maxWidth: 1300, margin: '0 auto', padding: '80px 20px 60px' }}>
-          {conTit('기타 성범죄 key point')}
-          {titLine}
-
-          <div style={cardStyle}>
-            <div style={{ display: 'flex', gap: 32, alignItems: 'flex-start' }}>
-              <div style={{ flexShrink: 0, width: 300, height: 300, overflow: 'hidden', borderRadius: 4 }}>
-                <img src="/law/mn03/img/mn03_04_img1.jpg" alt="통신매체이용음란"
-                  style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center' }} />
+        {/* 성매매 */}
+        <h3 className="con_tit">성매매</h3>
+        <div className="tit_line"><img src="/law/images/tit_line.gif" alt="" /></div>
+        <div className="cntbox wd2000">
+          <div style={{ overflow: 'hidden', background: '#fff' }}>
+            <div className="wd1300">
+              <div style={{ display: 'flex', marginBottom: 80 }}>
+                <div style={{ width: '51%', height: 386, background: 'url(/law/mn03/img/mn03_04_img1.jpg) no-repeat center', backgroundSize: 'cover', flexShrink: 0 }} />
+                <div style={{ padding: '40px 50px', textAlign: 'left' }}>
+                  <p style={{ fontSize: 25, fontWeight: 400, color: '#222', marginBottom: 20 }}>성매매</p>
+                  <p style={{ fontSize: 17, lineHeight: '28px', color: '#222' }}>불특정인을 상대로 금품이나 그 밖의 재산상의 이익을 주고받거나 주고받기로 약속하고 성교 행위 또는 유사 성교 행위를 하는 것, 또는 그 상대방이 되는 것입니다. 절대적으로 성매매를 금지하고 있는 사회적 분위기 속에서도 성매매사건은 줄어들지 않고 있습니다. 오히려 인터넷 기술이 발전하면서 어플 등 매체를 통해 성매매를 행하는 은밀한 방법이 급증하고 있습니다.</p>
+                </div>
               </div>
-              <div style={{ flex: 1, minWidth: 0 }}>
-                <span style={badge('통신매체이용음란')}>통신매체이용음란</span>
-                <p style={{ fontSize: 17, fontWeight: 500, color: '#222', lineHeight: 1.8, marginBottom: 12 }}>
-                  자신 또는 다른 사람의 성적 욕망을 유발하거나 만족시킬 목적으로 전화, 문자, 영상 등 통신매체를 통해 성적 수치심이나 혐오감을 일으키는 말, 음향, 글, 그림, 영상 등을 상대방에게 도달하게 한 경우 처벌받습니다.
-                </p>
-                <div style={sep} />
-                <p style={sTxt}>
-                  성폭력범죄의 처벌 등에 관한 특례법 제13조에 의해 2년 이하의 징역 또는 2,000만원 이하의 벌금에 처해지며, 신상정보 등록 및 취업제한 명령이 병과될 수 있습니다.
-                </p>
+              <div style={{ background: '#f4f3f2', padding: '40px 0', display: 'flex', gap: 20, flexWrap: 'wrap' }}>
+                <div style={{ flex: 1, background: '#fff', borderRadius: 20, padding: '30px 40px', boxShadow: '0 8px 15px rgba(0,0,0,0.2)', minWidth: 280 }}>
+                  <p className="big_txt"><b>성매매 혐의 대응요령</b></p>
+                  <hr style={{ border: 'none', borderTop: '1px solid #becad2', margin: '10px 0' }} />
+                  <p className="s_txt">한 순간의 실수, 호기심으로 성매매를 했지만 대처에 대한 안일한 생각은 사건을 더욱 키우는 지름길이 될 수 있습니다. 성매매는 기소의 여부가 정해지는 검찰 수사로 넘어가기 전 단계인 경찰수사초기부터 도움을 받아 확실한 대처를 하는 것이 좋습니다. 성매매 초범인 경우 충분한 반성태도와 재범 발생의 가능성이 없음을 적극적으로 표현해야 합니다.</p>
+                </div>
+                <div style={{ flex: 1, background: '#fff', borderRadius: 20, padding: '30px 40px', boxShadow: '0 8px 15px rgba(0,0,0,0.2)', minWidth: 280 }}>
+                  <p className="big_txt"><b>성매매 성립요건</b></p>
+                  <hr style={{ border: 'none', borderTop: '1px solid #becad2', margin: '10px 0' }} />
+                  <p className="s_txt">성매매는 메시지, 업소의 CCTV, 결제내역 등 상대적으로 객관적인 증거를 많이 남기게 되므로 신중한 대처가 요구됩니다.</p>
+                </div>
               </div>
             </div>
           </div>
+        </div>
 
-          <div style={cardStyle}>
-            <span style={badge('카메라 등 이용 촬영 (불법촬영)', '#253d5f')}>카메라 등 이용 촬영 (불법촬영)</span>
-            <p style={sTxt}>
-              카메라나 그 밖에 이와 유사한 기능을 갖춘 기계장치를 이용하여 성적 욕망 또는 수치심을 유발할 수 있는 사람의 신체를 촬영 대상자의 의사에 반하여 촬영한 경우 처벌받습니다.
-            </p>
-            <div style={sep} />
-            <table style={{ width: '100%', borderCollapse: 'collapse', borderTop: '2px solid #222', borderBottom: '2px solid #222', fontSize: 15, marginTop: 16 }}>
-              <tbody>
-                {[
-                  ['불법촬영', '7년 이하의 징역 또는 5,000만원 이하의 벌금'],
-                  ['촬영물 등 반포·판매·제공·공공전시·상영', '7년 이하의 징역 또는 5,000만원 이하의 벌금'],
-                  ['영리 목적 반포·판매·제공·전시·상영', '3년 이상의 유기징역'],
-                  ['촬영물 소지·구입·저장·시청', '3년 이하의 징역 또는 3,000만원 이하의 벌금'],
-                ].map(([left, right], i) => (
-                  <tr key={i}>
-                    <td style={{ width: '40%', padding: '16px 20px', borderBottom: '1px solid #eee', borderRight: '1px solid #ddd', backgroundColor: '#f7f7f7', color: '#333', fontWeight: 500 }}>{left}</td>
-                    <td style={{ padding: '16px 20px', borderBottom: '1px solid #eee', color: '#333' }}>{right}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+        {/* 아청법 위반 */}
+        <h3 className="con_tit">아청법 위반</h3>
+        <div className="tit_line"><img src="/law/images/tit_line.gif" alt="" /></div>
+        <div className="cntbox wd2000">
+          <div style={{ overflow: 'hidden', background: '#fff' }}>
+            <div className="wd1300">
+              <div style={{ display: 'flex', marginBottom: 40 }}>
+                <div style={{ padding: '40px 50px', textAlign: 'left', flex: 1 }}>
+                  <p style={{ fontSize: 25, fontWeight: 400, color: '#222', marginBottom: 20 }}>아청법 위반</p>
+                  <p style={{ fontSize: 17, lineHeight: '28px', color: '#222' }}>아청법위반 사건을 두고 법원의 판결은 엄격합니다. 아청법은 아동과 청소년을 성범죄로부터 보호하기 위한 목적으로 제정됐습니다. 아동과 청소년이 건강한 사회 구성원으로 성장할 수 있는 환경을 만들고자 특별히 제정된 만큼 일반 형법보다 우선하여 위 법조가 적용됩니다.</p>
+                </div>
+                <div style={{ width: '51%', height: 386, background: 'url(/law/mn03/img/mn03_04_img2.jpg) no-repeat center', backgroundSize: 'cover', flexShrink: 0 }} />
+              </div>
+              <div style={{ background: '#f4f3f2', padding: '40px 0' }}>
+                <div style={{ background: '#fff', borderRadius: 20, padding: '30px 40px', boxShadow: '0 8px 15px rgba(0,0,0,0.2)' }}>
+                  <p className="big_txt"><b>아청법위반 혐의 대응요령</b></p>
+                  <hr style={{ border: 'none', borderTop: '1px solid #becad2', margin: '10px 0' }} />
+                  <p className="s_txt">아동과 청소년을 대상으로 한 범죄라는 점에서 상황에 맞는 법적대응이 중요합니다. 사회적 약자인 아청법에 대한 대응방법에는 결백하는 무죄만을 주장하는 것보다 피해자와의 합의, 반성을 통해서 사건을 더욱 악화시키지 않는 방법도 존재합니다. 아청법위반의 경우 구속수사가 원칙인 만큼, 짧은 기간 안에 진행되는 구속영장실질심사를 보다 확실하게 대응하려면 지식과 풍부한 경험이 바탕이 되는 전담변호사의 도움이 필요합니다.</p>
+                </div>
+              </div>
+            </div>
           </div>
+        </div>
 
-          <div style={cardStyle}>
-            <span style={badge('성범죄 신상정보 등록')}>성범죄 신상정보 등록</span>
-            <p style={sTxt}>
-              성범죄로 유죄 판결이 확정된 경우 신상정보 등록 대상자가 되어 20년간 개인정보를 등록·관리해야 하며, 취업제한 명령으로 아동·청소년 관련 기관에 10년간 취업이 제한될 수 있습니다.
-            </p>
-            <div style={sep} />
-            <p style={sTxt}>
-              성범죄 사건에서는 신상정보 등록 및 취업제한 등 부수적 불이익을 최소화하기 위한 전략적 대응이 반드시 필요합니다. 전문 변호사의 조력을 통해 최선의 결과를 이끌어 내시기 바랍니다.
-            </p>
+        {/* 카메라등 이용 촬영죄 */}
+        <h3 className="con_tit">카메라등 이용 촬영죄</h3>
+        <div className="tit_line"><img src="/law/images/tit_line.gif" alt="" /></div>
+        <div className="cntbox wd2000">
+          <div style={{ overflow: 'hidden', background: '#fff' }}>
+            <div className="wd1300">
+              <div style={{ display: 'flex', marginBottom: 40 }}>
+                <div style={{ width: '51%', height: 386, background: 'url(/law/mn03/img/mn03_04_img3.jpg) no-repeat center', backgroundSize: 'cover', flexShrink: 0 }} />
+                <div style={{ padding: '40px 50px', textAlign: 'left', flex: 1 }}>
+                  <p style={{ fontSize: 25, fontWeight: 400, color: '#222', marginBottom: 20 }}>카메라등 이용 촬영죄</p>
+                  <p style={{ fontSize: 17, lineHeight: '28px', color: '#222' }}>카메라등 이용 촬영죄는 지하철, 버스와 같은 대중교통에서 가장 많이 발생되는 범죄 중 하나입니다. 성적 수치심 또는 욕망을 유발할 수 있는 신체를 촬영했는가가 주요한 쟁점입니다. 촬영당시에는 의사에 반하지 않았다고 하더라도 추후에 그 의사에 반하여 반포·판매·임대·제공 또는 공공연하게 전시·상영할 경우에도 본 죄는 성립하게 됩니다.</p>
+                </div>
+              </div>
+              <div style={{ background: '#f4f3f2', padding: '40px 0', display: 'flex', gap: 20 }}>
+                <div style={{ flex: 1, background: '#fff', borderRadius: 20, padding: '30px 40px', boxShadow: '0 8px 15px rgba(0,0,0,0.2)' }}>
+                  <p className="big_txt"><b>카메라등 이용 촬영죄 혐의 대응요령</b></p>
+                  <hr style={{ border: 'none', borderTop: '1px solid #becad2', margin: '10px 0' }} />
+                  <p className="s_txt">카메라등 이용 촬영죄는 명백한 증거가 존재합니다. 또한 디지털포렌식으로 인해 여죄까지 밝혀져 유죄 판결로 이어질 가능성도 있습니다. 따라서 관련 혐의를 받았다면 사건 초기에 전담변호사를 선임하여 일관적인 진술 및 법적 대응을 펼치는 것이 현명합니다.</p>
+                </div>
+                <div style={{ flex: 1, background: '#fff', borderRadius: 20, padding: '30px 40px', boxShadow: '0 8px 15px rgba(0,0,0,0.2)' }}>
+                  <p className="big_txt"><b>카메라등이용촬영죄 성립요건</b></p>
+                  <hr style={{ border: 'none', borderTop: '1px solid #becad2', margin: '10px 0' }} />
+                  <p className="s_txt">'성적 욕망 또는 수치심'을 유발시키는 타인의 신체를 촬영했는지가 주요한 쟁점입니다. 따라서 피해자의 옷차림, 노출의 정도, 촬영자의 의도, 촬영에 이르게 된 경위 등을 종합적으로 고려하여 판단하고 있습니다.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* 통신매체 이용 음란죄 */}
+        <h3 className="con_tit">통신매체 이용 음란죄</h3>
+        <div className="tit_line"><img src="/law/images/tit_line.gif" alt="" /></div>
+        <div className="cntbox wd2000">
+          <div style={{ overflow: 'hidden', background: '#fff' }}>
+            <div className="wd1300">
+              <div style={{ display: 'flex', marginBottom: 40 }}>
+                <div style={{ width: '51%', height: 386, background: 'url(/law/mn03/img/mn03_04_img5.jpg) no-repeat center', backgroundSize: 'cover', flexShrink: 0 }} />
+                <div style={{ padding: '40px 50px', textAlign: 'left', flex: 1 }}>
+                  <p style={{ fontSize: 25, fontWeight: 400, color: '#222', marginBottom: 20 }}>통신매체 이용 음란죄</p>
+                  <p style={{ fontSize: 17, lineHeight: '28px', color: '#222' }}>정보 및 통신수단이 첨단화 되면서 이를 악용한 디지털 성범죄가 지속적으로 증가하고있습니다. 점점 늘어가는 관련 범죄에 경찰과 사법당국은 수사강도와 법률 처벌강화 등 노력을 기울이고 있는 상황입니다.</p>
+                </div>
+              </div>
+              <div style={{ background: '#f4f3f2', padding: '40px 0', display: 'flex', gap: 20 }}>
+                <div style={{ flex: 1, background: '#fff', borderRadius: 20, padding: '30px 40px', boxShadow: '0 8px 15px rgba(0,0,0,0.2)' }}>
+                  <p className="big_txt"><b>통신매체 이용 음란죄 혐의 대응요령</b></p>
+                  <hr style={{ border: 'none', borderTop: '1px solid #becad2', margin: '10px 0' }} />
+                  <p className="s_txt">통신매체이용음란죄는 성립의 범위가 매우 넓기에 억울함을 토로하는 피의자들이 많습니다. 성적 욕망 유발이라는 주관적인 정립여부에 대하여 객관적인 법리해석을 적용하기 위해선 법률가의 조력은 필수라 할 수 있습니다.</p>
+                </div>
+                <div style={{ flex: 1, background: '#fff', borderRadius: 20, padding: '30px 40px', boxShadow: '0 8px 15px rgba(0,0,0,0.2)' }}>
+                  <p className="big_txt"><b>통신매체 이용 음란죄 성립요건 및 양형기준</b></p>
+                  <hr style={{ border: 'none', borderTop: '1px solid #becad2', margin: '10px 0' }} />
+                  <p className="s_txt">통신매체를 이용한 음란행위 죄는 자기 또는 다른 사람의 성적 욕망을 유발하거나 만족시킬 목적으로 전화, 우편, 컴퓨터, 그 밖의 통신매체를 통하여 성적 수치심이나 혐오감을 일으키는 말, 음향, 글, 그림, 영상 또는 물건을 상대방에게 도달하게 함으로써 성립합니다.<br /><br /><strong>양형기준: 2년 이하의 징역 또는 2천만원 이하의 벌금</strong></p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </>
+    </div>
   )
 }

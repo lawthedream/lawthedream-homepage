@@ -1,85 +1,80 @@
-import type { Metadata } from 'next'
-import SiteSubVisual from '@/components/SiteSubVisual'
 import LawNavTabs from '@/components/LawNavTabs'
 
-export const metadata: Metadata = {
-  title: '마약범죄 | 더드림교통형사센터',
-  description: '마약 투약·소지·밀수 형사사건 전문. 신속한 대응으로 최선의 결과. 02-6959-5053.',
-  keywords: '마약,마약투약,마약소지,형사변호사',
-  alternates: { canonical: 'https://www.lawthedream.com/law/mn05/drugs' },
-}
+export const metadata = { title: '마약범죄 | 더드림 교통형사센터' }
 
-const badge = (text: string, color = '#bf8553'): object => ({
-  display: 'inline-block', background: color, color: '#fff',
-  padding: '7px 22px', borderRadius: 30, fontSize: 16, fontWeight: 500, marginBottom: 18,
-})
-const conTit = (text: string) => (
-  <h3 style={{ textAlign: 'center', fontSize: 28, fontWeight: 700, color: '#222', marginBottom: 20 }}>{text}</h3>
-)
-const titLine = (
-  <div style={{ width: 1, height: 40, background: '#bbb', margin: '0 auto 40px' }} />
-)
-const sTxt: object = { fontSize: 16, fontWeight: 300, color: '#444', lineHeight: 1.9, marginBottom: 14 }
-const sep: object = { borderTop: '1px solid #ddd', margin: '18px 0' }
-
-export default function Page() {
+export default function DrugsPage() {
+  const current = '/law/mn05/drugs'
   return (
-    <>
-      <SiteSubVisual title="마약범죄" site="law" bgImage="/law/mn05/img/sub_vs05.jpg" />
-      <LawNavTabs current="/law/mn05/drugs" />
+    <div id="content_wrap">
+      <div id="sub_visual">
+        <img src="/law/mn05/img/sub_vs05.jpg" alt="" style={{ width: '100%' }} />
+        <div className="visual_text" style={{ top: '47%' }}>
+          <h2>마약범죄</h2>
+        </div>
+      </div>
+
+      <LawNavTabs current={current} />
 
       <div id="contents">
-        <div style={{ maxWidth: 1300, margin: '0 auto', padding: '80px 20px 60px' }}>
-          {conTit('마약범죄 key point')}
-          {titLine}
+        <h3 className="con_tit">마약범죄 key point</h3>
+        <div className="tit_line"><img src="/law/images/tit_line.gif" alt="" /></div>
+        <div className="cntbox wd2000">
+          <div className="bg_grey">
+            <div className="wd1300">
+              <p className="big_txt">마약사건은 점점 더 증가추세이며 그 유통경로가 다각화되면서 더 많은 수사인력과 처벌 또한 엄중해지고 있습니다.</p>
+            </div>
+          </div>
+        </div>
 
-          <div style={{ border: '1px solid #e2e2e2', borderRadius: 4, padding: '36px 40px', marginBottom: 24, background: '#fff' }}>
-            <div style={{ display: 'flex', gap: 32, alignItems: 'flex-start' }}>
-              <div style={{ flexShrink: 0, width: 420, height: 260, overflow: 'hidden', borderRadius: 4 }}>
-                <img src="/law/mn05/img/mn05_03_img1.jpg" alt="마약 범죄"
-                  style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center' }} />
-              </div>
-              <div style={{ flex: 1, minWidth: 0 }}>
-                <span style={badge('마약범죄')}>마약범죄</span>
-                <p style={{ fontSize: 17, fontWeight: 500, color: '#222', lineHeight: 1.8, marginBottom: 12 }}>
-                  마약류 관련 범죄는 마약류 관리에 관한 법률에 의해 엄격하게 처벌됩니다. 마약류는 마약, 향정신성의약품, 대마로 구분되며, 각각 처벌 수위가 다릅니다.
+        <h3 className="con_tit">마약 검사 결과에 따른 분류</h3>
+        <div className="tit_line"><img src="/law/images/tit_line.gif" alt="" /></div>
+        <div className="cntbox wd2000">
+          <div className="wd1300">
+            <div style={{ display: 'flex', gap: 20, flexWrap: 'wrap', margin: '40px 0' }}>
+              <div style={{ flex: 1, minWidth: 280, background: '#fff', border: '1px solid #ddd', borderTop: '4px solid #234059', padding: 30 }}>
+                <p style={{ fontSize: 20, fontWeight: 600, color: '#234059', marginBottom: 15, display: 'flex', alignItems: 'center', gap: 10 }}>
+                  <img src="/law/mn05/img/yes.png" alt="양성" style={{ width: 30 }} />
+                  마약 양성반응이 예상될 때
                 </p>
-                <div style={sep} />
-                <p style={sTxt}>마약 범죄는 초범이라도 실형이 선고되는 경우가 많고, 전과 기록이 평생 남아 사회적·직업적으로 큰 불이익을 받을 수 있습니다. 조사 초기 단계부터 변호인의 조력을 받는 것이 중요합니다.</p>
+                <p className="s_txt">수사기관은 크로마토그라피/질량분석법에 의한 모발검사에서 마약을 투약한 양이나 기간 등이 정확하게 검출된다고 피의자에게 잘못된 정보를 고의적으로 전달하는 경우가 많습니다. 이러한 상황에서 빠르게 전담변호사의 도움을 받아 정확한 사실 관계를 파악하는 것이 중요합니다.</p>
+              </div>
+              <div style={{ flex: 1, minWidth: 280, background: '#fff', border: '1px solid #ddd', borderTop: '4px solid #8f7863', padding: 30 }}>
+                <p style={{ fontSize: 20, fontWeight: 600, color: '#8f7863', marginBottom: 15, display: 'flex', alignItems: 'center', gap: 10 }}>
+                  <img src="/law/mn05/img/no.png" alt="음성" style={{ width: 30 }} />
+                  마약 음성반응이 예상될 때
+                </p>
+                <p className="s_txt">마약 음성반응이 나온다고 하여 객관적인 증거가 없다고 생각한다면 추후 양형에 매우 불리할 수 있습니다. 즉, 마약 음성반응이 나왔다고 무조건 범행을 부인한다면 추후 별도의 증거(판매책이나 금융계좌, DNA)가 나왔을 경우 중형이 선고 될 수 있습니다. 변호인에게 사건 경위에 대해 상세하게 상담받거나 조력을 받는 것이 필요합니다.</p>
               </div>
             </div>
           </div>
+        </div>
 
-          <div style={{ border: '1px solid #e2e2e2', borderRadius: 4, padding: '36px 40px', marginBottom: 24, background: '#fff' }}>
-            <span style={badge('마약류 종류별 처벌기준', '#253d5f')}>마약류 종류별 처벌기준</span>
-            <table style={{ width: '100%', borderCollapse: 'collapse', borderTop: '2px solid #222', borderBottom: '2px solid #222', fontSize: 15, marginTop: 16 }}>
-              <thead>
-                <tr>
-                  <td style={{ background: '#253d5f', color: '#fff', textAlign: 'center', height: 48, fontWeight: 600, width: '25%', borderRight: '1px solid #4a6080' }}>마약류 종류</td>
-                  <td style={{ background: '#253d5f', color: '#fff', textAlign: 'center', height: 48, fontWeight: 600, width: '35%', borderRight: '1px solid #4a6080' }}>행위</td>
-                  <td style={{ background: '#253d5f', color: '#fff', textAlign: 'center', height: 48, fontWeight: 600 }}>처벌</td>
-                </tr>
-              </thead>
-              <tbody>
-                {[
-                  ['마약 (헤로인·코카인 등)', '수출·수입·제조·매매·소지', '무기 또는 5년 이상 징역'],
-                  ['마약', '투약·흡입', '10년 이하 징역 또는 1억원 이하 벌금'],
-                  ['향정신성의약품 (필로폰 등)', '수출·수입·제조·매매', '무기 또는 5년 이상 징역'],
-                  ['향정신성의약품', '투약·소지', '10년 이하 징역 또는 1억원 이하 벌금'],
-                  ['대마', '수출·수입·제조', '5년 이상 징역'],
-                  ['대마', '흡연·소지', '5년 이하 징역 또는 5천만원 이하 벌금'],
-                ].map(([type, action, punishment], i) => (
-                  <tr key={i}>
-                    <td style={{ padding: '14px 16px', borderBottom: '1px solid #eee', borderRight: '1px solid #ddd', backgroundColor: '#f7f7f7', color: '#333', fontWeight: 500, textAlign: 'center' }}>{type}</td>
-                    <td style={{ padding: '14px 16px', borderBottom: '1px solid #eee', borderRight: '1px solid #ddd', color: '#333', textAlign: 'center' }}>{action}</td>
-                    <td style={{ padding: '14px 16px', borderBottom: '1px solid #eee', color: '#333' }}>{punishment}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+        <h3 className="con_tit">마약류</h3>
+        <div className="tit_line"><img src="/law/images/tit_line.gif" alt="" /></div>
+        <div className="cntbox wd2000">
+          <div className="wd1300">
+            <div style={{ overflow: 'hidden' }}>
+              <ul style={{ overflow: 'hidden' }}>
+                <li style={{ float: 'left', width: 596 }}>
+                  <img src="/law/mn05/img/mn05_03_img1.jpg" alt="" />
+                </li>
+                <li style={{ float: 'left', width: 640, padding: '46px 30px', backgroundColor: '#f7f7f7', textAlign: 'left' }}>
+                  <p className="big_txt">마약류란 일반적으로 느낌, 생각 또는 형태에 변화를 줄 목적으로 섭취하여 정신에 영향을 주는 물질을 말하며, 법률적으로는 마약류 관리에 관한 법률에 정의된 마약, 향정신성의약품 및 대마를 총칭합니다.</p>
+                  <p className="s_txt">마약류는 각성, 환각 효과가 있거나 억제 효과가 있어 취급자가 아닌 자가 오남용할 경우 신체적 정신적 의존성을 강하게 일으킬 가능성이 크고 중독으로 이어지므로 법적 처벌 수위가 높으며, 사회적으로도 지탄의 대상이 됩니다.</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <h3 className="con_tit">케이스별 적용</h3>
+        <div className="tit_line"><img src="/law/images/tit_line.gif" alt="" /></div>
+        <div className="cntbox wd2000">
+          <div className="wd1300">
+            <img src="/law/mn05/img/mn05_03_img2.jpg" alt="케이스별 적용" style={{ width: '100%' }} />
           </div>
         </div>
       </div>
-    </>
+    </div>
   )
 }
