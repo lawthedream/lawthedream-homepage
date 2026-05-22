@@ -9,12 +9,6 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lawthedream.com/law/mn02/license' },
 }
 
-const conTit = (text: string) => (
-  <h3 style={{ textAlign: 'center', fontSize: 28, fontWeight: 700, color: '#222', marginBottom: 20 }}>{text}</h3>
-)
-const titLine = (
-  <div style={{ width: 1, height: 40, background: '#bbb', margin: '0 auto 40px' }} />
-)
 const sTxt: object = { fontSize: 16, fontWeight: 300, color: '#444', lineHeight: 1.9, marginBottom: 14 }
 const tagBox = (text: string, color = '#253d5f'): object => ({
   display: 'inline-block', background: color, color: '#fff',
@@ -22,6 +16,10 @@ const tagBox = (text: string, color = '#253d5f'): object => ({
 })
 
 export default function Page() {
+  const conTit = (text: string) => (
+    <h3 style={{ textAlign: 'center', fontSize: 28, fontWeight: 700, color: '#222', marginBottom: 20 }}>{text}</h3>
+  )
+  const titLine = <div style={{ width: 1, height: 40, background: '#bbb', margin: '0 auto 40px' }} />
   return (
     <>
       <SiteSubVisual title="면허취소 구제" site="law" bgImage="/law/mn02/img/sub_vs02.jpg" />

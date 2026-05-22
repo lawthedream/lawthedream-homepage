@@ -13,12 +13,6 @@ const badge = (text: string, color = '#bf8553'): object => ({
   display: 'inline-block', background: color, color: '#fff',
   padding: '7px 22px', borderRadius: 30, fontSize: 16, fontWeight: 500, marginBottom: 18,
 })
-const conTit = (text: string) => (
-  <h3 style={{ textAlign: 'center', fontSize: 28, fontWeight: 700, color: '#222', marginBottom: 20 }}>{text}</h3>
-)
-const titLine = (
-  <div style={{ width: 1, height: 40, background: '#bbb', margin: '0 auto 40px' }} />
-)
 const cardStyle: object = {
   border: '1px solid #e2e2e2', borderRadius: 4, padding: '36px 40px',
   marginBottom: 24, background: '#fff',
@@ -28,6 +22,10 @@ const sTxt: object = { fontSize: 16, fontWeight: 300, color: '#444', lineHeight:
 const sep: object = { borderTop: '1px solid #ddd', margin: '18px 0' }
 
 export default function Page() {
+  const conTit = (text: string) => (
+    <h3 style={{ textAlign: 'center', fontSize: 28, fontWeight: 700, color: '#222', marginBottom: 20 }}>{text}</h3>
+  )
+  const titLine = <div style={{ width: 1, height: 40, background: '#bbb', margin: '0 auto 40px' }} />
   return (
     <>
       <SiteSubVisual title="민식이법" site="law" bgImage="/law/mn02/img/sub_vs02.jpg" />

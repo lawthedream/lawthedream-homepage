@@ -9,14 +9,12 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lawthedream.com/law/mn02/solution' },
 }
 
-const conTit = (text: string) => (
-  <h3 style={{ textAlign: 'center', fontSize: 28, fontWeight: 700, color: '#222', marginBottom: 20 }}>{text}</h3>
-)
-const titLine = (
-  <div style={{ width: 1, height: 40, background: '#bbb', margin: '0 auto 40px' }} />
-)
 
 export default function Page() {
+  const conTit = (text: string) => (
+    <h3 style={{ textAlign: 'center', fontSize: 28, fontWeight: 700, color: '#222', marginBottom: 20 }}>{text}</h3>
+  )
+  const titLine = <div style={{ width: 1, height: 40, background: '#bbb', margin: '0 auto 40px' }} />
   return (
     <>
       <SiteSubVisual title="더드림 보호프로그램" site="law" bgImage="/law/mn02/img/sub_vs02.jpg" />
