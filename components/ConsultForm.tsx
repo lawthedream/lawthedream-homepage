@@ -16,8 +16,6 @@ export default function ConsultForm({ gubun = '간편상담(메인)' }: ConsultF
     if (!form.name) { alert('이름을 입력해 주세요.'); return }
     if (!form.tel)  { alert('연락이 가능한 전화번호를 입력해 주세요.'); return }
 
-    // TODO: API Route(/api/consult)로 교체
-    // 현재는 기존 PHP 엔드포인트로 전송 (임시)
     const data = new FormData()
     data.append('type2', 'post')
     data.append('select_value', 'quick')
