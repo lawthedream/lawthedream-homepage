@@ -3,6 +3,7 @@ import Script from 'next/script'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import NaverTracker from '@/components/NaverTracker'
+import FloatingButtons from '@/components/FloatingButtons'
 import '@/styles/globals.css'
 import '@/styles/layout.css'
 import '@/styles/layout_main.css'
@@ -62,6 +63,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Header />
         <main>{children}</main>
         <Footer />
+        <FloatingButtons />
       </body>
     </html>
   )
