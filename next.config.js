@@ -3,6 +3,32 @@ const nextConfig = {
   images: {
     domains: ['thedreamlaw.cafe24.com', 'www.lawthedream.com'],
   },
+  webpack: (config) => {
+    // CSS url() 상대경로를 webpack이 모듈로 해석하지 않도록 설정
+    // (구 PHP 사이트의 CSS 이미지 참조가 많아 빌드 에러 방지)
+    config.module.rules.forEach((rule) => {
+      if (rule.oneOf) {
+        rule.oneOf.forEach((r) => {
+          if (Array.isArray(r.use)) {
+            r.use.forEach((use) => {
+              if (
+                use &&
+                typeof use.loader === 'string' &&
+                use.loader.includes('css-loader') &&
+                use.options &&
+                use.options.modules !== true
+              ) {
+                if (typeof use.options.url === 'undefined') {
+                  use.options.url = false
+                }
+              }
+            })
+          }
+        })
+      }
+    })
+    return config
+  },
   async redirects() {
     return [
       // PHP → Next.js 리다이렉트
