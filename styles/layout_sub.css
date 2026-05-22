@@ -62,8 +62,8 @@
 #cnts .slider .pnBtn a {display:block; width:100%; height:100%;}
 #cnts .slider .pnBtn .arrow {display:none; position:absolute; top:0; z-index:1; width:60px; height:60px;}
 #cnts .slider .pnBtn .arrow:hover {filter:alpha(opacity=60);opacity:0.6;}
-#cnts .slider .prev .arrow {background:url(../mn01/images/arrow_prev.png) no-repeat;}
-#cnts .slider .next .arrow {background:url(../mn01/images/arrow_next.png) no-repeat;}
+#cnts .slider .prev .arrow {background: #aaa;}
+#cnts .slider .next .arrow {background: #aaa;}
 
 
 
@@ -131,7 +131,7 @@
 
 .bg_grey {overflow: hidden; background-color: #f8f8f8;}
 
-.bg_top {overflow: hidden; background:url(../mn05/img/mn05_05_bg.jpg); padding: 60px 0 100px 0}
+.bg_top {overflow: hidden; background: #1a2232; padding: 60px 0 100px 0}
 .bg_top .blue_txt{color:#fced99}
 .bg_top .reg_txt{color:#fff}
 .bg_top .box_txt{color:#fff}
@@ -143,8 +143,8 @@
 #content_wrap #location {clear:both; height:30px; margin: 20px auto 20px}
 #content_wrap #location .locbox {width:1280px; margin:0 auto; text-align:center;}
 #content_wrap #location .locbox span {display:inline-block; vertical-align:middle;}
-#content_wrap #location .locbox .home {width:18px; height:0; padding-top:16px; overflow:hidden; background:url(../images/icon_home.png) no-repeat left top; }
-#content_wrap #location .locbox .arrow {width:5px; height:0; padding-top:16px; overflow:hidden; margin:0 5px; background:url(../images/icon_arrow.png) no-repeat left 4px;}
+#content_wrap #location .locbox .home {width:18px; height:0; padding-top:16px; overflow:hidden;  }
+#content_wrap #location .locbox .arrow {width:5px; height:0; padding-top:16px; overflow:hidden; margin:0 5px; }
 #content_wrap #location .locbox .loc1 {color:#999; height:39px; font-size:16px; line-height:39px;}
 #content_wrap #location .locbox .loc2 {height:39px; font-size:16px; line-height:39px; color:#647ecb}
 

@@ -119,13 +119,13 @@ legend{position:absolute; top:0; left:0; width:0; height:0; overflow:hidden; vis
 
 /*logo*/
 #header_top #logo {position:absolute; left:50%; top:20px; width:260px; height:65px; margin-left:-140px;}
-#logo h1 a {display:block; width:272px; float: left; height:65px; background:url(../images/logo.png) no-repeat left center; font-size: 0; }
+#logo h1 a {display:block; width:272px; float: left; height:65px; font-size: 0; }
 
 /*tel*/
 /*member btns*/
 #right_top #member {float:right; margin-bottom:14px; }
 
-#tel {width:185px; height:60px; background:url(../images/tel.gif) no-repeat; float:right; margin-top: 25px;}
+#tel {width:185px; height:60px; float:right; margin-top: 25px;}
 
 
 
@@ -182,7 +182,7 @@ legend{position:absolute; top:0; left:0; width:0; height:0; overflow:hidden; vis
 #f_line {border-top: 1px solid #a8a8a8; padding-top:23px;}
 
 #footer_wrap {width: 1300px;margin: 0 auto;}
-#footer_logo {width: 290px; height:50px; float: left; display:block; background:url(../images/f_logo.png) no-repeat left center; text-indent: -9999px; }
+#footer_logo {width: 290px; height:50px; float: left; display:block; text-indent: -9999px; }
 #footer {width: 900px;float: left;}
 
 
