@@ -10,19 +10,52 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lawthedream.com/law' },
 }
 
-const menuItems = [
-  { href: '/law/mn02/accident-12',       img: '/law/images/main/menu_ico01.png', label: '12대 중과실사고' },
-  { href: '/law/mn02/drunk-driving',     img: '/law/images/main/menu_ico02.png', label: '음주/뺑소니' },
-  { href: '/law/mn02/minshik-law',       img: '/law/images/main/menu_ico03.png', label: '민식이법' },
-  { href: '/law/mn02/solution',          img: '/law/images/main/menu_ico04.png', label: '합의' },
-  { href: '/law/mn02/license',           img: '/law/images/main/menu_ico05.png', label: '면허취소구제' },
-  { href: '/law/mn03/sexual-harassment', img: '/law/images/main/menu_ico06.png', label: '성희롱' },
-  { href: '/law/mn03/molestation',       img: '/law/images/main/menu_ico07.png', label: '성추행' },
-  { href: '/law/mn03/assault',           img: '/law/images/main/menu_ico08.png', label: '성폭행' },
-  { href: '/law/mn04/safety-law',        img: '/law/images/main/menu_ico09.png', label: '산업안전보건법' },
-  { href: '/law/mn05/general',           img: '/law/images/main/menu_ico10.png', label: '일반형사' },
-  { href: '/law/mn05/violence',          img: '/law/images/main/menu_ico11.png', label: '폭행상해' },
-  { href: '/law/mn05/drugs',             img: '/law/images/main/menu_ico12.png', label: '마약범죄' },
+const categories = [
+  {
+    listClass: 'list01',
+    icon: '/law/images/main/accident.png',
+    color: '#375b73',
+    title: '12대 중과실 사고',
+    items: [
+      { label: '12대 중과실사고 key point', href: '/law/mn02/accident-12' },
+      { label: '교통사고처리 특례법위반',   href: '/law/mn02/accident-12' },
+      { label: '면허취소 구제',           href: '/law/mn02/license' },
+    ],
+  },
+  {
+    listClass: 'list02',
+    icon: '/law/images/main/gender.png',
+    color: '#bf8553',
+    title: '음주/뺑소니',
+    items: [
+      { label: '음주 / 뺑소니 key point', href: '/law/mn02/drunk-driving' },
+      { label: '뺑소니 - 처벌받는 경우',  href: '/law/mn02/drunk-driving' },
+      { label: '뺑소니 처벌수위',         href: '/law/mn02/drunk-driving' },
+    ],
+  },
+  {
+    listClass: 'list03',
+    icon: '/law/images/main/safe.png',
+    color: '#375b73',
+    title: '민식이법',
+    items: [
+      { label: '민식이법 key point',    href: '/law/mn02/minshik-law' },
+      { label: '스쿨존사고 - 민식이법', href: '/law/mn02/minshik-law' },
+      { label: '민식이법 법안',         href: '/law/mn02/minshik-law' },
+      { label: '민식이법 형량',         href: '/law/mn02/minshik-law' },
+    ],
+  },
+  {
+    listClass: 'list04',
+    icon: '/law/images/main/crime.png',
+    color: '#bf8553',
+    title: '보험소송',
+    items: [
+      { label: '합의 key point', href: '/law/mn02/solution' },
+      { label: '소외합의',       href: '/law/mn02/solution' },
+      { label: '합의절차',       href: '/law/mn02/solution' },
+    ],
+  },
 ]
 
 export default function LawHome() {
@@ -30,43 +63,70 @@ export default function LawHome() {
     <>
       <LawMainSlider />
 
-      <div id="content">
-        {/* 업무분야 */}
-        <section id="part" aria-label="교통형사 업무분야">
-          <div className="cnt_1300">
-            <div className="cnt_tit1">
-              <h2 className="tit1">업무분야</h2>
-            </div>
-            <div className="main_cnt1">
-              <ul className="part_menu clear">
-                {menuItems.map(item => (
-                  <li key={item.href}>
-                    <Link href={item.href}>
-                      <div className="round">
-                        <img src={item.img} alt={item.label} width={60} height={60} />
-                      </div>
-                      <p>{item.label}</p>
+      <div id="content_wrap">
+        {/* OUR CASE */}
+        <div
+          id="category"
+          style={{
+            width: '100%',
+            minHeight: 953,
+            position: 'relative',
+            backgroundImage: 'url(/law/images/main/category_img.jpg)',
+            backgroundAttachment: 'fixed',
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
+          }}
+        >
+          <div className="category_tit" style={{ width: '100%', textAlign: 'center', paddingTop: 100 }}>
+            <h2 style={{ fontSize: 45, fontWeight: 700, color: '#f2bd79', paddingBottom: 38 }}>OUR CASE</h2>
+            <div style={{ width: 1, height: 38, background: '#fff', margin: '0 auto 38px' }} />
+            <p style={{ fontSize: 26, color: '#fff', fontWeight: 400, lineHeight: '1.3' }}>
+              더드림은 각 분야별로<br />특화된 법률전문가들로 구성되어 있습니다.
+            </p>
+          </div>
+
+          <div style={{ width: 1300, margin: '0 auto', paddingTop: 60, overflow: 'hidden', display: 'flex', gap: 20 }}>
+            {categories.map((cat) => (
+              <div
+                key={cat.listClass}
+                style={{ width: 309, background: '#fff', flexShrink: 0 }}
+              >
+                <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+                  {/* 상단 컬러 헤더 */}
+                  <li style={{ width: '100%', height: 187, backgroundColor: cat.color, backgroundImage: `url(${cat.icon})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center 40px' }}>
+                    <Link href={cat.items[0].href}>
+                      <p style={{ fontSize: 23, fontWeight: 500, color: '#fff', textAlign: 'center', paddingTop: 131, paddingBottom: 30 }}>
+                        {cat.title}
+                      </p>
                     </Link>
                   </li>
-                ))}
-              </ul>
-            </div>
+                  {/* 서브 아이템 */}
+                  {cat.items.map((item, i) => (
+                    <li key={i} style={{ width: '100%', height: i === 0 ? 76 : 60, borderBottom: '1px solid #e5e6e8' }}>
+                      <Link href={item.href}>
+                        <p style={{ fontSize: 20, fontWeight: 400, color: '#222', textAlign: 'center', paddingTop: i === 0 ? 30 : 15 }}>
+                          {item.label}
+                        </p>
+                      </Link>
+                    </li>
+                  ))}
+                  <li style={{ height: 60 }} />
+                </ul>
+              </div>
+            ))}
           </div>
-        </section>
+        </div>
 
         {/* 상담 신청 */}
-        <section id="main_map" aria-label="무료 상담 신청">
-          <div className="bg">
-            <div className="cnt_1300 map_box">
-              <div className="map_right" style={{ width: '100%' }}>
-                <div className="call">
-                  <p>전화번호 :{' '}
-                    <strong><a href="tel:02-6959-5053">tel : 02-6959-5053</a></strong>
-                  </p>
-                </div>
-                <ConsultForm />
-              </div>
+        <section id="main_map" aria-label="무료 상담 신청" style={{ padding: '60px 0', background: '#f8f8f8' }}>
+          <div style={{ maxWidth: 1300, margin: '0 auto', padding: '0 20px' }}>
+            <div className="call" style={{ marginBottom: 24 }}>
+              <p style={{ fontSize: 20 }}>
+                전화번호 :{' '}
+                <strong><a href="tel:02-6959-5053" style={{ color: '#253d5f' }}>tel : 02-6959-5053</a></strong>
+              </p>
             </div>
+            <ConsultForm />
           </div>
         </section>
       </div>
