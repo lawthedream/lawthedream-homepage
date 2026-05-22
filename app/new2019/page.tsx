@@ -222,20 +222,22 @@ export default function Home() {
           });
         `}
       </Script>
-      {/* 카카오 지도 */}
-      <Script
-        src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"
-        strategy="afterInteractive"
-        onLoad={() => {
-          // @ts-ignore
-          new daum.roughmap.Lander({
-            timestamp: '1628736435503',
-            key: '26xxv',
-            mapWidth: '560',
-            mapHeight: '445',
-          }).render()
-        }}
-      />
+      {/* 카카오 지도 — onLoad 대신 동적 로드 방식 사용 (Server Component 호환) */}
+      <Script id="daum-map-new2019" strategy="afterInteractive">{`
+        (function() {
+          var s = document.createElement('script');
+          s.src = 'https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js';
+          s.onload = function() {
+            new daum.roughmap.Lander({
+              timestamp: '1628736435503',
+              key: '26xxv',
+              mapWidth: '560',
+              mapHeight: '445',
+            }).render();
+          };
+          document.head.appendChild(s);
+        })();
+      \`}</Script>
     </>
   )
 }

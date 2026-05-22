@@ -26,7 +26,7 @@ export default function LocationPage() {
             />
           </div>
 
-          {/* 주소 및 연락처 — 텍스트를 HTML로 */}
+          {/* 주소 및 연락처 */}
           <div style={{ flex: '1 1 300px' }}>
             <h3 style={{ fontSize: '24px', fontWeight: 700, marginBottom: '30px', color: '#333' }}>
               더드림 법률사무소
@@ -56,20 +56,22 @@ export default function LocationPage() {
         </div>
       </section>
 
-      {/* 카카오 지도 스크립트 */}
-      <Script
-        src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"
-        strategy="afterInteractive"
-        onLoad={() => {
-          // @ts-ignore
-          new daum.roughmap.Lander({
-            timestamp: '1628736435504',
-            key: '26xxv',
-            mapWidth: '560',
-            mapHeight: '445',
-          }).render()
-        }}
-      />
+      {/* 카카오 지도 — onLoad 대신 동적 로드 방식 사용 (Server Component 호환) */}
+      <Script id="daum-map-location" strategy="afterInteractive">{`
+        (function() {
+          var s = document.createElement('script');
+          s.src = 'https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js';
+          s.onload = function() {
+            new daum.roughmap.Lander({
+              timestamp: '1628736435504',
+              key: '26xxv',
+              mapWidth: '560',
+              mapHeight: '445',
+            }).render();
+          };
+          document.head.appendChild(s);
+        })();
+      `}</Script>
     </>
   )
 }
