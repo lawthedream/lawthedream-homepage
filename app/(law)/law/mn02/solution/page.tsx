@@ -38,11 +38,8 @@ export default function Page() {
           {/* 5단계 프로세스 */}
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 0, marginBottom: 60, flexWrap: 'wrap' }}>
             {[
-              { icon: '💬', label: '상담방문 후
-방문상담' },
-              { icon: '📊', label: '유사 사건
-성공사례 확인 및
-담당변호사 배정' },
+              { icon: '💬', label: '상담방문 후\n방문상담' },
+              { icon: '📊', label: '유사 사건\n성공사례 확인 및\n담당변호사 배정' },
               { icon: '🚔', label: '경찰단계' },
               { icon: '⚖️', label: '검찰단계' },
               { icon: '🔨', label: '법원단계' },
@@ -147,18 +144,10 @@ export default function Page() {
 
             <div style={{ display: 'flex', justifyContent: 'center', gap: 0, alignItems: 'center' }}>
               {[
-                { label: '변호사 전체회의', color: '#253d5f', sub: '성공사례와 판례를
-기반으로 전체회의를 통해
-최적의 형사 변호사 배정' },
-                { label: '형사 TF팀 구성', color: '#bf8553', sub: '해당 사건에 특화된 팀을
-구성 사건진행 총괄' },
-                { label: 'TF팀 전략회의', color: '#253d5f', sub: '누적된 성공사례를
-바탕으로 사건해결을 위한
-전략수립' },
-                { label: '수사기관과
-커뮤니케이션', color: '#bf8553', sub: '담당변호사 외
-전체변호사들간 사건공유
-해당기관과 긴밀한 소통' },
+                { label: '변호사 전체회의', color: '#253d5f', sub: '성공사례와 판례를\n기반으로 전체회의를 통해\n최적의 형사 변호사 배정' },
+                { label: '형사 TF팀 구성', color: '#bf8553', sub: '해당 사건에 특화된 팀을\n구성 사건진행 총괄' },
+                { label: 'TF팀 전략회의', color: '#253d5f', sub: '누적된 성공사례를\n바탕으로 사건해결을 위한\n전략수립' },
+                { label: '수사기관과\n커뮤니케이션', color: '#bf8553', sub: '담당변호사 외\n전체변호사들간 사건공유\n해당기관과 긴밀한 소통' },
               ].map(({ label, color, sub }, i) => (
                 <div key={i} style={{ display: 'flex', alignItems: 'center' }}>
                   <div style={{ textAlign: 'center', maxWidth: 220 }}>
