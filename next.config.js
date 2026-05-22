@@ -4,8 +4,6 @@ const nextConfig = {
     domains: ['thedreamlaw.cafe24.com', 'www.lawthedream.com'],
   },
   webpack: (config) => {
-    // CSS url() 상대경로를 webpack이 모듈로 해석하지 않도록 설정
-    // (구 PHP 사이트의 CSS 이미지 참조가 많아 빌드 에러 방지)
     config.module.rules.forEach((rule) => {
       if (rule.oneOf) {
         rule.oneOf.forEach((r) => {
@@ -68,4 +66,19 @@ const nextConfig = {
       { source: '/law/mn07/mn07_01.php',     destination: '/law/mn07/cases',       permanent: true },
       { source: '/law/mn07/mn07_02.php',     destination: '/law/mn07/press',       permanent: true },
       { source: '/law/mn08/mn08_01.php',     destination: '/law/mn08/consult',     permanent: true },
-      { source: '/law/mn08/mn08_03.php',     destination: '/law/mn08/press',       permanent: tr
+      { source: '/law/mn08/mn08_03.php',     destination: '/law/mn08/press',       permanent: true },
+      { source: '/law/mobile/:path*',        destination: '/law',             permanent: true },
+      // accident PHP → Next.js
+      { source: '/accident/index.php',       destination: '/accident',        permanent: true },
+      { source: '/accident/mobile/:path*',   destination: '/accident',        permanent: true },
+      // center PHP → Next.js
+      { source: '/center/index.php',         destination: '/center',          permanent: true },
+      { source: '/center/mobile/:path*',     destination: '/center',          permanent: true },
+      // work PHP → Next.js
+      { source: '/work/index.php',           destination: '/work',            permanent: true },
+      { source: '/work/mobile/:path*',       destination: '/work',            permanent: true },
+    ]
+  },
+}
+
+module.exports = nextConfig
