@@ -40,7 +40,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo:400,700,800&subset=korean"
           rel="stylesheet"
         />
-        {/* Google Ads */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=AW-10929685812"
           strategy="afterInteractive"
@@ -53,7 +52,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             gtag('config', 'AW-10929685812');
           `}
         </Script>
-        {/* Naver Smart Log — SPA 페이지뷰는 NaverTracker 컴포넌트가 처리 */}
         <Script
           src="//wcs.naver.net/wcslog.js"
-          s
+          strategy="afterInteractive"
+        />
+      </head>
+      <body>
+        <NaverTracker />
+        <Header />
+        <main>{children}</main>
+        <Footer />
+      </body>
+    </html>
+  )
+}

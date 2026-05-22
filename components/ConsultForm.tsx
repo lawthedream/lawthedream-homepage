@@ -2,7 +2,11 @@
 
 import { useState } from 'react'
 
-export default function ConsultForm() {
+interface ConsultFormProps {
+  gubun?: string
+}
+
+export default function ConsultForm({ gubun = '간편상담(메인)' }: ConsultFormProps) {
   const [form, setForm] = useState({ name: '', tel: '', memo: '' })
   const [agreed, setAgreed] = useState(true)
   const [submitted, setSubmitted] = useState(false)
@@ -17,7 +21,7 @@ export default function ConsultForm() {
     const data = new FormData()
     data.append('type2', 'post')
     data.append('select_value', 'quick')
-    data.append('gubun', '간편상담(메인)')
+    data.append('gubun', gubun)
     data.append('name', form.name)
     data.append('tel', form.tel)
     data.append('memo', form.memo)
