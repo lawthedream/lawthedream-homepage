@@ -3,19 +3,6 @@ import Link from 'next/link'
 type Tab = { label: string; href: string }
 type SectionMap = Record<string, Tab[]>
 
-// mn03 pages use mn05's tab group (일반형사 + 성범죄 통합)
-// This matches the original PHP: mn03 pages include ../mn05/tabs.php
-const MN05_TABS: Tab[] = [
-  { label: '일반형사', href: '/law/mn05/general' },
-  { label: '폭행상해', href: '/law/mn05/violence' },
-  { label: '마약범죄', href: '/law/mn05/drugs' },
-  { label: '재산범죄', href: '/law/mn05/property' },
-  { label: '성희롱', href: '/law/mn03/sexual-harassment' },
-  { label: '성추행', href: '/law/mn03/molestation' },
-  { label: '성폭행', href: '/law/mn03/assault' },
-  { label: '기타 성범죄', href: '/law/mn03/other' },
-]
-
 const SECTION_TABS: SectionMap = {
   '/law/mn01': [
     { label: '인사말', href: '/law/mn01/greeting' },
@@ -31,22 +18,6 @@ const SECTION_TABS: SectionMap = {
     { label: '면허취소 구제', href: '/law/mn02/license' },
     { label: '형사사건절차', href: '/law/mn02/procedure' },
     { label: '더드림 솔루션', href: '/law/mn02/solution' },
-  ],
-  // mn03 pages share mn05 tabs (same as PHP original)
-  '/law/mn03': MN05_TABS,
-  '/law/mn04': [
-    { label: '산업안전보건법위반', href: '/law/mn04/safety-law' },
-    { label: '업무상 과실치사상', href: '/law/mn04/negligence' },
-  ],
-  '/law/mn05': MN05_TABS,
-  '/law/mn06': [
-    { label: '변호사선임사유', href: '/law/mn06/reason' },
-    { label: '피의자/피고인', href: '/law/mn06/defendant' },
-    { label: '피해자', href: '/law/mn06/victim' },
-  ],
-  '/law/mn07': [
-    { label: '성공 Case 보기', href: '/law/mn07/cases' },
-    { label: '언론보도', href: '/law/mn07/press' },
   ],
   '/law/mn08': [
     { label: '온라인상담', href: '/law/mn08/consult' },
