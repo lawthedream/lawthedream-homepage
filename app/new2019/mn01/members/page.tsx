@@ -68,13 +68,7 @@ export default function MembersPage() {
                 <img
                   src={m.src}
                   alt={m.name}
-                  style={{ display: 'block', transition: 'filter 1s' }}
-                  onMouseEnter={(e) =>
-                    ((e.target as HTMLImageElement).style.filter = 'brightness(130%)')
-                  }
-                  onMouseLeave={(e) =>
-                    ((e.target as HTMLImageElement).style.filter = 'none')
-                  }
+                  className="member-img"
                 />
                 {/* 이름 텍스트를 이미지 alt 외에도 HTML로 노출 — SEO를 위해 */}
                 <p

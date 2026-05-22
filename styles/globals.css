@@ -154,3 +154,7 @@
   .tab_area .sub_tabs ul li { width: 50%; }
   .tab_area .sub_tabs ul li a { font-size: 13px; padding: 9px 8px; }
 }
+
+/* 구성원 이미지 hover 효과 */
+.member-img { display: block; transition: filter 0.4s; }
+.member-img:hover { filter: brightness(130%); }
