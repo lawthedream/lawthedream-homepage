@@ -1,30 +1,30 @@
 import type { Metadata } from 'next'
 import SiteSubVisual from '@/components/SiteSubVisual'
 import LawNavTabs from '@/components/LawNavTabs'
-import ConsultForm from '@/components/ConsultForm'
 
 export const metadata: Metadata = {
   title: '폭행상해 | 더드림교통형사센터',
-  description: '폭행·상해 사건 전문 변호사. 합의 및 형사 대응.',
-  keywords: '폭행,상해,형사변호사,합의',
+  description: '폭행·상해 형사사건 전문 변호사. 02-6959-5053.',
+  keywords: '폭행,상해,형사변호사',
   alternates: { canonical: 'https://www.lawthedream.com/law/mn05/violence' },
 }
 
 export default function Page() {
   return (
     <>
-      <SiteSubVisual title="폭행상해" site="law" />
+      <SiteSubVisual title="폭행상해" site="law" bgImage="/law/mn05/img/sub_vs05.jpg" />
       <LawNavTabs current="/law/mn05/violence" />
-      <div id="contents" style={{ maxWidth: 1200, margin: '40px auto', padding: '0 20px' }}>
-        <section>
-          <h3 className="con_tit">폭행·상해 처벌 기준</h3>
-          <p style={{ color: "#555", fontSize: 16, lineHeight: 1.8, marginBottom: 12 }}>폭행죄: 2년 이하 징역, 500만 원 이하 벌금</p>
-          <p style={{ color: "#555", fontSize: 16, lineHeight: 1.8, marginBottom: 12 }}>상해죄: 7년 이하 징역, 10년 이하 자격정지 또는 1000만 원 이하 벌금</p>
-          <p style={{ color: "#555", fontSize: 16, lineHeight: 1.8, marginBottom: 12 }}>피해자와의 합의를 통해 형사처벌을 최소화할 수 있습니다.</p>
-        </section>
-        <section aria-label="무료 상담 신청" style={{ marginTop: 60 }}>
-          <ConsultForm />
-        </section>
+      <div id="contents">
+        <div className="cntbox wd2000" style={{ paddingTop: 60, paddingBottom: 80 }}>
+          <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+        <li style={{ marginTop: 0 }}>
+          <img src="/law/mn05/img/mn05_02_img1.jpg" alt="" style={{ display: 'block', width: '100%', height: 'auto' }} />
+        </li>
+        <li style={{ marginTop: 80 }}>
+          <img src="/law/mn05/img/mn05_02_img2.jpg" alt="" style={{ display: 'block', width: '100%', height: 'auto' }} />
+        </li>
+          </ul>
+        </div>
       </div>
     </>
   )
