@@ -79,8 +79,21 @@ export default function LawHeader() {
             </div>
           </div>
 
-          {/* GNB */}
-          <div id="gnb">
+          {/* Hamburger (mobile) */}
+          <button
+            className="hamburger-btn"
+            aria-label={mobileOpen ? '메뉴 닫기' : '메뉴 열기'}
+            onClick={() => setMobileOpen(v => !v)}
+          >
+            <span style={{ transform: mobileOpen ? 'translateY(7px) rotate(45deg)' : 'none', transition: 'transform 0.25s' }} />
+            <span style={{ opacity: mobileOpen ? 0 : 1, transition: 'opacity 0.2s' }} />
+            <span style={{ transform: mobileOpen ? 'translateY(-7px) rotate(-45deg)' : 'none', transition: 'transform 0.25s' }} />
+          </button>
+        </div>
+
+        {/* GNB — header-inner 바깥으로 이동하여 전체 너비 적용 */}
+        <div id="gnb">
+          <div className="gnb-inner">
             <ul id="top_link">
               {navItems.map((item, idx) => (
                 <li
@@ -103,17 +116,6 @@ export default function LawHeader() {
               ))}
             </ul>
           </div>
-
-          {/* Hamburger (mobile) */}
-          <button
-            className="hamburger-btn"
-            aria-label={mobileOpen ? '메뉴 닫기' : '메뉴 열기'}
-            onClick={() => setMobileOpen(v => !v)}
-          >
-            <span style={{ transform: mobileOpen ? 'translateY(7px) rotate(45deg)' : 'none', transition: 'transform 0.25s' }} />
-            <span style={{ opacity: mobileOpen ? 0 : 1, transition: 'opacity 0.2s' }} />
-            <span style={{ transform: mobileOpen ? 'translateY(-7px) rotate(-45deg)' : 'none', transition: 'transform 0.25s' }} />
-          </button>
         </div>
       </div>
 
@@ -139,13 +141,4 @@ export default function LawHeader() {
                     {item.sub.map(s => (
                       <li key={s.href}><Link href={s.href}>{s.label}</Link></li>
                     ))}
-                  </ul>
-                )}
-              </div>
-            ))}
-          </nav>
-        </div>
-      )}
-    </>
-  )
-}
+                  </ul

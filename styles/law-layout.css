@@ -76,14 +76,18 @@
 .law-site #law-header #right_top .r_tel b { font-weight: 300; }
 .law-site #law-header #right_top img { vertical-align: middle; display: block; }
 
-/* GNB */
+/* GNB — header-inner 밖, 전체 너비 */
 .law-site #law-header #gnb {
   width: 100%;
-  float: left;
   text-align: center;
   height: 82px;
-  background: rgba(0,0,0,0.92);  /* nav 바만 다크 */
+  background: rgba(0,0,0,0.92);
   border-top: 1px solid #555;
+}
+.law-site #law-header .gnb-inner {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
 }
 .law-site #law-header #top_link {
   list-style: none;
@@ -762,6 +766,4 @@
   .law-site .tab_area.borad_tab .sub_tabs.tabs-7 li { width: 50%; }
   .law-site .tab_area.borad_tab .sub_tabs.tabs-4 li { width: 50%; }
   .law-site .tab_area.borad_tab .sub_tabs.tabs-3 li { width: 50%; }
-  #quick { display: none; }
-  .law-site #contents { padding: 0 12px; margin: 24px auto; }
-}
+  #qu

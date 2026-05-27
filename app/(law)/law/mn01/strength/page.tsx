@@ -18,7 +18,7 @@ export default function Page() {
       <div id="contents" style={{ maxWidth: 1200, margin: '40px auto', padding: '0 20px' }}>
         <div style={{ width: '100%', marginBottom: 20 }}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/law/mn01/mn01_03_img.jpg" alt="왜 더드림인가" style={{ width: '100%', height: 'auto' }} />
+          <img src="/law/mn01/img/mn01_03_img1.jpg" alt="왜 더드림인가" style={{ width: '100%', height: 'auto' }} />
         </div>
         <section>
           <h3 className="con_tit">더드림을 선택하는 이유</h3>
@@ -30,5 +30,4 @@ export default function Page() {
         </section>
       </div>
     </>
-  )
-}
+ 
