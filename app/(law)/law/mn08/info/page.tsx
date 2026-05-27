@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import SiteSubVisual from '@/components/SiteSubVisual'
-import LawNavTabs from '@/components/LawNavTabs'
 import ConsultForm from '@/components/ConsultForm'
 
 export const metadata: Metadata = {
@@ -14,7 +13,6 @@ export default function Page() {
   return (
     <>
       <SiteSubVisual title="방문상담" site="law" imgSrc="/law/mn02/img/sub_vs02.jpg" />
-      <LawNavTabs current="/law/mn08/info" />
       <div id="contents" style={{ maxWidth: 1200, margin: '40px auto', padding: '0 20px' }}>
         <section>
           <h3 className="con_tit">방문 상담 안내</h3>

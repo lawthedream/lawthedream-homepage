@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import SiteSubVisual from '@/components/SiteSubVisual'
-import LawNavTabs from '@/components/LawNavTabs'
 
 export const metadata: Metadata = {
   title: '형사사건절차 | 더드림교통형사센터',
@@ -21,7 +20,6 @@ export default function Page() {
   return (
     <>
       <SiteSubVisual title="형사사건절차" site="law" imgSrc="/law/mn02/img/sub_vs02.jpg" />
-      <LawNavTabs current="/law/mn02/procedure" />
 
       <div className="mn02-wrap">
 
@@ -87,7 +85,7 @@ export default function Page() {
           <div className="mn02-detail-box">
             <div className="photo-side">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/law/mn02/photos/license_lawyer.jpg" alt="변호사 상담" />
+              <img src="/law/mn02/photos/procedure_police.jpg" alt="경찰 수사" />
             </div>
             <div className="text-side">
               <div className="mn02-detail-num">02</div>
@@ -136,7 +134,7 @@ export default function Page() {
             </div>
             <div className="photo-side">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/law/mn02/photos/procedure_court.jpg" alt="법원 건물" />
+              <img src="/law/mn02/photos/procedure_accident.jpg" alt="교통사고 현장" />
             </div>
           </div>
         </section>

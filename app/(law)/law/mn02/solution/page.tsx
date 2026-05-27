@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import SiteSubVisual from '@/components/SiteSubVisual'
-import LawNavTabs from '@/components/LawNavTabs'
 
 export const metadata: Metadata = {
   title: '더드림솔루션 | 더드림교통형사센터',
@@ -29,7 +28,6 @@ export default function Page() {
   return (
     <>
       <SiteSubVisual title="더드림솔루션" site="law" imgSrc="/law/mn02/img/sub_vs02.jpg" />
-      <LawNavTabs current="/law/mn02/solution" />
 
       <div className="mn02-wrap">
 
