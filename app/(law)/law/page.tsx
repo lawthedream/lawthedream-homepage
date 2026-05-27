@@ -129,6 +129,117 @@ export default function LawHome() {
             <ConsultForm />
           </div>
         </section>
+
+        {/* 커뮤니티 */}
+        <div id="community">
+          <div className="community_tit">
+            <h2 className="cnt_tit">커뮤니티</h2>
+            <div className="line" />
+          </div>
+          <div className="news" style={{ overflow: 'hidden' }}>
+            <div className="news_tit">더드림 <span>온라인상담</span></div>
+            <Link href="/law/mn08/consult" className="news_btn"><span>더보기+</span></Link>
+            <div className="news_img">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/law/images/main/news.jpg" alt="온라인상담" />
+            </div>
+            <div className="news_list">
+              <ul>
+                <li>중앙선 침범 사건 문의</li>
+                <li>비보호좌회전 오토바이 교통사고</li>
+                <li>뺑소니 사고 관련 문의드립니다.</li>
+                <li>비오는 저녁 무단횡단 사고 입니다</li>
+                <li>문의</li>
+              </ul>
+            </div>
+          </div>
+          <div className="law" style={{ overflow: 'hidden' }}>
+            <div className="law_tit">더드림 <span>법률정보</span></div>
+            <Link href="/law/mn08/consult" className="law_btn"><span>더보기+</span></Link>
+            <div className="law_img">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/law/images/main/law.jpg" alt="법률정보" />
+            </div>
+            <div className="law_list">
+              <ul>
+                <li>중대재해사고 관련 문의드립니다.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* THE DREAM INFORMATION */}
+        <div id="advice">
+          <div className="advice_tit">
+            <h2 className="cnt_tit">THE DREAM INFORMATION</h2>
+            <div className="line" />
+          </div>
+          <div className="advice_list">
+            <ul>
+              <li>
+                <Link href="/law/mn01/greeting">
+                  <div className="adv_txt">
+                    <p className="adv_txt01"><span>THE DREAM</span></p>
+                    <p className="adv_txt02"><span>더드림 인사말</span></p>
+                    <p className="adv_txt03">더드림<br />교통전문센터</p>
+                  </div>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src="/law/images/main/adv01.jpg" alt="더드림 인사말" />
+                </Link>
+              </li>
+              <li>
+                <Link href="/law/mn01/members">
+                  <div className="adv_txt">
+                    <p className="adv_txt01"><span>THE DREAM</span></p>
+                    <p className="adv_txt02"><span>더드림 구성원</span></p>
+                    <p className="adv_txt03">더드림<br />전문 구성원</p>
+                  </div>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src="/law/images/main/adv02.jpg" alt="더드림 구성원" />
+                </Link>
+              </li>
+              <li>
+                <Link href="/law/mn01/strength">
+                  <div className="adv_txt">
+                    <p className="adv_txt01"><span>THE DREAM</span></p>
+                    <p className="adv_txt02"><span>왜 더드림인가?</span></p>
+                    <p className="adv_txt03">더드림의<br />특별함</p>
+                  </div>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src="/law/images/main/adv03.jpg" alt="왜 더드림인가" />
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* 지도 + 연락처 */}
+        <div id="info">
+          <ul>
+            <li className="info_map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3165.3!2d127.0113!3d37.4979!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca15f4b3b3b3b%3A0x0!2z7ISc7Jq47Yq567OE7IucIOyEseyLnCDshLHroZzroZzroZw!5e0!3m2!1sko!2skr!4v1628736435503"
+                title="더드림 교통형사센터 위치"
+                allowFullScreen
+                loading="lazy"
+              />
+            </li>
+            <li className="info_time">
+              <div className="tel">
+                <p>상담전화</p>
+                <span>02.6959.5053</span>
+              </div>
+              <div className="ka">
+                <p>카톡상담</p>
+                <span>@더드림 교통전문센터</span>
+              </div>
+              <div className="loc">
+                <p>주소</p>
+                <span>서울시 서초구 사임당로 87, 1층 3층</span>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
     </>
   )

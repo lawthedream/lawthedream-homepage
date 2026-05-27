@@ -5,11 +5,11 @@ import LawQuickMenu from '@/components/LawQuickMenu'
 
 export default function LawLayout({ children }: { children: React.ReactNode }) {
   return (
-    <>
+    <div className="law-site">
       <LawHeader />
       <main>{children}</main>
       <LawQuickMenu />
       <LawFooter />
-    </>
+    </div>
   )
 }
