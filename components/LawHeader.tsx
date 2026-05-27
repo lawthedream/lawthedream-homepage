@@ -91,7 +91,7 @@ export default function LawHeader() {
           </button>
         </div>
 
-        {/* GNB — header-inner 바깥으로 이동하여 전체 너비 적용 */}
+        {/* GNB outside header-inner for full width */}
         <div id="gnb">
           <div className="gnb-inner">
             <ul id="top_link">
@@ -141,4 +141,13 @@ export default function LawHeader() {
                     {item.sub.map(s => (
                       <li key={s.href}><Link href={s.href}>{s.label}</Link></li>
                     ))}
-                  </ul
+                  </ul>
+                )}
+              </div>
+            ))}
+          </nav>
+        </div>
+      )}
+    </>
+  )
+}

@@ -766,4 +766,6 @@
   .law-site .tab_area.borad_tab .sub_tabs.tabs-7 li { width: 50%; }
   .law-site .tab_area.borad_tab .sub_tabs.tabs-4 li { width: 50%; }
   .law-site .tab_area.borad_tab .sub_tabs.tabs-3 li { width: 50%; }
-  #qu
+  #quick { display: none; }
+  .law-site #contents { padding: 0 12px; margin: 24px auto; }
+}

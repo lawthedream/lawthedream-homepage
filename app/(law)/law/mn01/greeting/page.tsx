@@ -22,12 +22,13 @@ export default function Page() {
         </div>
         <section>
           <h3 className="con_tit">더드림 교통형사센터</h3>
-          <p style={{ color: "#555", fontSize: 16, lineHeight: 1.8, marginBottom: 12 }}>더드림법률사무소 교통형사센터는 12대 중과실사고, 음주/뺑소니, 민식이법, 성범죄, 산업안전보건법 위반 등 형사사건 전 분야를 전문으로 다룹니다.</p>
-          <p style={{ color: "#555", fontSize: 16, lineHeight: 1.8, marginBottom: 12 }}>변호사·노무사·손해사정사가 팀을 이루어 사건 초기 단계부터 최적의 결과를 이끌어 냅니다.</p>
+          <p style={{ color: '#555', fontSize: 16, lineHeight: 1.8, marginBottom: 12 }}>더드림법률사무소 교통형사센터는 12대 중과실사고, 음주/뺑소니, 민식이법, 성범죄, 산업안전보건법 위반 등 형사사건 전 분야를 전문으로 다룹니다.</p>
+          <p style={{ color: '#555', fontSize: 16, lineHeight: 1.8, marginBottom: 12 }}>변호사·노무사·손해사정사가 팀을 이루어 사건 초기 단계부터 최적의 결과를 이끌어 냅니다.</p>
         </section>
         <section aria-label="무료 상담 신청" style={{ marginTop: 60 }}>
           <ConsultForm />
         </section>
       </div>
     </>
-  
+  )
+}

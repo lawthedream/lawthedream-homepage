@@ -22,12 +22,13 @@ export default function Page() {
         </div>
         <section>
           <h3 className="con_tit">더드림을 선택하는 이유</h3>
-          <p style={{ color: "#555", fontSize: 16, lineHeight: 1.8, marginBottom: 12 }}>12대 중과실사고, 음주운전, 민식이법 등 복잡한 교통·형사사건을 풍부한 경험으로 해결합니다.</p>
-          <p style={{ color: "#555", fontSize: 16, lineHeight: 1.8, marginBottom: 12 }}>경찰 조사 단계부터 형사재판, 민사 손해배상까지 원스톱으로 지원합니다.</p>
+          <p style={{ color: '#555', fontSize: 16, lineHeight: 1.8, marginBottom: 12 }}>12대 중과실사고, 음주운전, 민식이법 등 복잡한 교통·형사사건을 풍부한 경험으로 해결합니다.</p>
+          <p style={{ color: '#555', fontSize: 16, lineHeight: 1.8, marginBottom: 12 }}>경찰 조사 단계부터 형사재판, 민사 손해배상까지 원스톱으로 지원합니다.</p>
         </section>
         <section aria-label="무료 상담 신청" style={{ marginTop: 60 }}>
           <ConsultForm />
         </section>
       </div>
     </>
- 
+  )
+}
