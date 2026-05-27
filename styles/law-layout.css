@@ -17,12 +17,13 @@
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 1000;
-  background: rgba(0,0,0,0.92);
+  background: #fff;        /* 상단 로고 영역: 흰색 */
 }
 .law-site #law-header * { box-sizing: border-box; }
 
 .law-site #law-header .header-inner {
-  width: 1400px;
+  max-width: 1400px;
+  width: 100%;
   margin: 0 auto;
   padding-top: 10px;
   overflow: hidden;
@@ -81,6 +82,7 @@
   float: left;
   text-align: center;
   height: 82px;
+  background: rgba(0,0,0,0.92);  /* nav 바만 다크 */
   border-top: 1px solid #555;
 }
 .law-site #law-header #top_link {
@@ -155,7 +157,7 @@
 .law-site #law-header .hamburger-btn span {
   display: block;
   width: 24px; height: 2px;
-  background-color: #fff;
+  background-color: #333;   /* 흰색 헤더 위에서 보이도록 다크 */
 }
 
 /* Mobile drawer */
@@ -275,6 +277,26 @@
   margin: 40px auto;
   padding: 0 20px;
 }
+
+/* ===== WD2000 이미지 스택 (mn02 원본 PHP 방식) ===== */
+.law-site .law-cntbox {
+  position: relative;
+  width: 100%;
+  overflow: hidden;   /* 2000px 콘텐츠를 뷰포트 폭으로 클리핑 */
+}
+.law-site .law-cntbox ul {
+  list-style: none; padding: 0; margin: 0;
+  text-align: center;
+}
+.law-site .wd2000 {
+  position: relative;
+  left: 50%;
+  margin-left: -1000px;
+  width: 2000px;
+  text-align: center;
+}
+.law-site .mt100 { margin-top: 100px; }
+.law-site .mb100 { margin-bottom: 100px; }
 .law-site .con_tit {
   text-align: center; font-size: 28px;
   font-weight: 700; color: #222;
@@ -452,7 +474,8 @@
 #quick {
   position: fixed; right: 0; top: 50%;
   transform: translateY(-50%);
-  z-index: 1111111; width: 115px;
+  z-index: 999;     /* 헤더(z-index:1000) 아래 — 상단바 침범 방지 */
+  width: 115px;
 }
 #quick ul { list-style: none; padding: 0; margin: 0; }
 #quick ul li { display: block; }
@@ -471,6 +494,253 @@
 .law-site #law-footer p { color: #999; font-size: 13px; line-height: 1.8; }
 .law-site #law-footer a { color: #ccc; text-decoration: none; }
 .law-site #law-footer a:hover { color: #fff; }
+
+/* ===== MN02 B-OPTION CUSTOM LAYOUTS ===== */
+.law-site .mn02-wrap { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+.law-site .mn02-section { margin: 70px 0; }
+.law-site .mn02-section:first-child { margin-top: 50px; }
+
+/* 섹션 제목 */
+.law-site .mn02-h3 {
+  font-size: 26px; font-weight: 700; text-align: center;
+  color: #1a1a1a; margin-bottom: 0; padding-bottom: 16px;
+  border-bottom: 1px solid #999;
+}
+.law-site .mn02-h3-line {
+  display: block; width: 1px; height: 22px;
+  background: #999; margin: 0 auto 30px;
+}
+
+/* 배지 */
+.law-site .mn02-badge {
+  display: inline-block; padding: 5px 18px; border-radius: 2px;
+  font-size: 14px; font-weight: 600; color: #fff; margin-bottom: 14px;
+}
+.law-site .mn02-badge.blue { background: #253d5f; }
+.law-site .mn02-badge.gold { background: #bf8553; }
+
+/* Key point 박스 (테두리 카드) */
+.law-site .mn02-keybox {
+  border: 1px solid #ddd; padding: 40px;
+  display: flex; gap: 40px; align-items: center;
+}
+.law-site .mn02-keybox .text-col { flex: 1; }
+.law-site .mn02-keybox .photo-col { flex: 0 0 400px; }
+.law-site .mn02-keybox .photo-col img { width: 100%; height: 260px; object-fit: cover; }
+
+/* 본문 텍스트 */
+.law-site .mn02-text { font-size: 15px; line-height: 1.9; color: #444; }
+.law-site .mn02-text p { margin-bottom: 12px; }
+.law-site .mn02-text strong { color: #253d5f; font-weight: 700; }
+
+/* 사진+텍스트 좌우 분할 */
+.law-site .mn02-split { display: flex; gap: 40px; align-items: center; }
+.law-site .mn02-split.reverse { flex-direction: row-reverse; }
+.law-site .mn02-split .photo-side { flex: 0 0 46%; }
+.law-site .mn02-split .photo-side img { width: 100%; height: 310px; object-fit: cover; }
+.law-site .mn02-split .text-side { flex: 1; }
+
+/* 12대 중과실 그리드 */
+.law-site .mn02-grid12 {
+  display: grid; grid-template-columns: repeat(4,1fr);
+  border: 1px solid #ddd;
+}
+.law-site .mn02-grid12-item {
+  border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; overflow: hidden;
+}
+.law-site .mn02-grid12-item:nth-child(4n) { border-right: none; }
+.law-site .mn02-grid12-item:nth-last-child(-n+4) { border-bottom: none; }
+.law-site .mn02-grid12-head {
+  padding: 10px 14px; color: #fff; font-size: 13px; font-weight: 600; text-align: center;
+}
+.law-site .mn02-grid12-head.blue { background: #253d5f; }
+.law-site .mn02-grid12-head.gold { background: #bf8553; }
+.law-site .mn02-grid12-body {
+  padding: 14px 14px; font-size: 13px; color: #555; line-height: 1.6; min-height: 70px;
+}
+
+/* 회색 배경 블록 */
+.law-site .mn02-gray-bg {
+  background: #f4f3f2; padding: 30px 36px; margin: 24px 0;
+}
+
+/* 테이블 */
+.law-site .mn02-tbl { width: 100%; border-collapse: collapse; font-size: 14px; }
+.law-site .mn02-tbl thead th {
+  background: #253d5f; color: #fff; padding: 13px 16px; text-align: center;
+}
+.law-site .mn02-tbl tbody td {
+  padding: 14px 16px; color: #555; border-bottom: 1px solid #e8e8e8; line-height: 1.7;
+}
+.law-site .mn02-tbl tbody td:first-child {
+  text-align: center; font-weight: 600; color: #253d5f;
+  border-right: 1px solid #e8e8e8; width: 130px; background: #fafafa;
+}
+.law-site .mn02-tbl tbody tr:last-child td { border-bottom: none; }
+.law-site .mn02-tbl .tbl-header-dark {
+  background: #253d5f; color: #fff; padding: 13px 16px;
+  font-size: 14px; font-weight: 600; text-align: center;
+  border-bottom: none;
+}
+.law-site .mn02-tbl .tbl-header-dark:first-child { color: #fff; border-right: 1px solid #3a5070; }
+
+/* 원형 조건 카드 (4개 등) */
+.law-site .mn02-cond-row {
+  display: flex; gap: 20px; justify-content: center; margin: 30px 0; flex-wrap: wrap;
+}
+.law-site .mn02-cond-item {
+  flex: 1; min-width: 200px; max-width: 260px;
+  background: #f4f3f2; border-radius: 4px; padding: 20px 16px; text-align: center;
+}
+.law-site .mn02-cond-num {
+  width: 36px; height: 36px; border-radius: 50%; background: #253d5f;
+  color: #fff; font-size: 14px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 12px;
+}
+.law-site .mn02-cond-text { font-size: 14px; color: #444; line-height: 1.6; }
+
+/* 풀-너비 히어로 사진 (민식이법) */
+.law-site .mn02-hero {
+  position: relative; width: 100%; height: 420px; overflow: hidden; margin-bottom: 0;
+}
+.law-site .mn02-hero img { width: 100%; height: 100%; object-fit: cover; }
+.law-site .mn02-hero-overlay {
+  position: absolute; inset: 0; background: rgba(0,0,0,0.58);
+  display: flex; align-items: center; justify-content: flex-end; padding: 40px 60px;
+}
+.law-site .mn02-hero-card { background: #fff; padding: 32px 36px; max-width: 440px; }
+
+/* 정보 박스 (생계형/행정심판) */
+.law-site .mn02-info-label {
+  display: flex; align-items: center; gap: 14px; margin-bottom: 10px;
+}
+.law-site .mn02-info-tag {
+  padding: 5px 18px; background: #253d5f; color: #fff; font-size: 14px; font-weight: 600;
+}
+.law-site .mn02-info-tagval { color: #bf8553; font-size: 15px; font-weight: 700; }
+.law-site .mn02-info-list {
+  list-style: none; padding: 0; margin: 0 0 18px;
+  font-size: 14px; color: #444; line-height: 2;
+}
+
+/* 형사절차 5단계 플로우 */
+.law-site .mn02-flow {
+  display: flex; gap: 0; justify-content: center; align-items: flex-start;
+  margin: 40px 0; position: relative;
+}
+.law-site .mn02-flow::before {
+  content: ''; position: absolute; top: 38px; left: 8%; right: 8%;
+  height: 2px; background: #ccc; z-index: 0;
+}
+.law-site .mn02-flow-step { flex: 1; text-align: center; position: relative; z-index: 1; padding: 0 8px; }
+.law-site .mn02-flow-circle {
+  width: 76px; height: 76px; border-radius: 50%; border: 2px solid #253d5f;
+  background: #fff; margin: 0 auto 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 22px; color: #253d5f;
+}
+.law-site .mn02-flow-label { font-size: 14px; font-weight: 600; color: #333; }
+
+/* 수사개시 상세 박스 */
+.law-site .mn02-detail-box {
+  border: 1px solid #e0e0e0; padding: 28px 32px;
+  margin-bottom: 20px; display: flex; gap: 32px; align-items: flex-start;
+}
+.law-site .mn02-detail-box .text-side { flex: 1; }
+.law-site .mn02-detail-box .photo-side { flex: 0 0 220px; }
+.law-site .mn02-detail-box .photo-side img { width: 100%; height: 160px; object-fit: cover; }
+.law-site .mn02-detail-num {
+  font-size: 28px; font-weight: 700; color: #bf8553; margin-bottom: 4px; line-height: 1;
+}
+.law-site .mn02-detail-title { font-size: 17px; font-weight: 700; color: #253d5f; margin-bottom: 10px; }
+
+/* 더드림 솔루션 — 보호프로그램 원형 */
+.law-site .mn02-venn {
+  display: flex; justify-content: center; margin: 30px 0;
+}
+.law-site .mn02-venn-item { text-align: center; }
+.law-site .mn02-venn-circle {
+  width: 180px; height: 180px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-size: 15px; font-weight: 700; line-height: 1.4;
+  text-align: center; padding: 20px; margin-left: -30px;
+}
+.law-site .mn02-venn-item:first-child .mn02-venn-circle { margin-left: 0; }
+.law-site .mn02-venn-circle.blue { background: #253d5f; }
+.law-site .mn02-venn-circle.gold { background: #bf8553; }
+.law-site .mn02-venn-desc {
+  font-size: 12px; color: #666; line-height: 1.6;
+  max-width: 160px; margin: 10px auto 0;
+}
+
+/* 솔루션 결과 목록 */
+.law-site .mn02-result-grid {
+  display: grid; grid-template-columns: repeat(2,1fr); gap: 0;
+  border: 1px solid #ddd; margin-top: 20px;
+}
+.law-site .mn02-result-grid li {
+  padding: 12px 16px; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd;
+  font-size: 14px; color: #555; list-style: none;
+}
+.law-site .mn02-result-grid li:nth-child(2n) { border-right: none; }
+.law-site .mn02-result-grid li:nth-last-child(-n+2) { border-bottom: none; }
+.law-site .mn02-result-num { color: #bf8553; font-weight: 700; margin-right: 6px; }
+
+/* 합의절차 스텝 */
+.law-site .mn02-steps-wrap { margin: 30px 0; position: relative; }
+.law-site .mn02-steps-row {
+  display: flex; gap: 0; align-items: flex-start;
+  position: relative; padding-bottom: 30px;
+}
+.law-site .mn02-steps-row::after {
+  content: ''; position: absolute; top: 28px; left: 5%; right: 5%;
+  height: 2px; background: #ccc; z-index: 0;
+}
+.law-site .mn02-steps-item { flex: 1; text-align: center; position: relative; z-index: 1; }
+.law-site .mn02-steps-dot {
+  width: 12px; height: 12px; border-radius: 50%; background: #253d5f;
+  margin: 0 auto 8px; border: 3px solid #fff; box-shadow: 0 0 0 2px #253d5f;
+}
+.law-site .mn02-steps-icon { font-size: 28px; margin-bottom: 4px; }
+.law-site .mn02-steps-num { font-size: 11px; color: #bf8553; font-style: italic; font-weight: 600; }
+.law-site .mn02-steps-label { font-size: 13px; font-weight: 600; color: #333; line-height: 1.4; }
+
+/* 합의결과 분기 */
+.law-site .mn02-branch {
+  display: flex; gap: 40px; justify-content: center; margin-top: 10px;
+}
+.law-site .mn02-branch-item { text-align: center; }
+.law-site .mn02-branch-box {
+  display: inline-block; padding: 10px 28px; border-radius: 30px;
+  border: 2px solid #253d5f; font-size: 14px; font-weight: 600; color: #253d5f;
+  margin-bottom: 8px;
+}
+.law-site .mn02-branch-box.filled { background: #253d5f; color: #fff; }
+.law-site .mn02-branch-arrow { font-size: 12px; color: #999; }
+
+/* 반응형 */
+@media (max-width: 768px) {
+  .law-site .mn02-keybox { flex-direction: column; }
+  .law-site .mn02-keybox .photo-col { flex: none; width: 100%; }
+  .law-site .mn02-split { flex-direction: column; }
+  .law-site .mn02-split .photo-side { flex: none; width: 100%; }
+  .law-site .mn02-split .photo-side img { height: 200px; }
+  .law-site .mn02-grid12 { grid-template-columns: repeat(2,1fr); }
+  .law-site .mn02-hero { height: 260px; }
+  .law-site .mn02-hero-overlay { padding: 20px; justify-content: center; }
+  .law-site .mn02-hero-card { max-width: 100%; }
+  .law-site .mn02-flow { flex-wrap: wrap; gap: 16px; }
+  .law-site .mn02-flow::before { display: none; }
+  .law-site .mn02-detail-box { flex-direction: column; }
+  .law-site .mn02-detail-box .photo-side { flex: none; width: 100%; }
+  .law-site .mn02-venn { flex-wrap: wrap; }
+  .law-site .mn02-venn-circle { margin-left: 0 !important; }
+  .law-site .mn02-result-grid { grid-template-columns: 1fr; }
+  .law-site .mn02-steps-row::after { display: none; }
+  .law-site .mn02-steps-row { flex-wrap: wrap; gap: 16px; }
+  .law-site .mn02-cond-row { flex-direction: column; }
+}
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1450px) {
