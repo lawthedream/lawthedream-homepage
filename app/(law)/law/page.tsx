@@ -242,3 +242,6 @@ export default function LawHome() {
           </ul>
         </div>
       </div>
+    </>
+  )
+}
