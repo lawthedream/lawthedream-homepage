@@ -217,13 +217,13 @@ export default function Page() {
               </div>
             </div>
 
-            {/* 우: 변호사/서류 사진 */}
+            {/* 우: 노트에 펜 든 전문가 손 사진 */}
             <div style={{ flex: '0 0 340px', overflow: 'hidden', borderRadius: 4 }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/law/mn02/photos/procedure_lawyer.jpg"
-                alt="변호사 상담"
-                style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                src="/law/mn02/photos/solution_pen.jpg"
+                alt="전문가 노트 작성"
+                style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top', display: 'block' }}
               />
             </div>
           </div>
