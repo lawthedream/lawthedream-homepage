@@ -67,17 +67,9 @@ export default function LawHome() {
         {/* OUR CASE */}
         <div
           id="category"
-          style={{
-            width: '100%',
-            minHeight: 953,
-            position: 'relative',
-            backgroundImage: 'url(/law/images/main/category_img.jpg)',
-            backgroundAttachment: 'fixed',
-            backgroundPosition: 'center',
-            backgroundSize: 'cover',
-          }}
+          className="main-category-bg"
         >
-          <div className="category_tit" style={{ width: '100%', textAlign: 'center', paddingTop: 100 }}>
+          <div className="category_tit">
             <h2 style={{ fontSize: 45, fontWeight: 700, color: '#f2bd79', paddingBottom: 38 }}>OUR CASE</h2>
             <div style={{ width: 1, height: 38, background: '#fff', margin: '0 auto 38px' }} />
             <p style={{ fontSize: 26, color: '#fff', fontWeight: 400, lineHeight: '1.3' }}>
@@ -85,26 +77,26 @@ export default function LawHome() {
             </p>
           </div>
 
-          <div style={{ width: 1300, margin: '0 auto', paddingTop: 60, overflow: 'hidden', display: 'flex', gap: 20 }}>
+          <div className="main-case-wrap">
             {categories.map((cat) => (
               <div
                 key={cat.listClass}
-                style={{ width: 309, background: '#fff', flexShrink: 0 }}
+                className="main-case-card"
               >
                 <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
                   {/* 상단 컬러 헤더 */}
-                  <li style={{ width: '100%', height: 187, backgroundColor: cat.color, backgroundImage: `url(${cat.icon})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center 40px' }}>
+                  <li className="main-case-hdr" style={{ backgroundColor: cat.color, backgroundImage: `url(${cat.icon})` }}>
                     <Link href={cat.items[0].href}>
-                      <p style={{ fontSize: 23, fontWeight: 500, color: '#fff', textAlign: 'center', paddingTop: 131, paddingBottom: 30 }}>
+                      <p className="main-case-hdr-title">
                         {cat.title}
                       </p>
                     </Link>
                   </li>
                   {/* 서브 아이템 */}
                   {cat.items.map((item, i) => (
-                    <li key={i} style={{ width: '100%', height: i === 0 ? 76 : 60, borderBottom: '1px solid #e5e6e8' }}>
+                    <li key={i} className={`main-case-item${i === 0 ? ' main-case-item-first' : ''}`}>
                       <Link href={item.href}>
-                        <p style={{ fontSize: 20, fontWeight: 400, color: '#222', textAlign: 'center', paddingTop: i === 0 ? 30 : 15 }}>
+                        <p className="main-case-item-txt">
                           {item.label}
                         </p>
                       </Link>
