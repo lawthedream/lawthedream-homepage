@@ -459,8 +459,9 @@
 /* ===== INFO 섹션 (지도+연락처) ===== */
 .law-site #info { overflow: hidden; }
 .law-site #info ul { list-style: none; padding: 0; margin: 0; display: flex; }
-.law-site #info .info_map { flex: 1; min-height: 300px; }
-.law-site #info .info_map iframe { width: 100%; height: 300px; border: none; display: block; }
+.law-site #info .info_map { flex: 1; min-height: 412px; }
+.law-site #info .info_map iframe { width: 100%; height: 412px; border: none; display: block; }
+.law-site #info .info_map .root_daum_roughmap { width: 100% !important; min-height: 412px; display: block; }
 .law-site #info .info_time {
   width: 420px; flex-shrink: 0;
   background: #f5f6f8;

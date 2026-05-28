@@ -17,7 +17,6 @@ interface Member {
 const lawyers: Member[] = [
   { img: 'man01', name: '박성훈', role: '대표변호사' },
   { img: 'man02', name: '정영재', role: '변호사' },
-  { img: 'man03', name: '유명지', role: '변호사' },
   { img: 'man04', name: '목진성', role: '변호사' },
   { img: 'man05', name: '양희찬', role: '변호사' },
 ]
@@ -39,7 +38,6 @@ const investigators: Member[] = [
   { img: 'man27', name: '권혜인' },
   { img: 'man33', name: '박현성' },
   { img: 'man34', name: '김지민' },
-  { img: 'man35', name: '남현성' },
   { img: 'man36', name: '박안나' },
   { img: 'man37', name: '뽀띠리마웅' },
   { img: 'man38', name: '전현정' },
@@ -84,7 +82,7 @@ export default function MembersPage() {
           <div className="members-section-header" style={{ background: '#375b73' }}>
             <h2>교통형사 전문변호사</h2>
           </div>
-          <div className="members-grid members-grid-5">
+          <div className="members-grid members-grid-4">
             {lawyers.map((m) => <MemberCard key={m.img} member={m} />)}
           </div>
         </section>
