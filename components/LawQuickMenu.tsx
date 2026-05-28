@@ -20,6 +20,13 @@ export default function LawQuickMenu() {
             <img src="/law/images/quick_02.png" alt="온라인상담" />
           </a>
         </li>
+        {/* 24h emergency */}
+        <li className="quick_menu">
+          <a href="tel:02-6959-5053">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/law/images/quick_03.png" alt="24시 긴급상담" />
+          </a>
+        </li>
         {/* Kakao */}
         <li className="quick_menu">
           <a href="https://pf.kakao.com/_uDksxb" target="_blank" rel="noopener noreferrer">
