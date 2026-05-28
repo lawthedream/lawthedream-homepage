@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import ConsultForm from '@/components/ConsultForm'
+import Mn01NavTabs from '@/components/Mn01NavTabs'
 
 export const metadata: Metadata = {
   title: '더드림 인사말 | 더드림 교통형사센터',
@@ -75,6 +75,8 @@ export default function GreetingPage() {
         <h1>인사말</h1>
       </div>
 
+      <Mn01NavTabs />
+
       {/* 메인 컨텐츠 */}
       <div className="greeting-wrap">
 
@@ -140,16 +142,6 @@ export default function GreetingPage() {
                 </ul>
               </div>
             ))}
-          </div>
-        </section>
-
-        {/* 상담 폼 */}
-        <section className="law-consult-section">
-          <div className="law-consult-inner">
-            <div className="law-call-info">
-              <p>전화번호 : <strong><a href="tel:02-6959-5053" style={{ color: '#253d5f' }}>02-6959-5053</a></strong></p>
-            </div>
-            <ConsultForm />
           </div>
         </section>
 

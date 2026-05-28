@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import ConsultForm from '@/components/ConsultForm'
+import Mn01NavTabs from '@/components/Mn01NavTabs'
 
 export const metadata: Metadata = {
   title: '왜 더드림인가 | 더드림 교통형사센터',
@@ -68,6 +68,8 @@ export default function StrengthPage() {
         <h1>왜 더드림인가?</h1>
       </div>
 
+      <Mn01NavTabs />
+
       <div className="strength-wrap">
 
         {sections.map((sec) => (
@@ -86,16 +88,6 @@ export default function StrengthPage() {
             </div>
           </section>
         ))}
-
-        {/* 상담 폼 */}
-        <section className="law-consult-section">
-          <div className="law-consult-inner">
-            <div className="law-call-info">
-              <p>전화번호 : <strong><a href="tel:02-6959-5053" style={{ color: '#253d5f' }}>02-6959-5053</a></strong></p>
-            </div>
-            <ConsultForm />
-          </div>
-        </section>
 
       </div>
     </div>

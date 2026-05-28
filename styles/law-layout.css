@@ -17,7 +17,8 @@
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 1000;
-  background: #fff;        /* 상단 로고 영역: 흰색 */
+  background: #fff;
+  overflow: visible;
 }
 .law-site #law-header * { box-sizing: border-box; }
 
@@ -83,6 +84,7 @@
   height: 82px;
   background: rgba(0,0,0,0.92);
   border-top: 1px solid #555;
+  overflow: visible;
 }
 .law-site #law-header .gnb-inner {
   max-width: 1400px;
@@ -1152,4 +1154,39 @@ body:has(.law-site) #floating-quick { display: none !important; }
   .law-site .members-grid-5 .member-card,
   .law-site .members-grid-4 .member-card,
   .law-site .members-grid-7 .member-card { width: calc(50% - 10px); }
+}
+
+/* ===== 센터소개 mn01 내부 탭 NAV ===== */
+.law-site .mn01-nav {
+  background: #fff;
+  border-bottom: 2px solid #e0e0e0;
+  margin-bottom: 40px;
+}
+.law-site .mn01-nav ul {
+  list-style: none;
+  padding: 0; margin: 0;
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.law-site .mn01-nav ul li a {
+  display: block;
+  padding: 16px 36px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #666;
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+  transition: color 0.2s, border-color 0.2s;
+  white-space: nowrap;
+}
+.law-site .mn01-nav ul li a:hover {
+  color: #253d5f;
+  border-bottom-color: #7aa0c0;
+}
+.law-site .mn01-nav ul li a.active {
+  color: #253d5f;
+  border-bottom-color: #253d5f;
+  background: #eef3f8;
 }

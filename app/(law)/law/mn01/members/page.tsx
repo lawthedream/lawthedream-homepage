@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import ConsultForm from '@/components/ConsultForm'
+import Mn01NavTabs from '@/components/Mn01NavTabs'
 
 export const metadata: Metadata = {
   title: '더드림 구성원 | 더드림 교통형사센터',
@@ -76,6 +76,8 @@ export default function MembersPage() {
         <h1>더드림 구성원</h1>
       </div>
 
+      <Mn01NavTabs />
+
       <div className="members-wrap">
 
         <section className="members-section">
@@ -102,15 +104,6 @@ export default function MembersPage() {
           </div>
           <div className="members-grid members-grid-7">
             {investigators.map((m) => <MemberCard key={m.img} member={m} />)}
-          </div>
-        </section>
-
-        <section className="law-consult-section">
-          <div className="law-consult-inner">
-            <div className="law-call-info">
-              <p>전화번호 : <strong><a href="tel:02-6959-5053" style={{ color: '#253d5f' }}>02-6959-5053</a></strong></p>
-            </div>
-            <ConsultForm />
           </div>
         </section>
 

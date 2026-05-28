@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import SiteSubVisual from '@/components/SiteSubVisual'
-import ConsultForm from '@/components/ConsultForm'
 
 export const metadata: Metadata = {
   title: '방문상담 | 더드림교통형사센터',
@@ -21,9 +20,6 @@ export default function Page() {
           <p style={{ color: "#555", fontSize: 16, lineHeight: 1.8, marginBottom: 12 }}>지하철: 2호선·3호선 교대역 하차 → 도보 10분 또는 버스 이용</p>
           <p style={{ color: "#555", fontSize: 16, lineHeight: 1.8, marginBottom: 12 }}>버스: 144, 541, 740, N61, 742, 1006번 → 서초1동 주민센터 또는 서울교대정문 하차</p>
           <p style={{ color: "#555", fontSize: 16, lineHeight: 1.8, marginBottom: 12 }}>사전 예약 시 대기 없이 바로 상담 가능합니다.</p>
-        </section>
-        <section aria-label="무료 상담 신청" style={{ marginTop: 60 }}>
-          <ConsultForm />
         </section>
       </div>
     </>
