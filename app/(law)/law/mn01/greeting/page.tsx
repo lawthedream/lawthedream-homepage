@@ -101,7 +101,7 @@ export default function GreetingPage() {
                 color: '#bf8553',
               },
             ].map((area) => (
-              <Link key={area.title} href={area.href} className="practice-area-card" style={{ '--card-color': area.color } as React.CSSProperties}>
+              <div className="practice-area-card" style={{ '--card-color': area.color } as React.CSSProperties}>
                 <div className="practice-area-header" style={{ backgroundColor: area.color }}>
                   <span className="practice-area-icon">{area.icon}</span>
                   <h3>{area.title}</h3>
@@ -111,7 +111,7 @@ export default function GreetingPage() {
                     <li key={item}>{item}</li>
                   ))}
                 </ul>
-              </Link>
+              </div>
             ))}
           </div>
         </section>

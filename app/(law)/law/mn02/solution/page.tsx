@@ -39,7 +39,7 @@ export default function Page() {
           {/* 팀 사진 */}
           <div style={{ marginBottom: 30 }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/law/mn02/photos/solution_team.jpg" alt="더드림 법률 팀"
+            <img src="/law/mn02/photos/solution_handshake.jpg" alt="더드림 법률 팀"
               style={{ width: '100%', height: 300, objectFit: 'cover' }} />
           </div>
           <div className="mn02-text" style={{ textAlign: 'center', marginBottom: 30 }}>

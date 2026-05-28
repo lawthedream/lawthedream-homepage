@@ -21,7 +21,7 @@ export default function Page() {
           <span className="mn02-h3-line" />
           <div className="mn02-hero">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/law/mn02/photos/school_gavel_bg.jpg" alt="법원 망치" />
+            <img src="/law/mn02/photos/minshik_schoolzone.jpg" alt="법원 망치" />
             <div className="mn02-hero-overlay">
               <div className="mn02-hero-card">
                 <span className="mn02-badge gold" style={{ marginBottom: 16 }}>민식이법</span>

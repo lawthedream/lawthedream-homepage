@@ -218,7 +218,7 @@ export default function LawHome() {
           <ul>
             <li className="info_map">
               <iframe
-                src="https://map.naver.com/p/search/%EC%84%9C%EC%9A%B8%20%EC%84%9C%EC%B4%88%EA%B5%AC%20%EC%82%AC%EC%9E%84%EB%8B%B9%EB%A1%9C%2087%20%EB%8D%94%EB%93%9C%EB%A6%BC%EB%B2%95%EB%A5%A0%EC%82%AC%EB%AC%B4%EC%86%8C"
+                src="https://map.naver.com/p/entry/place/1880673239?c=15,0,0,0,dh"
                 title="더드림 교통형사센터 위치 (네이버 지도)"
                 allowFullScreen
                 loading="lazy"
@@ -226,17 +226,26 @@ export default function LawHome() {
               />
             </li>
             <li className="info_time">
-              <div className="tel">
-                <p>상담전화</p>
-                <span>02.6959.5053</span>
+              <div className="info-contact-row">
+                <span className="info-icon">📞</span>
+                <div>
+                  <p className="info-label">상담전화</p>
+                  <a href="tel:02-6959-5053" className="info-value">02.6959.5053</a>
+                </div>
               </div>
-              <div className="ka">
-                <p>카톡상담</p>
-                <span>@더드림 교통전문센터</span>
+              <div className="info-contact-row">
+                <span className="info-icon">💬</span>
+                <div>
+                  <p className="info-label">카톡상담</p>
+                  <span className="info-value">@더드림 교통전문센터</span>
+                </div>
               </div>
-              <div className="loc">
-                <p>주소</p>
-                <span>서울시 서초구 사임당로 87, 1층 3층</span>
+              <div className="info-contact-row">
+                <span className="info-icon">📍</span>
+                <div>
+                  <p className="info-label">주소</p>
+                  <span className="info-value">서울시 서초구 사임당로 87, 1층 3층</span>
+                </div>
               </div>
             </li>
           </ul>

@@ -461,18 +461,27 @@
 .law-site #info .info_map iframe { width: 100%; height: 300px; border: none; display: block; }
 .law-site #info .info_time {
   width: 420px; flex-shrink: 0;
-  background: #253d5f;
-  padding: 40px 30px;
-  color: #fff;
+  background: #f5f6f8;
+  padding: 40px 36px;
+  color: #222;
+  border-left: 1px solid #e0e0e0;
 }
-.law-site #info .info_time .tel,
-.law-site #info .info_time .ka,
-.law-site #info .info_time .loc { margin-bottom: 28px; }
-.law-site #info .info_time p {
-  font-size: 14px; color: rgba(255,255,255,0.7);
+.law-site #info .info-contact-row {
+  display: flex; align-items: flex-start; gap: 16px;
+  margin-bottom: 28px;
+}
+.law-site #info .info-icon {
+  font-size: 26px; line-height: 1; margin-top: 2px; flex-shrink: 0;
+}
+.law-site #info .info-label {
+  font-size: 13px; color: #888; font-weight: 500;
   margin-bottom: 4px;
 }
-.law-site #info .info_time span { font-size: 18px; font-weight: 600; }
+.law-site #info .info-value {
+  font-size: 18px; font-weight: 700; color: #1a2e42;
+  text-decoration: none; display: block;
+}
+.law-site #info .info-value:hover { color: #375b73; }
 
 /* ===== RIGHT QUICK MENU — position:fixed이라 스코핑 불필요 ===== */
 #quick {
@@ -611,7 +620,7 @@
 .law-site .mn02-hero img { width: 100%; height: 100%; object-fit: cover; }
 .law-site .mn02-hero-overlay {
   position: absolute; inset: 0; background: rgba(0,0,0,0.58);
-  display: flex; align-items: center; justify-content: flex-end; padding: 40px 60px;
+  display: flex; align-items: center; justify-content: center; padding: 40px 60px;
 }
 .law-site .mn02-hero-card { background: #fff; padding: 32px 36px; max-width: 440px; }
 
