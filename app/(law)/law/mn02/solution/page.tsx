@@ -33,15 +33,6 @@ export default function Page() {
         <section className="mn02-section">
           <h3 className="mn02-h3">보호 프로그램 과정</h3>
           <span className="mn02-h3-line" />
-          <div style={{ textAlign: 'center', marginBottom: 40 }}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/law/mn02/img/mn02_07_img2.jpg"
-              alt="보호 프로그램 과정"
-              style={{ maxWidth: '100%', height: 'auto', display: 'block', margin: '0 auto' }}
-            />
-          </div>
-
           {/* 벤다이어그램 — 4단계 과정 */}
           <div className="mn02-venn">
             <div className="mn02-venn-item">

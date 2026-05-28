@@ -27,7 +27,6 @@ const navItems = [
     href: '/law/mn08/consult',
     sub: [
       { label: '온라인상담', href: '/law/mn08/consult' },
-      { label: '방문상담', href: '/law/mn08/info' },
     ],
   },
 ]

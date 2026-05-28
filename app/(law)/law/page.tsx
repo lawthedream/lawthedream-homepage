@@ -168,18 +168,33 @@ export default function LawHome() {
                 <Link href="/law/mn01/greeting">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src="/law/images/main/adv01.jpg" alt="더드림 인사말" />
+                  <div className="adv_txt">
+                    <p className="adv_txt01"><span>THE DREAM</span></p>
+                    <p className="adv_txt02"><span>더드림 인사말</span></p>
+                    <p className="adv_txt03">더드림<br />교통전문센터</p>
+                  </div>
                 </Link>
               </li>
               <li>
                 <Link href="/law/mn01/members">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src="/law/images/main/adv02.jpg" alt="더드림 구성원" />
+                  <div className="adv_txt">
+                    <p className="adv_txt01"><span>THE DREAM</span></p>
+                    <p className="adv_txt02"><span>더드림 구성원</span></p>
+                    <p className="adv_txt03">더드림<br />교통전문센터</p>
+                  </div>
                 </Link>
               </li>
               <li>
                 <Link href="/law/mn01/strength">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src="/law/images/main/adv03.jpg" alt="왜 더드림인가" />
+                  <div className="adv_txt">
+                    <p className="adv_txt01"><span>THE DREAM</span></p>
+                    <p className="adv_txt02"><span>왜 더드림인가</span></p>
+                    <p className="adv_txt03">더드림<br />교통전문센터</p>
+                  </div>
                 </Link>
               </li>
             </ul>

@@ -1,4 +1,4 @@
-// 더드림교통형사센터 위치 — 네이버 지도 (사이드바 CSS clip으로 숨김)
+// 더드림교통형사센터 위치 — 네이버 지도 (사이드바 CSS clip)
 export default function KakaoMapSection() {
   return (
     <div style={{ overflow: 'hidden', height: 412, position: 'relative', background: '#e8e4df' }}>
@@ -8,9 +8,9 @@ export default function KakaoMapSection() {
         style={{
           border: 0,
           display: 'block',
-          width: 'calc(100% + 380px)',
+          width: 'calc(100% + 450px)',
           height: '100%',
-          marginLeft: '-380px',
+          marginLeft: '-450px',
         }}
         allowFullScreen
         loading="lazy"
