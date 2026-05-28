@@ -10,11 +10,11 @@ export const metadata: Metadata = {
 
 /* 5단계 플로우 데이터 */
 const steps = [
-  { num: '01', label: '사건발생 후\n방문상담' },
-  { num: '02', label: '유사 사건\n성공사례 확인 및\n담당변호사 배정' },
-  { num: '03', label: '경찰단계' },
-  { num: '04', label: '검찰단계' },
-  { num: '05', label: '법원단계' },
+  { num: '01', icon: '📞', label: '사건발생 후\n방문상담' },
+  { num: '02', icon: '🔍', label: '유사 사건 성공사례\n확인 및 변호사 배정' },
+  { num: '03', icon: '👮', label: '경찰단계' },
+  { num: '04', icon: '⚖️', label: '검찰단계' },
+  { num: '05', icon: '🏛️', label: '법원단계' },
 ]
 
 /* 형사 소송 진행 12항목 */
@@ -70,42 +70,56 @@ export default function Page() {
           </div>
         </section>
 
-        {/* ─── Section 2: 5단계 프로세스 플로우 ─── */}
+        {/* ─── Section 2: 사건 처리 프로세스 — 아이콘+글 카드 ─── */}
         <section className="mn02-section">
           <h3 className="mn02-h3">사건 처리 프로세스</h3>
           <span className="mn02-h3-line" />
 
           <div style={{
-            display: 'flex', alignItems: 'flex-start', justifyContent: 'center',
+            display: 'flex', alignItems: 'stretch', justifyContent: 'center',
             gap: 0, padding: '30px 0 40px', flexWrap: 'wrap',
           }}>
             {steps.map((step, i) => (
               <div key={i} style={{ display: 'flex', alignItems: 'center' }}>
-                {/* 원형 아이콘 */}
-                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: 130 }}>
+                {/* 아이콘 카드 */}
+                <div style={{
+                  width: 148,
+                  background: '#fff',
+                  border: '1px solid #dde4ec',
+                  borderRadius: 8,
+                  boxShadow: '0 2px 10px rgba(37,61,95,0.08)',
+                  display: 'flex', flexDirection: 'column',
+                  alignItems: 'center', justifyContent: 'center',
+                  padding: '22px 10px 18px',
+                  textAlign: 'center',
+                }}>
+                  {/* 이모티콘 아이콘 */}
                   <div style={{
-                    width: 100, height: 100, borderRadius: '50%',
-                    border: '2px solid #b0bec5',
-                    background: '#fff',
-                    display: 'flex', flexDirection: 'column',
-                    alignItems: 'center', justifyContent: 'center',
-                    boxShadow: '0 2px 8px rgba(0,0,0,0.08)',
-                    marginBottom: 10,
+                    width: 64, height: 64, borderRadius: '50%',
+                    background: 'linear-gradient(135deg, #253d5f 0%, #375b73 100%)',
+                    display: 'flex', alignItems: 'center', justifyContent: 'center',
+                    fontSize: 28, marginBottom: 12,
+                    boxShadow: '0 3px 8px rgba(37,61,95,0.25)',
                   }}>
-                    <span style={{ fontSize: 11, color: '#375b73', fontWeight: 700, letterSpacing: 1 }}>{step.num}</span>
-                    <span style={{
-                      fontSize: 13, color: '#222', fontWeight: 600,
-                      textAlign: 'center', lineHeight: 1.4, padding: '0 6px',
-                      whiteSpace: 'pre-line',
-                    }}>{step.label}</span>
+                    {step.icon}
                   </div>
+                  {/* 단계 번호 */}
+                  <span style={{
+                    fontSize: 11, color: '#375b73', fontWeight: 700,
+                    letterSpacing: 2, marginBottom: 6,
+                  }}>STEP {step.num}</span>
+                  {/* 제목 */}
+                  <span style={{
+                    fontSize: 13.5, color: '#1a2e42', fontWeight: 700,
+                    lineHeight: 1.5, whiteSpace: 'pre-line',
+                  }}>{step.label}</span>
                 </div>
                 {/* 화살표 (마지막 제외) */}
                 {i < steps.length - 1 && (
                   <div style={{
-                    width: 24, fontSize: 20, color: '#90a4ae',
-                    textAlign: 'center', marginBottom: 10, flexShrink: 0,
-                  }}>▶</div>
+                    width: 28, textAlign: 'center', flexShrink: 0,
+                    fontSize: 18, color: '#90a4ae',
+                  }}>›</div>
                 )}
               </div>
             ))}
