@@ -149,9 +149,13 @@ export default function Page() {
               }}>
                 형사 소송 진행
               </div>
+              {/* 좌열 01~06, 우열 07~12 — grid-auto-flow:column */}
               <div style={{
                 border: '1px solid #dde2ea', borderTop: 'none',
-                display: 'grid', gridTemplateColumns: '1fr 1fr',
+                display: 'grid',
+                gridTemplateColumns: '1fr 1fr',
+                gridTemplateRows: 'repeat(6, auto)',
+                gridAutoFlow: 'column',
                 borderRadius: '0 0 4px 4px', overflow: 'hidden',
               }}>
                 {prosecutionItems.map((item, i) => (
@@ -159,8 +163,9 @@ export default function Page() {
                     display: 'flex', alignItems: 'center', gap: 10,
                     padding: '10px 14px',
                     borderBottom: '1px solid #eef0f4',
-                    borderRight: i % 2 === 0 ? '1px solid #eef0f4' : 'none',
-                    background: i % 4 < 2 ? '#fff' : '#f8f9fb',
+                    /* 좌열(0~5) 우측 구분선 */
+                    borderRight: i < 6 ? '1px solid #eef0f4' : 'none',
+                    background: i % 2 === 0 ? '#fff' : '#f8f9fb',
                     fontSize: 13.5,
                   }}>
                     <span style={{
