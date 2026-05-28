@@ -145,7 +145,7 @@
 }
 
 /* Header spacer */
-.law-site .law-header-spacer { height: 172px; }
+.law-site .law-header-spacer { height: 182px; }
 
 /* Hamburger */
 .law-site #law-header .hamburger-btn {
@@ -491,7 +491,7 @@
 #quick {
   position: fixed;
   right: 0;
-  top: 172px;
+  top: 182px;
   z-index: 9999;
   width: 115px;
   /* zoom 잘림 방지: 최대 높이 + 스크롤 */
