@@ -20,7 +20,7 @@ export default function FloatingButtons() {
   }
 
   return (
-    <div id="quick">
+    <div id="floating-quick">
       {/* 전화 버튼 */}
       <a href="tel:02-6959-5053" title="전화 상담">
         <Image

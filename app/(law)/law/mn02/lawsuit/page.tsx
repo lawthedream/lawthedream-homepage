@@ -21,7 +21,7 @@ export default function Page() {
           <span className="mn02-h3-line" />
           <div style={{ marginBottom: 30 }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/law/mn02/photos/settlement_meeting.jpg" alt="합의 미팅"
+            <img src="/law/mn02/photos/lawsuit_gavel.jpg" alt="법봉 합의"
               style={{ width: '100%', height: 320, objectFit: 'cover' }} />
           </div>
           <div className="mn02-text" style={{ textAlign: 'center', fontSize: 16, marginBottom: 16 }}>

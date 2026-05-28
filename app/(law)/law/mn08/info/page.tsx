@@ -18,7 +18,8 @@ export default function Page() {
           <h3 className="con_tit">방문 상담 안내</h3>
           <p style={{ color: "#555", fontSize: 16, lineHeight: 1.8, marginBottom: 12 }}>주소: 서울시 서초구 사임당로 87, 1층·3층</p>
           <p style={{ color: "#555", fontSize: 16, lineHeight: 1.8, marginBottom: 12 }}>전화: 02-6959-5053</p>
-          <p style={{ color: "#555", fontSize: 16, lineHeight: 1.8, marginBottom: 12 }}>지하철: 2호선 방배역 1번 출구 도보 5분</p>
+          <p style={{ color: "#555", fontSize: 16, lineHeight: 1.8, marginBottom: 12 }}>지하철: 2호선·3호선 교대역 하차 → 도보 10분 또는 버스 이용</p>
+          <p style={{ color: "#555", fontSize: 16, lineHeight: 1.8, marginBottom: 12 }}>버스: 144, 541, 740, N61, 742, 1006번 → 서초1동 주민센터 또는 서울교대정문 하차</p>
           <p style={{ color: "#555", fontSize: 16, lineHeight: 1.8, marginBottom: 12 }}>사전 예약 시 대기 없이 바로 상담 가능합니다.</p>
         </section>
         <section aria-label="무료 상담 신청" style={{ marginTop: 60 }}>

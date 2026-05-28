@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import LawMainSlider from '@/components/LawMainSlider'
-import ConsultForm from '@/components/ConsultForm'
 import KakaoMapSection from '@/components/KakaoMapSection'
 
 export const metadata: Metadata = {
@@ -118,18 +117,6 @@ export default function LawHome() {
           </div>
         </div>
 
-        {/* 상담 신청 */}
-        <section id="main_map" aria-label="무료 상담 신청" style={{ padding: '60px 0', background: '#f8f8f8' }}>
-          <div style={{ maxWidth: 1300, margin: '0 auto', padding: '0 20px' }}>
-            <div className="call" style={{ marginBottom: 24 }}>
-              <p style={{ fontSize: 20 }}>
-                전화번호 :{' '}
-                <strong><a href="tel:02-6959-5053" style={{ color: '#253d5f' }}>tel : 02-6959-5053</a></strong>
-              </p>
-            </div>
-            <ConsultForm />
-          </div>
-        </section>
 
         {/* 커뮤니티 */}
         <div id="community">
