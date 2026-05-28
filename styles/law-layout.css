@@ -8,6 +8,7 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  word-break: keep-all; /* 단어 단위 줄바꿈 */
 }
 .law-site main { flex: 1; }
 
