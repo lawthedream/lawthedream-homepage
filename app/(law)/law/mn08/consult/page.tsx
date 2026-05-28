@@ -75,7 +75,6 @@ export default function Page() {
       <div className="law-mn08-tabs">
         <Link href="/law/mn08/consult" className="law-mn08-tab law-mn08-tab-active">온라인상담</Link>
         <a href="https://pf.kakao.com/_uDksxb" target="_blank" rel="noopener noreferrer" className="law-mn08-tab">카톡상담</a>
-        <Link href="/law/mn08/info" className="law-mn08-tab">방문상담</Link>
       </div>
 
       <div id="contents" style={{ maxWidth: 1100, margin: '0 auto', padding: '0 20px 60px' }}>

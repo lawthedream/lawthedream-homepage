@@ -22,7 +22,6 @@ const SECTION_TABS: SectionMap = {
   '/law/mn08': [
     { label: '온라인상담', href: '/law/mn08/consult' },
     { label: '카톡상담', href: 'https://pf.kakao.com/_uDksxb' },
-    { label: '방문상담', href: '/law/mn08/info' },
   ],
 }
 
