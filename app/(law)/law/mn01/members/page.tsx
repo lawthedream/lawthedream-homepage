@@ -13,11 +13,12 @@ export default function Page() {
   return (
     <>
       <SiteSubVisual title="구성원소개" site="law" imgSrc="/law/mn02/img/sub_vs02.jpg" />
-      <div id="contents" style={{ maxWidth: 1200, margin: '40px auto', padding: '0 20px' }}>
-        <div style={{ width: '100%', marginBottom: 20 }}>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/law/mn01/img/man01.jpg" alt="더드림 교통형사센터 구성원" style={{ width: '100%', height: 'auto' }} />
-        </div>
+      {/* 이미지 — 넓은 컨테이너 (30% 크게) */}
+      <div style={{ maxWidth: 1560, margin: '0 auto', padding: '20px 20px 0' }}>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src="/law/mn01/img/man01.jpg" alt="더드림 교통형사센터 구성원" style={{ width: '100%', height: 'auto', display: 'block' }} />
+      </div>
+      <div id="contents" style={{ maxWidth: 1200, margin: '0 auto', padding: '24px 20px 0' }}>
         <section>
           <h3 className="con_tit">구성원 소개</h3>
           <p style={{ color: '#555', fontSize: 16, lineHeight: 1.8, marginBottom: 12 }}>더드림 교통형사센터는 형사 전문 변호사, 공인노무사, 손해사정사 등 각 분야 전문가로 구성되어 있습니다.</p>

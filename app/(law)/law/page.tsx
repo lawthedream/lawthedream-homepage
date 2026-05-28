@@ -218,10 +218,11 @@ export default function LawHome() {
           <ul>
             <li className="info_map">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3165.3!2d127.0113!3d37.4979!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca15f4b3b3b3b%3A0x0!2z7ISc7Jq47Yq567OE7IucIOyEseyLnCDshLHroZzroZzroZw!5e0!3m2!1sko!2skr!4v1628736435503"
-                title="더드림 교통형사센터 위치"
+                src="https://map.naver.com/p/search/%EC%84%9C%EC%9A%B8%20%EC%84%9C%EC%B4%88%EA%B5%AC%20%EC%82%AC%EC%9E%84%EB%8B%B9%EB%A1%9C%2087%20%EB%8D%94%EB%93%9C%EB%A6%BC%EB%B2%95%EB%A5%A0%EC%82%AC%EB%AC%B4%EC%86%8C"
+                title="더드림 교통형사센터 위치 (네이버 지도)"
                 allowFullScreen
                 loading="lazy"
+                style={{ border: 0 }}
               />
             </li>
             <li className="info_time">
@@ -241,6 +242,3 @@ export default function LawHome() {
           </ul>
         </div>
       </div>
-    </>
-  )
-}
