@@ -1,32 +1,130 @@
 import type { Metadata } from 'next'
-import SiteSubVisual from '@/components/SiteSubVisual'
+import Link from 'next/link'
 import ConsultForm from '@/components/ConsultForm'
 
 export const metadata: Metadata = {
-  title: '구성원소개 | 더드림교통형사센터',
-  description: '더드림 교통형사센터 구성원. 경력 10년 이상의 변호사·노무사로 구성된 전문팀.',
-  keywords: '구성원,변호사,노무사,교통형사',
+  title: '더드림 구성원 | 더드림 교통형사센터',
+  description: '더드림 교통형사센터 전문 구성원 소개. 교통형사 전문변호사, 보험보상 전문위원, 사건조사 전문위원.',
   alternates: { canonical: 'https://www.lawthedream.com/law/mn01/members' },
 }
 
-export default function Page() {
+interface Member {
+  img: string
+  name: string
+  role?: string
+}
+
+const lawyers: Member[] = [
+  { img: 'man01', name: '박성훈', role: '대표변호사' },
+  { img: 'man02', name: '정영재', role: '변호사' },
+  { img: 'man03', name: '유명지', role: '변호사' },
+  { img: 'man04', name: '목진성', role: '변호사' },
+  { img: 'man05', name: '양희찬', role: '변호사' },
+]
+
+const insuranceExperts: Member[] = [
+  { img: 'man40', name: '김철기' },
+  { img: 'man30', name: '김선우' },
+  { img: 'man31', name: '안민지' },
+  { img: 'man32', name: '임동윤' },
+]
+
+const investigators: Member[] = [
+  { img: 'man08', name: '마정환' },
+  { img: 'man09', name: '이선민' },
+  { img: 'man10', name: '이수정' },
+  { img: 'man14', name: '정승화' },
+  { img: 'man16', name: '김다운' },
+  { img: 'man21', name: '전찬일' },
+  { img: 'man27', name: '권혜인' },
+  { img: 'man33', name: '박현성' },
+  { img: 'man34', name: '김지민' },
+  { img: 'man35', name: '남현성' },
+  { img: 'man36', name: '박안나' },
+  { img: 'man37', name: '뽀띠리마웅' },
+  { img: 'man38', name: '전현정' },
+  { img: 'man39', name: '이재용' },
+]
+
+function MemberCard({ member }: { member: Member }) {
   return (
-    <>
-      <SiteSubVisual title="구성원소개" site="law" imgSrc="/law/mn02/img/sub_vs02.jpg" />
-      {/* 이미지 — 넓은 컨테이너 (30% 크게) */}
-      <div style={{ maxWidth: 1560, margin: '0 auto', padding: '20px 20px 0' }}>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/law/mn01/img/man01.jpg" alt="더드림 교통형사센터 구성원" style={{ width: '100%', height: 'auto', display: 'block' }} />
+    <div className="member-card">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={`/law/mn01/img/${member.img}.jpg`}
+        alt={member.name}
+        onError={(e) => {
+          const target = e.target as HTMLImageElement
+          target.style.background = '#ddd'
+          target.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE3MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE3MCIgZmlsbD0iI2RkZCIvPjx0ZXh0IHg9Ijc1IiB5PSI5MCIgZm9udC1zaXplPSIxNCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzg4OCI+TiBBPC90ZXh0Pjwvc3ZnPg=='
+        }}
+      />
+      <p className="member-name">{member.name}</p>
+      {member.role && <p className="member-role">{member.role}</p>}
+    </div>
+  )
+}
+
+export default function MembersPage() {
+  return (
+    <div className="law-page-wrap">
+      {/* 브레드크럼 */}
+      <div className="law-breadcrumb">
+        <Link href="/law">HOME</Link>
+        <span> &gt; </span>
+        <span>센터소개</span>
+        <span> &gt; </span>
+        <span>더드림 구성원</span>
       </div>
-      <div id="contents" style={{ maxWidth: 1200, margin: '0 auto', padding: '24px 20px 0' }}>
-        <section>
-          <h3 className="con_tit">구성원 소개</h3>
-          <p style={{ color: '#555', fontSize: 16, lineHeight: 1.8, marginBottom: 12 }}>더드림 교통형사센터는 형사 전문 변호사, 공인노무사, 손해사정사 등 각 분야 전문가로 구성되어 있습니다.</p>
-        </section>
-        <section aria-label="무료 상담 신청" style={{ marginTop: 60 }}>
-          <ConsultForm />
-        </section>
+
+      {/* 페이지 타이틀 */}
+      <div className="law-page-title-bar">
+        <h1>더드림 구성원</h1>
       </div>
-    </>
+
+      <div className="members-wrap">
+
+        {/* 교통형사 전문변호사 */}
+        <section className="members-section">
+          <div className="members-section-header" style={{ background: '#375b73' }}>
+            <h2>교통형사 전문변호사</h2>
+          </div>
+          <div className="members-grid members-grid-5">
+            {lawyers.map((m) => <MemberCard key={m.img} member={m} />)}
+          </div>
+        </section>
+
+        {/* 보험보상 전문위원 */}
+        <section className="members-section">
+          <div className="members-section-header" style={{ background: '#bf8553' }}>
+            <h2>보험보상 전문위원</h2>
+          </div>
+          <div className="members-grid members-grid-4">
+            {insuranceExperts.map((m) => <MemberCard key={m.img} member={m} />)}
+          </div>
+        </section>
+
+        {/* 사건조사 전문위원 */}
+        <section className="members-section">
+          <div className="members-section-header" style={{ background: '#375b73' }}>
+            <h2>사건조사 전문위원</h2>
+          </div>
+          <div className="members-grid members-grid-7">
+            {investigators.map((m) => <MemberCard key={m.img} member={m} />)}
+          </div>
+        </section>
+
+        {/* 상담 폼 */}
+        <section className="law-consult-section">
+          <div className="law-consult-inner">
+            <div className="law-call-info">
+              <p>전화번호 : <strong><a href="tel:02-6959-5053" style={{ color: '#253d5f' }}>02-6959-5053</a></strong></p>
+            </div>
+            <ConsultForm />
+          </div>
+        </section>
+
+      </div>
+    </div>
   )
 }

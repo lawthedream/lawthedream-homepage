@@ -802,3 +802,319 @@
   #quick { display: none; }
   .law-site #contents { padding: 0 12px; margin: 24px auto; }
 }
+
+
+/* ═══════════════════════════════════════════════════════════
+   공통 페이지 레이아웃
+═══════════════════════════════════════════════════════════ */
+.law-site .law-page-wrap {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px 60px;
+}
+.law-site .law-breadcrumb {
+  font-size: 13px;
+  color: #888;
+  padding: 18px 0 10px;
+}
+.law-site .law-breadcrumb a { color: #888; text-decoration: none; }
+.law-site .law-breadcrumb a:hover { color: #375b73; }
+.law-site .law-page-title-bar {
+  border-bottom: 2px solid #375b73;
+  margin-bottom: 40px;
+  padding-bottom: 14px;
+}
+.law-site .law-page-title-bar h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1a2e42;
+}
+.law-site .law-consult-section {
+  margin-top: 60px;
+  padding-top: 40px;
+  border-top: 1px solid #ddd;
+}
+.law-site .law-consult-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.law-site .law-call-info {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   인사말 페이지
+═══════════════════════════════════════════════════════════ */
+.law-site .greeting-wrap {}
+.law-site .greeting-intro {
+  max-width: 1100px;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+.law-site .greeting-main-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1a2e42;
+  margin-bottom: 32px;
+}
+.law-site .greeting-team-photo {
+  margin-bottom: 36px;
+}
+.law-site .greeting-team-photo img {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 4px;
+}
+.law-site .greeting-body-text {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+.law-site .greeting-body-text p {
+  font-size: 17px;
+  line-height: 1.9;
+  color: #444;
+  margin-bottom: 16px;
+}
+.law-site .greeting-closing {
+  font-size: 18px !important;
+  color: #375b73 !important;
+  margin-top: 8px;
+}
+
+/* 5가지 약속 */
+.law-site .greeting-promise {
+  background: #f5f7fa;
+  padding: 60px 20px;
+  margin-bottom: 60px;
+}
+.law-site .greeting-promise-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.law-site .greeting-promise-item {
+  width: 195px;
+  background: #fff;
+  border-radius: 8px;
+  padding: 30px 16px 24px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+.law-site .promise-num {
+  font-size: 36px;
+  font-weight: 900;
+  color: #375b73;
+  margin-bottom: 14px;
+}
+.law-site .promise-text {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* 다크 배너 */
+.law-site .greeting-dark-banner {
+  background: #1a2e42;
+  color: #fff;
+  text-align: center;
+  padding: 50px 20px;
+  margin-bottom: 60px;
+}
+.law-site .greeting-dark-banner p {
+  font-size: 22px;
+  line-height: 1.8;
+  font-weight: 400;
+}
+
+/* 업무영역 카드 */
+.law-site .greeting-practice-areas {
+  max-width: 1100px;
+  margin: 0 auto 60px;
+}
+.law-site .practice-area-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #1a2e42;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.law-site .practice-area-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.law-site .practice-area-card {
+  width: 240px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+  text-decoration: none;
+  transition: box-shadow 0.2s;
+}
+.law-site .practice-area-card:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+}
+.law-site .practice-area-header {
+  padding: 20px 16px;
+  text-align: center;
+  color: #fff;
+}
+.law-site .practice-area-icon { font-size: 28px; display: block; margin-bottom: 8px; }
+.law-site .practice-area-header h3 { font-size: 20px; font-weight: 600; color: #fff; }
+.law-site .practice-area-card ul {
+  list-style: none;
+  padding: 12px 0;
+  margin: 0;
+}
+.law-site .practice-area-card ul li {
+  font-size: 14px;
+  color: #555;
+  padding: 7px 16px;
+  border-bottom: 1px solid #f0f0f0;
+}
+.law-site .practice-area-card ul li:last-child { border-bottom: none; }
+
+/* ═══════════════════════════════════════════════════════════
+   구성원 페이지
+═══════════════════════════════════════════════════════════ */
+.law-site .members-wrap {}
+.law-site .members-section {
+  max-width: 1200px;
+  margin: 0 auto 50px;
+}
+.law-site .members-section-header {
+  padding: 18px 24px;
+  border-radius: 4px 4px 0 0;
+  margin-bottom: 24px;
+}
+.law-site .members-section-header h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+}
+.law-site .members-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0 4px;
+}
+.law-site .member-card {
+  text-align: center;
+  flex-shrink: 0;
+}
+.law-site .members-grid-5 .member-card { width: calc((100% - 80px) / 5); }
+.law-site .members-grid-4 .member-card { width: calc((100% - 60px) / 4); }
+.law-site .members-grid-7 .member-card { width: calc((100% - 120px) / 7); }
+.law-site .member-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+  border: 1px solid #e0e0e0;
+}
+.law-site .member-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #222;
+  margin-top: 10px;
+}
+.law-site .member-role {
+  font-size: 13px;
+  color: #666;
+  margin-top: 4px;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   왜 더드림인가 페이지
+═══════════════════════════════════════════════════════════ */
+.law-site .strength-wrap {}
+.law-site .strength-section {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  max-width: 1100px;
+  margin: 0 auto 70px;
+  padding: 40px 20px;
+  border-bottom: 1px solid #eee;
+}
+.law-site .strength-section-reverse {
+  flex-direction: row-reverse;
+  background: #f8f9fb;
+  border-radius: 8px;
+}
+.law-site .strength-img-box {
+  flex: 0 0 460px;
+  position: relative;
+}
+.law-site .strength-img-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+.law-site .strength-num-badge {
+  position: absolute;
+  top: -16px;
+  left: -16px;
+  width: 52px;
+  height: 52px;
+  background: #375b73;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 900;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+.law-site .strength-text-box { flex: 1; }
+.law-site .strength-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1a2e42;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+.law-site .strength-body {
+  font-size: 16px;
+  line-height: 1.9;
+  color: #555;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   반응형 (모바일)
+═══════════════════════════════════════════════════════════ */
+@media (max-width: 900px) {
+  .law-site .law-page-title-bar h1 { font-size: 22px; }
+  .law-site .greeting-main-title { font-size: 22px; }
+  .law-site .greeting-promise-grid { gap: 12px; }
+  .law-site .greeting-promise-item { width: calc(50% - 12px); }
+  .law-site .practice-area-grid { gap: 14px; }
+  .law-site .practice-area-card { width: calc(50% - 10px); }
+  .law-site .members-grid-5 .member-card { width: calc((100% - 30px) / 3); }
+  .law-site .members-grid-4 .member-card { width: calc((100% - 20px) / 3); }
+  .law-site .members-grid-7 .member-card { width: calc((100% - 30px) / 3); }
+  .law-site .strength-section { flex-direction: column !important; gap: 24px; }
+  .law-site .strength-section-reverse { background: transparent; }
+  .law-site .strength-img-box { flex: none; width: 100%; }
+  .law-site .strength-title { font-size: 20px; }
+  .law-site .greeting-dark-banner p { font-size: 17px; }
+}
+@media (max-width: 600px) {
+  .law-site .greeting-promise-item { width: 100%; }
+  .law-site .practice-area-card { width: 100%; }
+  .law-site .members-grid-5 .member-card,
+  .law-site .members-grid-4 .member-card,
+  .law-site .members-grid-7 .member-card { width: calc(50% - 10px); }
+}
