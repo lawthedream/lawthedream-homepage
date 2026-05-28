@@ -87,13 +87,6 @@ export default function GreetingPage() {
                 color: '#375b73',
               },
               {
-                title: '성범죄',
-                icon: '⚖️',
-                items: ['성희롱', '성추행', '성폭행', '기타'],
-                href: '/law/mn02/accident-12',
-                color: '#bf8553',
-              },
-              {
                 title: '산업안전',
                 icon: '🏗️',
                 items: ['산업안전보건법위반', '업무상과실치사상'],
