@@ -401,9 +401,9 @@
   float: right;
   display: inline-block;
   background: #333;
-  color: #fff;
+  color: #fff !important;
   font-size: 15px;
-  font-weight: 700;
+  font-weight: 700 !important;
   padding: 5px 12px;
   border-radius: 20px;
   text-decoration: none;
@@ -974,7 +974,8 @@ body:has(.law-site) #floating-quick { display: none !important; }
 .law-site .greeting-dark-banner p {
   font-size: 24px;
   line-height: 1.8;
-  font-weight: 700;
+  font-weight: 700 !important;
+  color: #fff !important;
 }
 
 /* 업무영역 카드 */
