@@ -27,14 +27,16 @@
   max-width: 1400px;
   width: 100%;
   margin: 0 auto;
-  padding-top: 10px;
-  overflow: hidden;
+  padding: 0 20px;
   position: relative;
+  min-height: 100px;  /* header-inner 높이 고정 */
+  display: flex;
+  align-items: center;
 }
 
 /* Logo */
 .law-site #law-header #logo {
-  float: left;
+  flex-shrink: 0;
   width: 434px;
   height: 90px;
 }
@@ -50,9 +52,8 @@
 
 /* Right top */
 .law-site #law-header #right_top {
-  float: right;
+  margin-left: auto;   /* flex에서 우측 밀기 */
   text-align: right;
-  margin-top: 21px;
 }
 .law-site #law-header #right_top ul {
   list-style: none;
@@ -388,6 +389,15 @@
   font-size: 38px; font-weight: 700; color: #222;
   padding-bottom: 14px;
 }
+/* THE DREAM INFORMATION 섹션 제목만 금색 */
+.law-site #advice .cnt_tit {
+  color: #d4a84b !important;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.5);
+}
+.law-site #advice .advice_tit .line {
+  background: #d4a84b;
+  opacity: 0.7;
+}
 .law-site .community_tit .line,
 .law-site .advice_tit .line {
   width: 1px; height: 36px;
@@ -430,9 +440,19 @@
 
 /* ===== THE DREAM INFORMATION ===== */
 .law-site #advice {
-  background: #f5f5f5;
+  background: #1a1a2e url('/law/images/main/category_img.jpg') center/cover fixed;
+  background-color: #1a1a2e;
   padding: 60px 0 50px;
+  position: relative;
 }
+.law-site #advice::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 16, 28, 0.72);
+  z-index: 0;
+}
+.law-site #advice > * { position: relative; z-index: 1; }
 .law-site .advice_tit {
   max-width: 1300px;
   margin: 0 auto 40px;
@@ -474,7 +494,12 @@
 
 /* ===== INFO 섹션 (지도+연락처) ===== */
 .law-site #info { overflow: hidden; }
-.law-site #info ul { list-style: none; padding: 0; margin: 0; display: flex; }
+.law-site #info ul {
+  list-style: none; padding: 0; margin: 0;
+  display: flex;
+  max-width: 1300px;   /* advice 너비와 일치 */
+  margin-left: auto; margin-right: auto;
+}
 .law-site #info .info_map { flex: 1; min-height: 412px; }
 .law-site #info .info_map iframe { width: 100%; height: 412px; border: none; display: block; }
 .law-site #info .info_map .root_daum_roughmap { width: 100% !important; min-height: 412px; display: block; }
@@ -506,10 +531,9 @@
 #quick {
   position: fixed;
   right: 0;
-  top: 182px;
+  top: 910px;   /* 182px × 5 = 910px */
   z-index: 9999;
   width: 115px;
-  /* zoom 잘림 방지: 최대 높이 + 스크롤 */
   max-height: 80vh;
   overflow: visible;
 }
@@ -1513,6 +1537,12 @@ body:has(.law-site) #floating-quick { display: none !important; }
   .law-site .main-category-bg { min-height: auto; padding-bottom: 60px; background-attachment: scroll; }
   .law-site .main-case-wrap { flex-wrap: wrap; gap: 16px; }
   .law-site .main-case-card { flex: 1 1 calc(50% - 10px); min-width: calc(50% - 10px); }
+  .law-site .main-case-hdr { height: 130px; background-position: center 24px; background-size: 54px auto; }
+  .law-site .main-case-hdr-title { font-size: 17px; padding-top: 84px; padding-bottom: 12px; }
+  .law-site .main-case-item { min-height: 46px; padding: 10px 8px; }
+  .law-site .main-case-item.main-case-item-first { min-height: 54px; }
+  .law-site .main-case-item-txt { font-size: 15px; }
+  .law-site .main-case-card ul li:last-child { height: 0 !important; display: none; }
   .law-site .category_tit { padding-top: 60px; }
   .law-site .category_tit h2 { font-size: 32px; padding-bottom: 24px; }
   .law-site .category_tit > p { font-size: 18px; }
@@ -1539,11 +1569,12 @@ body:has(.law-site) #floating-quick { display: none !important; }
 /* === 768px 이하 — 모바일 큰 화면 === */
 @media (max-width: 768px) {
   .law-site .main-case-card { flex: 1 1 100%; }
-  .law-site .main-case-hdr { height: 140px; background-size: 56px auto; }
-  .law-site .main-case-hdr-title { font-size: 19px; padding-top: 86px; padding-bottom: 16px; }
-  .law-site .main-case-item-txt { font-size: 16px; }
-  .law-site .main-case-item { min-height: 50px; padding: 12px 8px; }
-  .law-site .main-case-item.main-case-item-first { min-height: 60px; }
+  .law-site .main-case-hdr { height: 120px; background-position: center 20px; background-size: 50px auto; }
+  .law-site .main-case-hdr-title { font-size: 17px; padding-top: 78px; padding-bottom: 10px; }
+  .law-site .main-case-item-txt { font-size: 15px; }
+  .law-site .main-case-item { min-height: 44px; padding: 10px 8px; }
+  .law-site .main-case-item.main-case-item-first { min-height: 50px; }
+  .law-site .main-case-card ul li:last-child { height: 0 !important; display: none; }
 
   /* 커뮤니티 폰트 */
   .law-site .news_tit, .law-site .law_tit { font-size: 20px; }
@@ -1559,9 +1590,10 @@ body:has(.law-site) #floating-quick { display: none !important; }
   .law-site .category_tit h2 { font-size: 26px; padding-bottom: 16px; }
   .law-site .category_tit > p { font-size: 15px; }
   .law-site .main-case-wrap { padding: 30px 12px 0; gap: 12px; }
-  .law-site .main-case-hdr { height: 120px; background-size: 48px auto; }
-  .law-site .main-case-hdr-title { font-size: 17px; padding-top: 72px; padding-bottom: 12px; }
+  .law-site .main-case-hdr { height: 100px; background-position: center 16px; background-size: 42px auto; }
+  .law-site .main-case-hdr-title { font-size: 15px; padding-top: 64px; padding-bottom: 8px; }
   .law-site .main-case-item-txt { font-size: 14px; }
+  .law-site .main-case-card ul li:last-child { height: 0 !important; display: none; }
 
   /* 커뮤니티 여백 */
   .law-site #community { padding: 40px 16px 36px; }
