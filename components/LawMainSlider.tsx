@@ -29,7 +29,9 @@ export default function LawMainSlider() {
       style={{
         position: 'relative',
         width: '100%',
-        height: 600,
+        /* 반응형: 16:6 비율 유지, 최대 600px */
+        aspectRatio: '16 / 6',
+        maxHeight: 600,
         overflow: 'hidden',
         borderTop: '1px solid #c4c3c1',
       }}
@@ -48,10 +50,17 @@ export default function LawMainSlider() {
           <img
             src={slide.img}
             alt={`메인 비주얼 ${idx + 1}`}
-            style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top' }}
+            style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center center' }}
           />
-          <div style={{ position: 'absolute', top: 330, left: 350, zIndex: 2 }}>
-            <img src={slide.txt} alt="슬라이드 텍스트" />
+          {/* 텍스트: % 기반으로 화면 크기에 비례 */}
+          <div style={{
+            position: 'absolute',
+            bottom: '15%',
+            left: '22%',
+            zIndex: 2,
+            maxWidth: '50%',
+          }}>
+            <img src={slide.txt} alt="슬라이드 텍스트" style={{ width: '100%', height: 'auto' }} />
           </div>
         </div>
       ))}

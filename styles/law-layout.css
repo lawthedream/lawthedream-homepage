@@ -488,10 +488,15 @@
 
 /* ===== RIGHT QUICK MENU — position:fixed이라 스코핑 불필요 ===== */
 #quick {
-  position: fixed; right: 0; top: 50%;
+  position: fixed;
+  right: 0;
+  top: 50%;
   transform: translateY(-50%);
-  z-index: 999;     /* 헤더(z-index:1000) 아래 — 상단바 침범 방지 */
+  z-index: 9999;
   width: 115px;
+  /* zoom 잘림 방지: 최대 높이 + 스크롤 */
+  max-height: 80vh;
+  overflow: visible;
 }
 #quick ul { list-style: none; padding: 0; margin: 0; }
 #quick ul li { display: block; }
