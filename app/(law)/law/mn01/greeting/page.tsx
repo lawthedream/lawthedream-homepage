@@ -8,6 +8,56 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://www.lawthedream.com/law/mn01/greeting' },
 }
 
+// 5가지 약속 아이콘 (원본 Flaticon 스타일 PNG 사용)
+const PROMISES = [
+  {
+    num: '01',
+    img: '/law/mn01/img/mn01_01_img1.png',
+    text: '당신의 원하는 바가 무엇인지 잘 알고 있습니다',
+  },
+  {
+    num: '02',
+    img: '/law/mn01/img/mn01_01_img2.png',
+    text: '당신에게 이득이 되는 것을 더 드리려 항상 노력합니다',
+  },
+  {
+    num: '03',
+    img: '/law/mn01/img/mn01_01_img3.png',
+    text: '일상의 회복을 위한 최적의 솔루션을 제공합니다',
+  },
+  {
+    num: '04',
+    img: '/law/mn01/img/mn01_01_img4.png',
+    text: '한가지라도 더 알려드리는 친절함을 가지고 있습니다',
+  },
+  {
+    num: '05',
+    img: '/law/mn01/img/mn01_01_img5.png',
+    text: '당신에게 도움이 되는 올바른 길을 찾는 안내자가 될것입니다',
+  },
+]
+
+const PRACTICE_AREAS = [
+  {
+    title: '교통사고',
+    icon: '🚗',
+    items: ['12대 중과실사고', '음주·뺑소니', '민식이법', '합의', '면허취소구제'],
+    color: '#375b73',
+  },
+  {
+    title: '산업안전',
+    icon: '🏗️',
+    items: ['산업안전보건법위반', '업무상과실치사상', '중대재해처벌법', '근로자재해보험', '손해배상책임'],
+    color: '#375b73',
+  },
+  {
+    title: '일반형사',
+    icon: '📋',
+    items: ['폭행상해', '마약범죄', '재산범죄', '성범죄'],
+    color: '#bf8553',
+  },
+]
+
 export default function GreetingPage() {
   return (
     <div className="law-page-wrap">
@@ -31,9 +81,10 @@ export default function GreetingPage() {
         {/* 상단 인사 텍스트 */}
         <section className="greeting-intro">
           <h2 className="greeting-main-title">더드림 법률사무소 교통형사센터는</h2>
+          {/* 변호사 팀 사진 (텍스트 없는 깨끗한 사진) */}
           <div className="greeting-team-photo">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/law/mn01/img/mn01_01_img7.jpg" alt="더드림 법률사무소 교통형사센터 팀" />
+            <img src="/law/mn01/img/mn01_01_img6.jpg" alt="더드림 법률사무소 변호사 팀" />
           </div>
           <div className="greeting-body-text">
             <p>
@@ -51,18 +102,16 @@ export default function GreetingPage() {
           </div>
         </section>
 
-        {/* 5가지 약속 아이콘 */}
+        {/* 5가지 약속 — Flaticon 아이콘 포함 */}
         <section className="greeting-promise">
           <div className="greeting-promise-grid">
-            {[
-              { num: '01', text: '당신의 원하는 바가 무엇인지 잘 알고 있습니다' },
-              { num: '02', text: '당신에게 이득이 되는 것을 더 드리려 항상 노력합니다' },
-              { num: '03', text: '일상의 회복을 위한 최적의 솔루션을 제공합니다' },
-              { num: '04', text: '한가지라도 더 알려드리는 친절함을 가지고 있습니다' },
-              { num: '05', text: '당신에게 도움이 되는 올바른 길을 찾는 안내자가 될것입니다' },
-            ].map((item) => (
+            {PROMISES.map((item) => (
               <div key={item.num} className="greeting-promise-item">
-                <div className="promise-num">{item.num}</div>
+                <div className="promise-icon-wrap">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={item.img} alt={`약속 ${item.num}`} className="promise-icon-img" />
+                  <div className="promise-num">{item.num}</div>
+                </div>
                 <p className="promise-text">{item.text}</p>
               </div>
             ))}
@@ -78,30 +127,8 @@ export default function GreetingPage() {
         <section className="greeting-practice-areas">
           <h2 className="practice-area-title">업무영역</h2>
           <div className="practice-area-grid">
-            {[
-              {
-                title: '교통사고',
-                icon: '🚗',
-                items: ['12대 중과실사고', '음주·뺑소니', '민식이법', '합의', '면허취소구제'],
-                href: '/law/mn02/accident-12',
-                color: '#375b73',
-              },
-              {
-                title: '산업안전',
-                icon: '🏗️',
-                items: ['산업안전보건법위반', '업무상과실치사상'],
-                href: '/law/mn02/accident-12',
-                color: '#375b73',
-              },
-              {
-                title: '일반형사',
-                icon: '📋',
-                items: ['폭행상해', '마약범죄', '재산범죄'],
-                href: '/law/mn02/accident-12',
-                color: '#bf8553',
-              },
-            ].map((area) => (
-              <div className="practice-area-card" style={{ '--card-color': area.color } as React.CSSProperties}>
+            {PRACTICE_AREAS.map((area) => (
+              <div key={area.title} className="practice-area-card" style={{ '--card-color': area.color } as React.CSSProperties}>
                 <div className="practice-area-header" style={{ backgroundColor: area.color }}>
                   <span className="practice-area-icon">{area.icon}</span>
                   <h3>{area.title}</h3>

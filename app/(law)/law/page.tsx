@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import LawMainSlider from '@/components/LawMainSlider'
 import ConsultForm from '@/components/ConsultForm'
+import KakaoMapSection from '@/components/KakaoMapSection'
 
 export const metadata: Metadata = {
   title: '더드림 교통형사센터 | 교통사고·형사사건 전문',
@@ -217,13 +218,7 @@ export default function LawHome() {
         <div id="info">
           <ul>
             <li className="info_map">
-              <iframe
-                src="https://map.naver.com/p/entry/place/1880673239?c=15,0,0,0,dh"
-                title="더드림 교통형사센터 위치 (네이버 지도)"
-                allowFullScreen
-                loading="lazy"
-                style={{ border: 0 }}
-              />
+              <KakaoMapSection />
             </li>
             <li className="info_time">
               <div className="info-contact-row">

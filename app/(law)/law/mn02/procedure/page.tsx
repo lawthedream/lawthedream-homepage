@@ -77,7 +77,7 @@ export default function Page() {
             </div>
             <div className="photo-side">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/law/mn02/photos/procedure_lawyer.jpg" alt="변호사 서류 작업" />
+              <img src="/law/mn02/photos/procedure_docs.jpg" alt="서류 작업" />
             </div>
           </div>
 
@@ -134,7 +134,7 @@ export default function Page() {
             </div>
             <div className="photo-side">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/law/mn02/photos/procedure_accident.jpg" alt="교통사고 현장" />
+              <img src="/law/mn02/photos/procedure_justice.jpg" alt="법원 정의 저울" style={{ objectFit: "cover", height: "100%", width: "100%" }} />
             </div>
           </div>
         </section>
