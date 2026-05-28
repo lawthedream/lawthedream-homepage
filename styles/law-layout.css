@@ -457,12 +457,15 @@
   position: absolute;
   bottom: 0; left: 0; right: 0;
   background: rgba(0,0,0,0.55);
-  padding: 18px 20px;
+  padding: 14px 20px;
   color: #fff;
 }
-.law-site .adv_txt01 { font-size: 14px; color: #f2bd79; margin-bottom: 4px; }
-.law-site .adv_txt02 { font-size: 19px; font-weight: 700; margin-bottom: 6px; }
-.law-site .adv_txt03 { font-size: 16px; line-height: 1.5; color: rgba(255,255,255,0.85); }
+.law-site .adv_txt02 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff !important;
+  margin: 0;
+}
 
 /* ===== INFO 섹션 (지도+연락처) ===== */
 .law-site #info { overflow: hidden; }
