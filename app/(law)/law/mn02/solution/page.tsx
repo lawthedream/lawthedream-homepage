@@ -33,6 +33,18 @@ const prosecutionItems = [
   { n: '12', t: '선고' },
 ]
 
+/* 예상 결과 8항목 */
+const resultItems = [
+  { n: '01', t: '불송치 결정' },
+  { n: '02', t: '기소의견 숨치' },
+  { n: '03', t: '불기소 처분' },
+  { n: '04', t: '기소 유예 등' },
+  { n: '05', t: '무죄' },
+  { n: '06', t: '선고유예' },
+  { n: '07', t: '집행유예' },
+  { n: '08', t: '신상정보공개 기각 등' },
+]
+
 /* 대응 진행 12항목 */
 const responseItems = [
   { n: '01', t: '담당형사변호사 및 사건 TF팀 면담, 전략 수립' },
@@ -225,6 +237,59 @@ export default function Page() {
                 alt="전문가 노트 작성"
                 style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top', display: 'block' }}
               />
+            </div>
+          </div>
+        </section>
+
+        {/* ─── Section 5: 예상 결과 ─── */}
+        <section className="mn02-section">
+          <div style={{ display: 'flex', gap: 30, alignItems: 'stretch' }}>
+
+            {/* 좌: 법전/망치 사진 */}
+            <div style={{ flex: '0 0 340px', overflow: 'hidden', borderRadius: 4 }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/law/mn02/photos/solution_gavel.jpg"
+                alt="법원 판결"
+                style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 30%', display: 'block' }}
+              />
+            </div>
+
+            {/* 우: 예상 결과 표 */}
+            <div style={{ flex: 1 }}>
+              <div style={{
+                background: '#375b73', color: '#fff',
+                padding: '10px 20px', fontSize: 16, fontWeight: 700,
+                borderRadius: '4px 4px 0 0', letterSpacing: 1,
+              }}>
+                예상 결과
+              </div>
+              {/* 좌열 01~04, 우열 05~08 */}
+              <div style={{
+                border: '1px solid #dde2ea', borderTop: 'none',
+                display: 'grid',
+                gridTemplateColumns: '1fr 1fr',
+                gridTemplateRows: 'repeat(4, auto)',
+                gridAutoFlow: 'column',
+                borderRadius: '0 0 4px 4px', overflow: 'hidden',
+              }}>
+                {resultItems.map((item, i) => (
+                  <div key={i} style={{
+                    display: 'flex', alignItems: 'center', gap: 10,
+                    padding: '12px 16px',
+                    borderBottom: '1px solid #eef0f4',
+                    borderRight: i < 4 ? '1px solid #eef0f4' : 'none',
+                    background: i % 2 === 0 ? '#fff' : '#f8f9fb',
+                    fontSize: 14,
+                  }}>
+                    <span style={{
+                      color: '#375b73', fontWeight: 700, fontSize: 12,
+                      minWidth: 24, flexShrink: 0,
+                    }}>{item.n}</span>
+                    <span style={{ color: '#333', lineHeight: 1.4 }}>{item.t}</span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>
