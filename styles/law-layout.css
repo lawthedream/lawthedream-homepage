@@ -66,10 +66,12 @@
   padding: 10px 25px;
   border-radius: 50px;
 }
-.law-site #law-header #right_top .r_tel a {
+.law-site #law-header #right_top .r_tel a,
+.law-site #law-header #right_top .r_tel a:link,
+.law-site #law-header #right_top .r_tel a:visited {
   display: block;
   font-size: 20px;
-  color: #fff;
+  color: #fff !important;
   line-height: 130%;
   font-weight: 700;
   text-decoration: none;
