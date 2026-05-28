@@ -24,12 +24,13 @@ export default function LawMainSlider() {
   }, [next])
 
   return (
+    /* 이미지 원본 비율(2000×925 = 46.25%) 그대로 유지하면서 뷰포트에 맞게 축소 */
     <div
       id="main_visual"
       style={{
         position: 'relative',
         width: '100%',
-        height: 'clamp(400px, 38vw, 600px)',
+        paddingBottom: '46.25%',   /* 925/2000 = 46.25% — 비례 높이 */
         overflow: 'hidden',
         borderTop: '1px solid #c4c3c1',
       }}
@@ -45,6 +46,7 @@ export default function LawMainSlider() {
             zIndex: idx === current ? 1 : 0,
           }}
         >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={slide.img}
             alt={`메인 비주얼 ${idx + 1}`}
@@ -57,6 +59,7 @@ export default function LawMainSlider() {
             zIndex: 2,
             maxWidth: '50%',
           }}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src={slide.txt} alt="슬라이드 텍스트" style={{ width: '100%', maxWidth: 520, height: 'auto' }} />
           </div>
         </div>
@@ -70,9 +73,11 @@ export default function LawMainSlider() {
         pointerEvents: 'none',
       }}>
         <button onClick={prev} style={{ pointerEvents: 'all', background: 'none', border: 'none', cursor: 'pointer', padding: 0 }}>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/law/images/main/visual_arrow_left.png" alt="이전" width={52} height={68} />
         </button>
         <button onClick={next} style={{ pointerEvents: 'all', background: 'none', border: 'none', cursor: 'pointer', padding: 0 }}>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/law/images/main/visual_arrow_right.png" alt="다음" width={52} height={68} />
         </button>
       </div>
@@ -89,6 +94,7 @@ export default function LawMainSlider() {
             onClick={() => setCurrent(idx)}
             style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 0, lineHeight: 0 }}
           >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={idx === current ? `/law/images/main/visual_btn${idx}_o.gif` : `/law/images/main/visual_btn${idx}.gif`}
               alt={`슬라이드 ${idx + 1}`}
