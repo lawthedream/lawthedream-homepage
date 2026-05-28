@@ -53,11 +53,7 @@ function MemberCard({ member }: { member: Member }) {
       <img
         src={`/law/mn01/img/${member.img}.jpg`}
         alt={member.name}
-        onError={(e) => {
-          const target = e.target as HTMLImageElement
-          target.style.background = '#ddd'
-          target.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE3MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE3MCIgZmlsbD0iI2RkZCIvPjx0ZXh0IHg9Ijc1IiB5PSI5MCIgZm9udC1zaXplPSIxNCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzg4OCI+TiBBPC90ZXh0Pjwvc3ZnPg=='
-        }}
+        loading="lazy"
       />
       <p className="member-name">{member.name}</p>
       {member.role && <p className="member-role">{member.role}</p>}
@@ -68,7 +64,6 @@ function MemberCard({ member }: { member: Member }) {
 export default function MembersPage() {
   return (
     <div className="law-page-wrap">
-      {/* 브레드크럼 */}
       <div className="law-breadcrumb">
         <Link href="/law">HOME</Link>
         <span> &gt; </span>
@@ -77,14 +72,12 @@ export default function MembersPage() {
         <span>더드림 구성원</span>
       </div>
 
-      {/* 페이지 타이틀 */}
       <div className="law-page-title-bar">
         <h1>더드림 구성원</h1>
       </div>
 
       <div className="members-wrap">
 
-        {/* 교통형사 전문변호사 */}
         <section className="members-section">
           <div className="members-section-header" style={{ background: '#375b73' }}>
             <h2>교통형사 전문변호사</h2>
@@ -94,7 +87,6 @@ export default function MembersPage() {
           </div>
         </section>
 
-        {/* 보험보상 전문위원 */}
         <section className="members-section">
           <div className="members-section-header" style={{ background: '#bf8553' }}>
             <h2>보험보상 전문위원</h2>
@@ -104,7 +96,6 @@ export default function MembersPage() {
           </div>
         </section>
 
-        {/* 사건조사 전문위원 */}
         <section className="members-section">
           <div className="members-section-header" style={{ background: '#375b73' }}>
             <h2>사건조사 전문위원</h2>
@@ -114,7 +105,6 @@ export default function MembersPage() {
           </div>
         </section>
 
-        {/* 상담 폼 */}
         <section className="law-consult-section">
           <div className="law-consult-inner">
             <div className="law-call-info">
