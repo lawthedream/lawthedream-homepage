@@ -1516,15 +1516,15 @@ body:has(.law-site) #floating-quick { display: none !important; }
 .law-site .main-case-item {
   width: 100%;
   border-bottom: 1px solid #e5e6e8;
-  padding: 15px 0;
-  min-height: 60px;
+  padding: 12px 0;        /* 15px × 0.8 = 12px (상하 20% 축소) */
+  min-height: 48px;       /* 60px × 0.8 = 48px */
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .law-site .main-case-item.main-case-item-first {
-  min-height: 76px;
-  padding: 18px 0;
+  min-height: 61px;       /* 76px × 0.8 ≈ 61px */
+  padding: 14px 0;        /* 18px × 0.8 ≈ 14px */
 }
 .law-site .main-case-item-txt {
   font-size: 20px;
