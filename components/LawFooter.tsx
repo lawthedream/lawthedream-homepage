@@ -9,7 +9,7 @@ export default function LawFooter() {
         style={{
           maxWidth: 1300,
           margin: '0 auto',
-          padding: '50px 0 36px',
+          padding: '50px 20px 36px',
           display: 'flex',
           alignItems: 'center',
           gap: 40,

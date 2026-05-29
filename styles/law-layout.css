@@ -464,9 +464,10 @@
 .law-site .advice_tit {
   max-width: 1300px;
   margin: 0 auto 40px;
+  padding: 0 20px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 1.5em;  /* 제목 우측 약 3칸 간격 */
 }
 .law-site .advice_tit .cnt_tit {
