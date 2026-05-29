@@ -1431,7 +1431,7 @@ body:has(.law-site) #floating-quick { display: none !important; }
 /* === OUR CASE 배경 === */
 .law-site .main-category-bg {
   width: 100%;
-  min-height: 953px;
+  min-height: 858px;
   position: relative;
   background-image: url('/law/images/main/category_img.jpg');
   background-attachment: fixed;
@@ -1443,7 +1443,7 @@ body:has(.law-site) #floating-quick { display: none !important; }
 .law-site .category_tit {
   width: 100%;
   text-align: center;
-  padding-top: 100px;
+  padding-top: 90px;
 }
 .law-site .category_tit h2 {
   font-size: 45px;
@@ -1468,7 +1468,7 @@ body:has(.law-site) #floating-quick { display: none !important; }
   max-width: 1300px;
   width: 100%;
   margin: 0 auto;
-  padding: 60px 20px 0;
+  padding: 54px 20px 54px;
   display: flex;
   gap: 20px;
   box-sizing: border-box;
