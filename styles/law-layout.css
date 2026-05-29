@@ -531,7 +531,7 @@
 #quick {
   position: fixed;
   right: 0;
-  top: 910px;   /* 182px × 5 = 910px */
+  top: 364px;   /* 182px × 2 = 364px */
   z-index: 9999;
   width: 115px;
   max-height: 80vh;
