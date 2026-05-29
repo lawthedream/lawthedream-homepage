@@ -893,7 +893,12 @@ body:has(.law-site) #floating-quick { display: none !important; }
 .law-site .sol-tbl-grid-8 {
   grid-template-rows: repeat(4, auto); grid-auto-flow: column;
 }
-.law-site .sol-tbl-grid-2col { /* 대응진행: 순서대로 2열 */ }
+.law-site .sol-tbl-grid-2col {
+  grid-template-rows: repeat(6, auto); grid-auto-flow: column;
+}
+.law-site .sol-tbl-grid-5 {
+  grid-template-columns: 1fr; grid-template-rows: repeat(5, auto);
+}
 
 .law-site .sol-tbl-item {
   display: flex; align-items: center; gap: 10px;
@@ -935,7 +940,9 @@ body:has(.law-site) #floating-quick { display: none !important; }
   /* 표 그리드 1열로 */
   .law-site .sol-tbl-grid,
   .law-site .sol-tbl-grid-12,
-  .law-site .sol-tbl-grid-8 {
+  .law-site .sol-tbl-grid-8,
+  .law-site .sol-tbl-grid-2col,
+  .law-site .sol-tbl-grid-5 {
     grid-template-columns: 1fr !important;
     grid-template-rows: auto !important;
     grid-auto-flow: row !important;
