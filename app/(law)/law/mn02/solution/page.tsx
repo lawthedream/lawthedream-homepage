@@ -75,8 +75,8 @@ export default function Page() {
           <div style={{ textAlign: 'center', marginBottom: 48 }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/law/mn02/img/mn02_07_img1.jpg"
-              alt="더드림 보호프로그램"
+              src="/law/mn02/img/mn02_07_img1_team.jpg"
+              alt="더드림 보호프로그램 팀"
               style={{ maxWidth: '100%', height: 'auto', display: 'block', margin: '0 auto' }}
             />
           </div>
