@@ -68,13 +68,6 @@ export default function Page() {
 
       <div className="mn02-wrap">
 
-        {/* ─── Section 1: 더드림 보호프로그램 ─── */}
-        <section className="mn02-section">
-          <h3 className="mn02-h3">더드림 보호프로그램</h3>
-          <span className="mn02-h3-line" />
-
-        </section>
-
         {/* ─── Section 2: 사건 처리 프로세스 — 아이콘+글 카드 ─── */}
         <section className="mn02-section">
           <h3 className="mn02-h3">사건 처리 프로세스</h3>
