@@ -543,7 +543,7 @@
 #quick {
   position: fixed;
   right: 0;
-  top: 364px;   /* 182px × 2 = 364px */
+  top: 430px;
   z-index: 9999;
   width: 115px;
   max-height: 80vh;
