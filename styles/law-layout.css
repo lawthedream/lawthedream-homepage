@@ -406,10 +406,14 @@
   background: #d4a84b;
   opacity: 0.7;
 }
-.law-site .community_tit .line,
-.law-site .advice_tit .line {
+.law-site .community_tit .line {
   width: 1px; height: 36px;
-  background: #bbb; flex-shrink: 0;
+  background: #bbb; flex-shrink: 0; margin: 0 auto;
+}
+.law-site .advice_tit .line {
+  width: 2px; height: 40px;
+  flex-shrink: 0;
+  margin-left: 24px;   /* 텍스트와 명확한 간격 */
 }
 .law-site #community .news {
   float: left; width: 48%; margin-right: 4%;
@@ -468,7 +472,6 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 1.5em;  /* 제목 우측 약 3칸 간격 */
 }
 .law-site .advice_tit .cnt_tit {
   white-space: nowrap;   /* 1줄 강제 */
