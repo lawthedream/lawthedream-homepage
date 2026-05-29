@@ -3,18 +3,20 @@ import Link from 'next/link'
 
 export default function LawFooter() {
   return (
-    <div id="footer_wrap" style={{ clear: 'both', width: '100%', background: '#121d26' }}>
-      {/* width:100% 인라인으로 layout.css의 #footer_wrap #footer { width:1200px } 덮어쓰기 */}
+    /* law-footer-wrap / law-footer 사용 — layout.css의 #footer_wrap #footer 규칙 충돌 회피 */
+    <div
+      id="law-footer-wrap"
+      style={{ clear: 'both', width: '100%', background: '#121d26' }}
+    >
       <div
-        id="footer"
+        id="law-footer"
         style={{
-          width: '100%',
-          boxSizing: 'border-box',
           maxWidth: 1300,
           margin: '0 auto',
           padding: '50px 20px 40px',
-          textAlign: 'center',
-          overflow: 'visible',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
         }}
       >
         {/* 로고 — 중앙 */}
@@ -25,7 +27,7 @@ export default function LawFooter() {
             width={200}
             height={60}
             unoptimized
-            style={{ display: 'inline-block' }}
+            style={{ display: 'block' }}
           />
         </div>
 

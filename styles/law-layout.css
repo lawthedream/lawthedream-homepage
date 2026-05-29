@@ -866,11 +866,13 @@ body:has(.law-site) #floating-quick { display: none !important; }
 .law-site .sol-photo-table-row-rev { flex-direction: row; } /* default = photo left */
 .law-site .sol-photo-side {
   flex: 0 0 340px; overflow: hidden; border-radius: 4px;
-  align-self: stretch;  /* 테이블 높이에 맞춰 stretch */
+  align-self: stretch;        /* 부모 flex row에서 표 높이만큼 늘어남 */
+  display: flex;
+  flex-direction: column;     /* img가 남은 높이 전부 채우도록 */
 }
-/* 사진이 부모 높이 100% 채움 */
+/* 사진이 테이블 높이에 맞게 100% stretch */
 .law-site .sol-photo-side img {
-  width: 100%; height: 100%; object-fit: cover; display: block;
+  flex: 1 0 0; width: 100%; min-height: 0; object-fit: cover; display: block;
 }
 .law-site .sol-table-side { flex: 1; min-width: 0; }
 
