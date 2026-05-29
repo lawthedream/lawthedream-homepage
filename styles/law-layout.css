@@ -33,6 +33,14 @@
   display: flex;
   align-items: center;
 }
+/* logo + right_top 가로 배치 + 세로 중앙 */
+.law-site #law-header .header-logo-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+  min-width: 0;
+}
 
 /* Logo */
 .law-site #law-header #logo {

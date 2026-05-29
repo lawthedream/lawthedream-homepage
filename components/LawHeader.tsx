@@ -47,7 +47,7 @@ export default function LawHeader() {
     <>
       <div id="law-header">
         <div className="header-inner">
-          <div style={{ overflow: 'hidden' }}>
+          <div className="header-logo-row">
             {/* Logo */}
             <div id="logo">
               <h1>
