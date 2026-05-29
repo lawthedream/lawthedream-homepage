@@ -4,13 +4,17 @@ import Link from 'next/link'
 export default function LawFooter() {
   return (
     <div id="footer_wrap" style={{ clear: 'both', width: '100%', background: '#121d26' }}>
+      {/* width:100% 인라인으로 layout.css의 #footer_wrap #footer { width:1200px } 덮어쓰기 */}
       <div
         id="footer"
         style={{
+          width: '100%',
+          boxSizing: 'border-box',
           maxWidth: 1300,
           margin: '0 auto',
           padding: '50px 20px 40px',
           textAlign: 'center',
+          overflow: 'visible',
         }}
       >
         {/* 로고 — 중앙 */}
@@ -32,6 +36,7 @@ export default function LawFooter() {
             color: '#acafb2',
             fontSize: 15,
             lineHeight: 2.2,
+            textAlign: 'center',
           }}
         >
           더드림교통사고전문센터
