@@ -411,9 +411,9 @@
   background: #bbb; flex-shrink: 0; margin: 0 auto;
 }
 .law-site .advice_tit .line {
-  width: 1px; height: 40px;
+  width: 1px; height: 44px;
   display: block;
-  margin: 10px auto 0;   /* 제목 아래 중앙 | */
+  margin: 22px auto 0;   /* 줄바꿈 후 | 중앙 배치 */
 }
 .law-site #community .news {
   float: left; width: 48%; margin-right: 4%;
