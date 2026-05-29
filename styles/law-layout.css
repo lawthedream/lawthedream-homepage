@@ -93,7 +93,7 @@
 .law-site #law-header #gnb {
   width: 100%;
   text-align: center;
-  height: 82px;
+  height: 74px;
   background: rgba(0,0,0,0.92);
   border-top: 1px solid #555;
   overflow: visible;
@@ -114,15 +114,15 @@
   display: inline-block;
   width: 143px;
   text-align: center;
-  height: 57px;
-  line-height: 57px;
+  height: 51px;
+  line-height: 51px;
 }
 .law-site #law-header #top_link li.sub_top > a {
   display: block;
   color: #fff;
   font-size: 18px;
   font-weight: 400;
-  line-height: 57px;
+  line-height: 51px;
   text-decoration: none;
   transition: color 0.2s;
 }
@@ -132,7 +132,7 @@
 .law-site #law-header .sub_menu {
   position: absolute;
   min-width: 155px;
-  top: 57px;
+  top: 51px;
   left: 50%;
   transform: translateX(-50%);
   border: 1px solid #444;
@@ -157,7 +157,7 @@
 }
 
 /* Header spacer */
-.law-site .law-header-spacer { height: 182px; }
+.law-site .law-header-spacer { height: 174px; }
 
 /* Hamburger */
 .law-site #law-header .hamburger-btn {
