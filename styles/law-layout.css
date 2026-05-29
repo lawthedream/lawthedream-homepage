@@ -1496,10 +1496,10 @@ body:has(.law-site) #floating-quick { display: none !important; }
 /* 카드 컬러 헤더 */
 .law-site .main-case-hdr {
   width: 100%;
-  height: 175px;
+  height: 200px;
   background-repeat: no-repeat;
-  background-position: center 18px;   /* 아이콘 위치 */
-  background-size: 95px auto;         /* 아이콘 확대: 70→95px */
+  background-position: center 14px;   /* 아이콘 위치 */
+  background-size: 143px auto;        /* 아이콘 150% 확대: 95→143px */
 }
 
 /* 카드 헤더 타이틀 */
@@ -1508,8 +1508,8 @@ body:has(.law-site) #floating-quick { display: none !important; }
   font-weight: 500;
   color: #fff !important;
   text-align: center;
-  padding-top: 122px;   /* 18px(위) + 95px(아이콘) + 9px(간격) */
-  padding-bottom: 22px;
+  padding-top: 162px;   /* 14px(위) + 143px(아이콘) + 5px(간격) */
+  padding-bottom: 20px;
   margin: 0;
 }
 
