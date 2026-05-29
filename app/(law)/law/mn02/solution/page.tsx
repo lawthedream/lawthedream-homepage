@@ -110,7 +110,7 @@ export default function Page() {
             <div className="sol-photo-side">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src="/law/mn02/photos/procedure_police.jpg" alt="경찰 수사"
-                style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+                />
             </div>
             {/* 우: 형사소송진행 표 */}
             <div className="sol-table-side">
@@ -148,7 +148,7 @@ export default function Page() {
             <div className="sol-photo-side">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src="/law/mn02/photos/solution_pen.jpg" alt="전문가 노트 작성"
-                style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top', display: 'block' }} />
+                />
             </div>
           </div>
         </section>
@@ -160,7 +160,7 @@ export default function Page() {
             <div className="sol-photo-side">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src="/law/mn02/photos/solution_gavel.jpg" alt="법원 판결"
-                style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 30%', display: 'block' }} />
+                />
             </div>
             {/* 우: 예상 결과 표 */}
             <div className="sol-table-side">
