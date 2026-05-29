@@ -72,14 +72,7 @@ export default function Page() {
         <section className="mn02-section">
           <h3 className="mn02-h3">더드림 보호프로그램</h3>
           <span className="mn02-h3-line" />
-          <div style={{ textAlign: 'center', marginBottom: 48 }}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/law/mn02/img/mn02_07_img1_team.jpg"
-              alt="더드림 보호프로그램 팀"
-              style={{ maxWidth: '100%', height: 'auto', display: 'block', margin: '0 auto' }}
-            />
-          </div>
+
         </section>
 
         {/* ─── Section 2: 사건 처리 프로세스 — 아이콘+글 카드 ─── */}
