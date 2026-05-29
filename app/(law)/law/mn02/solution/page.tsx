@@ -10,11 +10,11 @@ export const metadata: Metadata = {
 
 /* 사건 처리 프로세스 5단계 */
 const stepItems = [
-  { n: 'STEP 01', t: '사건발생 후 방문상담' },
-  { n: 'STEP 02', t: '유사 사건 성공사례 확인 및 변호사 배정' },
-  { n: 'STEP 03', t: '경찰단계' },
-  { n: 'STEP 04', t: '검찰단계' },
-  { n: 'STEP 05', t: '법원단계' },
+  { num: '01', icon: '📞', label: '사건발생 후\n방문상담' },
+  { num: '02', icon: '🔍', label: '유사 사건 성공사례\n확인 및 변호사 배정' },
+  { num: '03', icon: '👮', label: '경찰단계' },
+  { num: '04', icon: '⚖️', label: '검찰단계' },
+  { num: '05', icon: '🏛️', label: '법원단계' },
 ]
 
 /* 형사 소송 진행 12항목 */
@@ -68,26 +68,24 @@ export default function Page() {
 
       <div className="mn02-wrap">
 
-        {/* ─── Section 2: 사건 처리 프로세스 — 사진(좌)+표(우) ─── */}
+        {/* ─── Section 2: 사건 처리 프로세스 — 아이콘+글 카드 ─── */}
         <section className="mn02-section">
-          <div className="sol-photo-table-row">
-            {/* 좌: 사진 */}
-            <div className="sol-photo-side">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/law/mn02/photos/procedure_lawyer.jpg" alt="변호사 상담" />
-            </div>
-            {/* 우: 사건 처리 프로세스 표 */}
-            <div className="sol-table-side">
-              <div className="sol-tbl-head sol-tbl-head-blue">사건 처리 프로세스</div>
-              <div className="sol-tbl-grid sol-tbl-grid-5">
-                {stepItems.map((item, i) => (
-                  <div key={i} className={`sol-tbl-item${i % 2 !== 0 ? ' sol-tbl-item-alt' : ''}`}>
-                    <span className="sol-tbl-num sol-tbl-num-blue">{item.n}</span>
-                    <span className="sol-tbl-txt">{item.t}</span>
-                  </div>
-                ))}
+          <h3 className="mn02-h3">사건 처리 프로세스</h3>
+          <span className="mn02-h3-line" />
+
+          <div className="sol-steps-row">
+            {stepItems.map((step, i) => (
+              <div key={i} className="sol-step-unit">
+                <div className="sol-step-card">
+                  <div className="sol-step-icon">{step.icon}</div>
+                  <span className="sol-step-num">STEP {step.num}</span>
+                  <span className="sol-step-label">{step.label}</span>
+                </div>
+                {i < stepItems.length - 1 && (
+                  <div className="sol-step-arrow">›</div>
+                )}
               </div>
-            </div>
+            ))}
           </div>
         </section>
 
