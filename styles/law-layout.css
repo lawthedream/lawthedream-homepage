@@ -93,7 +93,7 @@
 .law-site #law-header #gnb {
   width: 100%;
   text-align: center;
-  height: 74px;
+  height: 70px;
   background: rgba(0,0,0,0.92);
   border-top: 1px solid #555;
   overflow: visible;
@@ -157,7 +157,7 @@
 }
 
 /* Header spacer */
-.law-site .law-header-spacer { height: 174px; }
+.law-site .law-header-spacer { height: 170px; }
 
 /* Hamburger */
 .law-site #law-header .hamburger-btn {
