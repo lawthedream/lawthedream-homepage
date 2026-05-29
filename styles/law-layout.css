@@ -472,7 +472,10 @@
   text-align: center;   /* OUR CASE처럼 중앙정렬 */
 }
 .law-site .advice_tit .cnt_tit {
-  white-space: nowrap;   /* 1줄 강제 */
+  white-space: nowrap;
+  text-align: center !important;   /* layout_main.css .cnt_tit { text-align:left } 덮어쓰기 */
+  float: none !important;          /* layout_main.css .cnt_tit { float:left } 덮어쓰기 */
+  width: auto !important;          /* layout_main.css .cnt_tit { width:365px } 덮어쓰기 */
 }
 .law-site .advice_list ul {
   list-style: none; padding: 0; margin: 0;
